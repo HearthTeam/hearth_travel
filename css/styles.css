@@ -1,0 +1,125 @@
+:root{
+  --ink-900:#2A2218; --ink-800:#3A2E1E; --ink-700:#4A3D2C;
+  --cream-50:#FDFBF4; --cream-100:#FAF6EA; --cream-200:#F4EEDD; --cream-300:#ECE3CC;
+  --n0:#FFFFFF; --n50:#FAFAF7; --n100:#F5F4EF; --n150:#EFEDE6; --n200:#E8E5DC; --n300:#DAD6CB; --n400:#B7B3A8; --n500:#737067; --n600:#56534C; --n700:#3B3832; --n900:#171613;
+  --green-50:#ECF4EE; --green-100:#D7EADD; --green-500:#2F8B5C; --green-600:#25734A; --green-700:#1C5938;
+  --cta:#161512;
+  --fd:'Albra','Cormorant Garamond',Georgia,serif;
+  --fs:'Avenir','Avenir Next',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --sh-xs:0 1px 2px rgba(36,30,18,.05); --sh-sm:0 2px 8px rgba(36,30,18,.06); --sh-md:0 8px 24px rgba(36,30,18,.07); --sh-lg:0 18px 50px rgba(36,30,18,.12); --sh-phone:0 40px 90px rgba(36,30,18,.30);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--cream-100);font-family:var(--fs);-webkit-font-smoothing:antialiased;}
+.app-loading{min-height:100vh;display:grid;place-content:center;justify-items:center;gap:14px;color:var(--ink-700);font:600 14px/1.5 var(--fs);}
+.app-loading img{animation:loaderPulse 1.5s ease-in-out infinite;}
+.app-loading p{margin:0;}
+.app-loading--error{color:#8B2E24;}
+.noscript-message{max-width:720px;margin:48px auto;padding:20px 24px;border:1px solid var(--cream-300);border-radius:16px;background:var(--n0);color:var(--ink-800);font:600 16px/1.5 var(--fs);text-align:center;}
+svg.lucide{width:1em;height:1em;display:block;stroke-width:2;}
+.scrl{scrollbar-width:none;-ms-overflow-style:none;}
+.scrl::-webkit-scrollbar{display:none;}
+.film{position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;background-image:url("../assets/images/texture-noise.svg");background-size:160px 160px;}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes loaderPulse{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1)}}
+@keyframes fragDrift{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+@keyframes flowDot{0%{transform:translateX(0);opacity:0}25%{opacity:1}100%{transform:translateX(30px);opacity:0}}
+@keyframes kburns{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.16) translate(-1.5%,-2%)}}
+.kb{animation:kburns 22s ease-in-out infinite alternate;}
+@media (prefers-reduced-motion: reduce){.kb{animation:none;}}
+@media (max-width: 860px){
+  [style*="min-width: 340px"],[style*="min-width: 320px"],[style*="min-width: 300px"],[style*="min-width: 296px"],[style*="min-width: 284px"],[style*="min-width: 256px"],[style*="min-width: 248px"],[style*="min-width: 188px"]{ min-width:0 !important; }
+  [style*="width: 700px"]{ width:auto !important; height:auto !important; }
+  [style*="width: 490px"]{ width:auto !important; max-width:100% !important; }
+  [style*="white-space: nowrap"]{ white-space:normal !important; }
+  [style*="font-size: 53px"]{ font-size:38px !important; }
+  [style*="font-size: 41px"]{ font-size:31px !important; }
+  [style*="font-size: 40px"]{ font-size:31px !important; }
+  [style*="font-size: 50px"]{ font-size:34px !important; }
+  [style*="font-size: 39px"]{ font-size:30px !important; white-space:normal !important; }
+  [style*="padding: 40px 50px"]{ padding:30px 22px !important; }
+}
+@media (max-width: 560px){
+  [style*="max-width: 1180px"]{ padding-left:20px !important; padding-right:20px !important; }
+  [style*="width: 700px"]{ font-size:32px !important; }
+  [style*="font-size: 41px"]{ font-size:28px !important; }
+}
+
+/* ===== COMPACT DESKTOP / LAPTOP (MacBook Air 13") — keeps desktop layout, ~15% smaller ===== */
+/* NB: runtime serializes inline styles WITH spaces, so selectors must match "prop: value" */
+@media (min-width: 861px) and (max-width: 1440px){
+  /* section vertical padding —20/25% (+ hero column gap on same element) */
+  [style*="padding: 58px 32px 52px"]{ padding:42px 32px 38px !important; gap:36px !important; }
+  [style*="padding: 54px 32px 48px"]{ padding:40px 32px 36px !important; }
+  [style*="padding: 48px 32px 52px"]{ padding:38px 32px 40px !important; }
+  [style*="padding: 62px 32px 66px"]{ padding:46px 32px 48px !important; }
+  [style*="padding: 62px 32px;"]{ padding:46px 32px !important; }
+  [style*="padding: 64px 32px;"]{ padding:46px 32px !important; }
+
+  /* titles —~20% */
+  [style*="font-size: 53px"]{ font-size:42px !important; height:auto !important; width:560px !important; }
+  [style*="font-size: 54px"]{ font-size:42px !important; }
+  [style*="font-size: 41px"]{ font-size:33px !important; }
+  [style*="font-size: 40px"]{ font-size:32px !important; }
+  [style*="font-size: 39px"]{ font-size:32px !important; }
+  [style*="font-size: 30px"]{ font-size:25px !important; }
+  [style*="font-size: 28px"]{ font-size:24px !important; }
+
+  /* phone mockups — scala l'INTERO telefono (frame + contenuti) in proporzione,
+     così il testo interno non resta sovradimensionato. margin-bottom negativo
+     recupera lo spazio lasciato dal box originale. */
+  [style*="width: 304px; height: 632px"]{ transform:scale(.78) !important; transform-origin:top center !important; margin-bottom:-139px !important; }
+  [style*="width: 276px; height: 552px"]{ transform:scale(.8) !important; transform-origin:top center !important; margin-bottom:-110px !important; }
+
+  /* demo cinematic card — tighter padding/gap/height */
+  [style*="padding: 40px 50px"]{ gap:28px !important; padding:30px 36px !important; }
+  [style*="min-height: 588px"]{ min-height:500px !important; }
+
+  /* "Da frammenti…" two-column row — tighter column gap */
+  [style*="gap: 48px; align-items: flex-start"]{ gap:30px !important; }
+
+  /* simulatore config card — tighter internal padding */
+  [style*="padding: 30px 30px 32px"]{ padding:24px 24px 26px !important; }
+}
+
+/* ===================================================================
+   MOBILE = esperienza sintetica dedicata (< 768px).
+   Il DOM desktop viene nascosto; al suo posto renderizza .mob-shell —
+   non è un reflow verticale della landing desktop.
+   =================================================================== */
+.mob-shell{ display:none; }
+@media (max-width: 767px){
+  .desk-shell{ display:none !important; }
+  .mob-shell{ display:block !important; }
+}
+.mob-shell .scrl-x::-webkit-scrollbar{ display:none; }
+.mob-shell .scrl-x{ scrollbar-width:none; -ms-overflow-style:none; }
+
+/* ── Hero mobile · micro-animazioni premium ── */
+@keyframes mHeroRise{ from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);} }
+@keyframes mPhoneRise{ from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+@keyframes mPhoneFloat{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-5px);} }
+@keyframes mDrawBar{ from{transform:scaleY(0);} to{transform:scaleY(1);} }
+@keyframes mGlowIn{ from{opacity:0;} to{opacity:1;} }
+@keyframes mReveal{ from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+@keyframes mdemoFade{ from{opacity:0;transform:translateY(6px);} to{opacity:1;transform:translateY(0);} }
+
+/* ── premium reveal system ── */
+@keyframes hRise{ from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
+@keyframes hPhoneRise{ from{opacity:0;transform:translateY(34px) scale(.985);} to{opacity:1;transform:translateY(0) scale(1);} }
+.hero-rise{ animation:hRise .85s cubic-bezier(.22,.61,.36,1) both; }
+.hero-phone-rise{ animation:hPhoneRise 1s cubic-bezier(.22,.61,.36,1) .1s both; }
+.reveal{ opacity:0; }
+.reveal.seen{ animation:hRise .9s cubic-bezier(.22,.61,.36,1) both; }
+.rd1{ animation-delay:.06s; } .rd2{ animation-delay:.16s; } .rd3{ animation-delay:.28s; } .rd4{ animation-delay:.4s; }
+@media (prefers-reduced-motion: reduce){ .hero-rise,.hero-phone-rise,.reveal,.reveal.seen{ animation:none !important; opacity:1 !important; transform:none !important; } }
+
+.mob-shell .m-cta1{ transition:filter .2s ease; }
+.mob-shell .m-cta1 svg, .mob-shell .m-cta1 i{ transition:transform .2s ease; }
+.mob-shell .m-cta1:hover{ filter:brightness(1.07); }
+.mob-shell .m-cta1:hover svg, .mob-shell .m-cta1:hover i{ transform:translateX(3px); }
+.mob-shell .m-cta2{ transition:border-color .2s ease; }
+.mob-shell .m-cta2 svg, .mob-shell .m-cta2 i{ transition:opacity .2s ease, transform .2s ease; opacity:.72; }
+.mob-shell .m-cta2:hover{ border-color:rgba(40,30,18,.42); }
+.mob-shell .m-cta2:hover svg, .mob-shell .m-cta2:hover i{ opacity:1; transform:scale(1.08); }
+
+@media (prefers-reduced-motion: reduce){ .mob-shell *{ animation:none !important; } }

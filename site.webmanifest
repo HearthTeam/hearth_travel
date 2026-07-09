@@ -1,0 +1,18 @@
+{
+  "name": "Hearth per il tuo territorio",
+  "short_name": "Hearth",
+  "description": "Guide vive, contenuti digitali, QR e Visit Pass per il territorio.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FAF6EA",
+  "theme_color": "#1C5938",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "./assets/brand/logo-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
