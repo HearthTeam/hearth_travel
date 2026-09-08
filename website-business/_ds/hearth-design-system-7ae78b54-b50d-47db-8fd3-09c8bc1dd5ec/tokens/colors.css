@@ -1,0 +1,151 @@
+/* ============================================================
+   Hearth — Color tokens
+
+   TWO SEPARATED NEUTRAL LAYERS
+
+   1. PRODUCT neutrals  → default foundation for Creator App,
+      backoffice and municipality dashboard. Pure/near-white
+      surfaces, very light WARM neutral backgrounds, subtle
+      borders, high-contrast dark text. Clean, modern, premium.
+
+   2. EDITORIAL neutrals → warm cream + brown ink, reserved for
+      brand moments: landing heroes, public guides, manifesto,
+      storytelling, campaign visuals, posters, social graphics.
+
+   Never use cream-100 / cream-200 as the default background for
+   operational screens, forms, dashboards or review interfaces.
+
+   Hearth green stays the functional identity color.
+   Heritage blue / red are CAMPAIGN-only accents — never default UI.
+   ============================================================ */
+:root {
+  /* ========================================================
+     1 · PRODUCT NEUTRALS  (warm, very light — default UI)
+     ======================================================== */
+  --neutral-0:   #FFFFFF;   /* surface-0  · pure white cards */
+  --neutral-50:  #FAFAF7;   /* surface-50 · warm off-white app bg */
+  --neutral-100: #F5F4EF;   /* surface-100· soft warm grey panel */
+  --neutral-150: #EFEDE6;   /* hover fill / chip */
+  --neutral-200: #E8E5DC;   /* border-100 · subtle warm border */
+  --neutral-300: #DAD6CB;   /* stronger divider */
+  --neutral-400: #B7B3A8;   /* disabled fill */
+  --neutral-500: #737067;   /* text-500 · muted text */
+  --neutral-600: #56534C;   /* tertiary text / icon */
+  --neutral-700: #3B3832;   /* text-700 · secondary text */
+  --neutral-800: #29271F;   /* product heading */
+  --neutral-900: #171613;   /* text-900 · primary text / CTA */
+
+  /* ========================================================
+     2 · EDITORIAL NEUTRALS  (warm cream + brown ink — brand)
+     ======================================================== */
+  --cream-50:  #FDFBF4;   /* lightest editorial canvas */
+  --cream-100: #FAF6EA;   /* primary editorial background */
+  --cream-200: #F4EEDD;   /* deeper cream panel */
+  --cream-300: #ECE3CC;   /* cream divider / hover */
+
+  --ink-700: #4A3D2C;     /* warm brown body on cream */
+  --ink-800: #3A2E1E;     /* deep ink brown — editorial headline */
+  --ink-900: #2A2218;     /* almost-black brown */
+
+  /* ========================================================
+     FUNCTIONAL HEARTH GREEN  (active / success / published)
+     ======================================================== */
+  --green-50:  #ECF4EE;   /* soft success / selected background */
+  --green-100: #D7EADD;
+  --green-300: #7FB897;   /* muted green */
+  --green-500: #2F8B5C;   /* main · active state / approved */
+  --green-600: #25734A;   /* pressed / text-on-light */
+  --green-700: #1C5938;   /* dark · published / confirmed */
+
+  /* ========================================================
+     CAMPAIGN ACCENTS  (editorial / posters / launches only)
+     Strong heritage blue + red. NEVER default product UI.
+     ======================================================== */
+  --heritage-blue: #1557FF;
+  --heritage-red:  #F04B43;
+
+  /* ---- Status raw hues (warm, restrained) ---- */
+  --amber-50:  #FFF4E2;   /* correction background */
+  --amber-500: #C98124;   /* correction dot */
+  --amber-700: #8A5615;   /* correction text */
+
+  --red-50:   #FDECEC;    /* rejected background */
+  --red-500:  #C84848;    /* rejected dot */
+  --red-700:  #9E2F2F;    /* rejected text */
+
+  --slate-50:  #F1F1F0;   /* in-review background (warm grey) */
+  --slate-500: #8A8984;   /* in-review dot */
+  --slate-700: #55534E;   /* in-review text */
+
+  /* ---- Terracotta (legacy editorial accent, sparing) ---- */
+  --terra-100: #EFD9C8;
+  --terra-500: #B5673E;
+  --terra-700: #8A4A28;
+
+  /* =========================================================
+     SEMANTIC ALIASES
+     ========================================================= */
+
+  /* ---- Product surfaces (recommended naming) ---- */
+  --surface-0:    var(--neutral-0);    /* #FFFFFF */
+  --surface-50:   var(--neutral-50);   /* #FAFAF7 */
+  --surface-100:  var(--neutral-100);  /* #F5F4EF */
+  --border-100:   var(--neutral-200);  /* #E8E5DC */
+
+  --surface-app:        var(--neutral-50);
+  --surface-card:       var(--neutral-0);
+  --surface-sunken:     var(--neutral-100);
+  --surface-raised:     var(--neutral-0);
+  --surface-inverse:    var(--neutral-900);
+
+  /* ---- Editorial surfaces (brand only) ---- */
+  --surface-editorial:      var(--cream-100);
+  --surface-editorial-deep: var(--cream-200);
+
+  /* ---- Text ---- */
+  --text-900:        var(--neutral-900);  /* primary */
+  --text-700:        var(--neutral-700);  /* secondary */
+  --text-500:        var(--neutral-500);  /* muted */
+
+  --text-display:    var(--ink-800);   /* Albra headlines on cream */
+  --text-heading:    var(--neutral-900);
+  --text-body:       var(--neutral-700);
+  --text-muted:      var(--neutral-500);
+  --text-subtle:     var(--neutral-500);
+  --text-on-dark:    #F7F5EF;
+  --text-on-green:   #FFFFFF;
+  --text-link:       var(--green-700);
+
+  /* ---- Borders ---- */
+  --border-soft:     var(--neutral-200);
+  --border-strong:   var(--neutral-300);
+  --border-editorial:var(--cream-300);
+  --border-focus:    var(--green-500);
+
+  /* ---- CTA ---- */
+  --cta-fill:        var(--neutral-900);
+  --cta-fill-hover:  #000000;
+  --cta-text:        #F7F5EF;
+  --cta-disabled:    var(--neutral-400);
+  --cta-disabled-text: #FFFFFF;
+
+  /* ---- Status — bg / fg pairs (dot color set per component) ---- */
+  --status-review-bg:     var(--slate-50);    /* In revisione */
+  --status-review-fg:     var(--slate-700);
+  --status-progress-bg:   var(--green-50);    /* In lavorazione */
+  --status-progress-fg:   var(--green-700);
+  --status-approved-bg:   var(--green-50);    /* Approvato */
+  --status-approved-fg:   var(--green-700);
+  --status-published-bg:  var(--green-500);   /* Pubblicato (solid) */
+  --status-published-fg:  #FFFFFF;
+  --status-correction-bg: var(--amber-50);    /* Correzioni */
+  --status-correction-fg: var(--amber-700);
+  --status-error-bg:      var(--red-50);       /* Rifiutato */
+  --status-error-fg:      var(--red-700);
+
+  /* ---- Accent ---- */
+  --accent-green:    var(--green-500);
+  --accent-terra:    var(--terra-500);
+  --campaign-blue:   var(--heritage-blue);
+  --campaign-red:    var(--heritage-red);
+}

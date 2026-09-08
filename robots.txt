@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hearthteam.github.io/hearth_travel/sitemap.xml
+Sitemap: https://hearth.travel/sitemap.xml

@@ -1,0 +1,61 @@
+/* ============================================================
+   Hearth — Spacing, radius, shadow, layout tokens
+   8pt base. Generous editorial spacing; calm product rhythm.
+   ============================================================ */
+:root {
+  /* ---------- Spacing scale (8pt base, 4pt half-steps) ---------- */
+  --space-0:   0;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+
+  /* ---------- Border radius ---------- */
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius-md:  14px;   /* inputs, chips */
+  --radius-lg:  20px;   /* cards */
+  --radius-xl:  28px;   /* large cards, sheets */
+  --radius-2xl: 36px;   /* bottom sheets, hero panels */
+  --radius-pill: 999px; /* badges, pills, CTA */
+  --radius-circle: 50%;
+
+  /* ---------- Shadows (minimal, soft, warm) ---------- */
+  --shadow-none: none;
+  --shadow-xs:  0 1px 2px rgba(36, 30, 18, 0.04);
+  --shadow-sm:  0 2px 8px rgba(36, 30, 18, 0.05);
+  --shadow-md:  0 6px 20px rgba(36, 30, 18, 0.06);
+  --shadow-lg:  0 14px 40px rgba(36, 30, 18, 0.08);
+  --shadow-sheet: 0 -8px 40px rgba(36, 30, 18, 0.10);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --container-prose: 680px;
+  --app-width: 412px;        /* mobile design width */
+  --gutter-mobile: 20px;
+  --gutter-desktop: 40px;
+  --grid-columns: 12; /* @kind other */
+  --grid-gap: 24px;
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --dur-fast: 140ms; /* @kind other */
+  --dur-base: 220ms; /* @kind other */
+  --dur-slow: 360ms; /* @kind other */
+
+  /* ---------- Z-index ---------- */
+  --z-nav: 100; /* @kind other */
+  --z-sheet: 200; /* @kind other */
+  --z-overlay: 300; /* @kind other */
+  --z-toast: 400; /* @kind other */
+}

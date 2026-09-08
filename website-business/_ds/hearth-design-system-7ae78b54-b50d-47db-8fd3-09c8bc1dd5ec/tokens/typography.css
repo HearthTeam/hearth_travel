@@ -1,0 +1,48 @@
+/* ============================================================
+   Hearth — Typography tokens
+   Albra (display) for emotion/identity; Avenir (sans) for
+   all operational UI. Never use the serif for long operational text.
+   ============================================================ */
+:root {
+  /* ---------- Families ---------- */
+  --font-display: 'Albra', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ---------- Weights ---------- */
+  --fw-display: 300; /* @kind font */   /* Albra Light only */
+  --fw-regular: 400; /* @kind font */   /* Avenir Roman */
+  --fw-medium:  500; /* @kind font */   /* Avenir Roman */
+  --fw-semibold:600; /* @kind font */   /* Avenir Roman */
+  --fw-heavy:   800; /* @kind font */   /* Avenir Heavy */
+
+  /* ---------- Display scale (Albra, editorial) ---------- */
+  --display-2xl: 88px;   /* hero poster claim */
+  --display-xl:  64px;
+  --display-lg:  48px;
+  --display-md:  38px;
+  --display-sm:  30px;
+
+  /* ---------- Product type scale (Avenir) ---------- */
+  --text-3xl: 30px;   /* product page title (mobile hero) */
+  --text-2xl: 24px;
+  --text-xl:  20px;
+  --text-lg:  18px;   /* card title */
+  --text-md:  16px;   /* body / input */
+  --text-sm:  14px;   /* secondary, captions */
+  --text-xs:  13px;   /* metadata */
+  --text-2xs: 11px;   /* eyebrow / overline */
+
+  /* ---------- Line heights ---------- */
+  --lh-display: 1.02; /* @kind font */
+  --lh-tight:   1.15; /* @kind font */
+  --lh-snug:    1.3;  /* @kind font */
+  --lh-normal:  1.5;  /* @kind font */
+  --lh-relaxed: 1.65; /* @kind font */
+
+  /* ---------- Letter spacing ---------- */
+  --ls-display: -0.02em; /* @kind font */   /* Albra tightens slightly at large size */
+  --ls-tight:   -0.01em; /* @kind font */
+  --ls-normal:  0em;     /* @kind font */
+  --ls-wide:    0.04em;  /* @kind font */
+  --ls-eyebrow: 0.12em;  /* @kind font */   /* overlines / labels (uppercase) */
+}

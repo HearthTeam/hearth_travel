@@ -1,0 +1,42 @@
+/* ============================================================
+   Hearth — Fonts
+   Albra Light / Albra Light Italic  →  editorial display (brand)
+   Avenir Heavy / Avenir Roman       →  product UI (operational)
+   All four are now bundled real webfonts (assets/fonts/).
+   ============================================================ */
+
+/* ---- Albra Light (editorial display) ---- */
+@font-face {
+  font-family: 'Albra';
+  src: url('../assets/fonts/AlbraLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Albra Light Italic (editorial emphasis) ---- */
+@font-face {
+  font-family: 'Albra';
+  src: url('../assets/fonts/AlbraLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ---- Avenir Roman (product body / captions / metadata) ---- */
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/AvenirRoman.ttf') format('truetype');
+  font-weight: 400 600;   /* Roman covers regular → semibold requests */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Avenir Heavy (product titles / buttons / labels) ---- */
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/AvenirHeavy.ttf') format('truetype');
+  font-weight: 700 900;   /* Heavy covers bold → heavy requests */
+  font-style: normal;
+  font-display: swap;
+}

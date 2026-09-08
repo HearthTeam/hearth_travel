@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/hearth-design-system-7ae78b54-b50d-47db-8fd3-09c8bc1dd5ec/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-7ae78b54-b50d-47db-8fd3-09c8bc1dd5ec/tokens/colors.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-7ae78b54-b50d-47db-8fd3-09c8bc1dd5ec/tokens/typography.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-7ae78b54-b50d-47db-8fd3-09c8bc1dd5ec/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-7ae78b54-b50d-47db-8fd3-09c8bc1dd5ec/styles.css">
+<script src="_ds/hearth-design-system-7ae78b54-b50d-47db-8fd3-09c8bc1dd5ec/_ds_bundle.js"></script>
+</helmet>
+<div style="font-family:'Avenir',system-ui,sans-serif;color:#3B3832;width:100%">
+
+  <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+  <form novalidate="novalidate" ref="{{ formRef }}" onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:26px;width:100%">
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px 20px">
+      <sc-for list="{{ fields }}" as="f" hint-placeholder-count="6">
+        <x-import component-from-global-scope="HearthDesignSystem_7ae78b.Input" overline="{{ true }}" label="{{ f.label }}" name="{{ f.name }}" type="{{ f.type }}" placeholder="{{ f.placeholder }}" auto-complete="{{ f.autocomplete }}" input-mode="{{ f.inputmode }}" error="{{ f.error }}" hint-size="100%,84px"></x-import>
+      </sc-for>
+
+      <sc-if value="{{ showCategory }}" hint-placeholder-val="{{ true }}">
+        <label style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#171613">Categoria attività *</span>
+          <select name="categoria" style="height:52px;padding:0 14px;background:#FFFFFF;border:1px solid #E8E5DC;border-radius:14px;font-family:'Avenir',system-ui,sans-serif;font-size:16px;color:#3B3832;appearance:none;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'><path d='M1 1l6 6 6-6' fill='none' stroke='%2356534C' stroke-width='1.6' stroke-linecap='round'/></svg>&quot;);background-repeat:no-repeat;background-position:right 16px center" style-focus="border-color:#2F8B5C;outline:none">
+            <option value="">Seleziona…</option>
+            <sc-for list="{{ categorie }}" as="c" hint-placeholder-count="8">
+              <option value="{{ c }}">{{ c }}</option>
+            </sc-for>
+          </select>
+        </label>
+      </sc-if>
+    </div>
+
+    <sc-if value="{{ showGoals }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#171613">Cosa vuoi ottenere dal sito?</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <sc-for list="{{ obiettivi }}" as="o" hint-placeholder-count="5">
+            <button type="button" aria-pressed="{{ o.pressed }}" onClick="{{ o.toggle }}" style="display:inline-flex;align-items:center;height:38px;padding:0 18px;border-radius:999px;font-family:'Avenir',system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:-.01em;cursor:pointer;transition:background 220ms,color 220ms,border-color 220ms;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <label style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#171613">{{ noteLabel }}</span>
+      <textarea name="note" rows="3" placeholder="{{ notePlaceholder }}" style="padding:14px;background:#FFFFFF;border:1px solid #E8E5DC;border-radius:14px;font-family:'Avenir',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#3B3832;resize:vertical" style-focus="border-color:#2F8B5C;outline:none"></textarea>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer">
+      <input type="checkbox" name="privacy" style="width:20px;height:20px;margin:2px 0 0;accent-color:#2F8B5C;flex:none">
+      <span style="font-size:13px;line-height:1.55;color:#56534C">Ho letto e accetto il trattamento dei miei dati per essere ricontattato in merito a questa richiesta. <sc-if value="{{ privacyError }}" hint-placeholder-val="{{ false }}"><span style="display:block;margin-top:4px;color:#C84848;font-weight:600">Serve la tua conferma per continuare.</span></sc-if></span>
+    </label>
+
+    <sc-if value="{{ hasErrors }}" hint-placeholder-val="{{ false }}">
+      <p role="alert" style="margin:0;padding:14px 16px;background:#FDECEC;border-radius:14px;font-size:14px;line-height:1.5;color:#9E2F2F">{{ errorSummary }}</p>
+    </sc-if>
+
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+      <x-import component-from-global-scope="HearthDesignSystem_7ae78b.Button" type="submit" size="lg" variant="primary" full-width="{{ true }}" disabled="{{ sending }}" hint-size="100%,56px">{{ ctaLabel }}</x-import>
+      <p style="margin:0;font-size:13px;line-height:1.55;color:#56534C">{{ footnote }}</p>
+    </div>
+  </form>
+  </sc-if>
+
+  <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:22px;align-items:flex-start;padding:32px;background:#FFFFFF;border:1px solid #E8E5DC;border-radius:20px">
+      <span style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8A4A28">{{ doneEyebrow }}</span>
+      <h3 style="margin:0;font-family:'Albra',Georgia,serif;font-weight:300;font-size:clamp(26px,3.4vw,38px);line-height:1.05;letter-spacing:-.02em;color:#3A2E1E">{{ doneTitle }}</h3>
+      <p style="margin:0;max-width:48ch;font-size:16px;line-height:1.6;color:#4A3D2C">{{ doneBody }}</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="{{ waHref }}" onClick="{{ onWhatsApp }}" rel="noopener noreferrer" style="display:inline-flex;align-items:center;height:52px;padding:0 28px;border-radius:999px;background:#171613;color:#F7F5EF;font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase" style-hover="background:#000000;color:#F7F5EF">Invia su WhatsApp</a>
+        <a href="{{ mailHref }}" style="display:inline-flex;align-items:center;height:52px;padding:0 28px;border-radius:999px;background:#FFFFFF;border:1px solid #DAD6CB;color:#171613;font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase" style-hover="border-color:#171613;color:#171613">Invia per email</a>
+      </div>
+      <button type="button" onClick="{{ onEdit }}" style="background:none;border:none;padding:0;font-family:'Avenir',system-ui,sans-serif;font-size:13px;color:#56534C;text-decoration:underline;text-underline-offset:3px;cursor:pointer" style-hover="color:#171613">Modifica i dati</button>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:760,&quot;height&quot;:820},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;demo&quot;,&quot;contatto&quot;],&quot;default&quot;:&quot;demo&quot;,&quot;tsType&quot;:&quot;'demo' | 'contatto'&quot;},&quot;session&quot;:{&quot;editor&quot;:null,&quot;default&quot;:0,&quot;tsType&quot;:&quot;number&quot;}}">
+/* ============================================================
+   CONFIGURAZIONE — due flussi separati
+
+   variant="demo"      → pagamento dei 20 € per la demo
+   variant="contatto"  → richiesta diretta del sito da 299 €
+
+   1) CHECKOUT_URL: incolla qui il Payment Link Stripe (o altro
+      checkout) per attivare il pagamento dei 20 €.
+   2) CONTACT_ENDPOINT: incolla qui l'URL che riceve le richieste
+      di contatto (Formspree, Netlify Forms, webhook…).
+
+   Finché restano null NON viene simulato nulla: il form mostra
+   l'invio diretto via WhatsApp o email con il riepilogo.
+   ============================================================ */
+const CHECKOUT_URL = null;
+const CONTACT_ENDPOINT = null;
+/* Unica fonte di verità per il numero WhatsApp Hearth (formato internazionale,
+   solo cifre). Ogni CTA WhatsApp passa da createWhatsAppUrl. */
+const HEARTH_WHATSAPP_NUMBER = '393792844477';
+const CONTACT_EMAIL = 'info@hearth.email';
+
+function createWhatsAppUrl(message) {
+  return 'https://wa.me/' + HEARTH_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+}
+
+const F = {
+  nome: { name: 'nome', label: 'Nome e cognome *', type: 'text', placeholder: 'Come ti chiami', autocomplete: 'name', required: true },
+  attivita: { name: 'attivita', label: 'Nome attività *', type: 'text', placeholder: 'Come si chiama la tua attività', autocomplete: 'organization', required: true },
+  citta: { name: 'citta', label: 'Città *', type: 'text', placeholder: 'Dove sei', autocomplete: 'address-level2', required: true },
+  telefono: { name: 'telefono', label: 'Telefono / WhatsApp *', type: 'tel', placeholder: '+39', autocomplete: 'tel', inputmode: 'tel', required: true },
+  email: { name: 'email', label: 'Email *', type: 'email', placeholder: 'nome@esempio.it', autocomplete: 'email', inputmode: 'email', required: true },
+  link: { name: 'link', label: 'Instagram, sito o Google Maps *', type: 'text', placeholder: 'Un link dove possiamo vederti', inputmode: 'url', required: true },
+};
+
+const VARIANTS = {
+  demo: {
+    fields: [F.nome, F.attivita, F.citta, F.telefono, F.email, F.link],
+    showCategory: true,
+    showGoals: true,
+    noteLabel: "C'è qualcosa che dobbiamo sapere?",
+    notePlaceholder: 'Facoltativo. Orari, servizi, un vincolo, una storia.',
+    ctaLabel: 'CONTINUA — 20 €',
+    footnote: 'I 20 € vengono scalati dai 299 € se decidi di pubblicare il sito.',
+    doneEyebrow: 'Ultimo passaggio',
+    doneTitle: 'Abbiamo tutto quello che ci serve per iniziare.',
+    doneBody: 'Il pagamento online dei 20 € non è ancora attivo su questa pagina. Mandaci la richiesta con un tocco: ti rispondiamo con il link per completare e partiamo con la demo.',
+    subject: 'Richiesta demo 20 € — Hearth',
+  },
+  contatto: {
+    fields: [F.nome, F.attivita, F.telefono, F.email, F.link],
+    showCategory: false,
+    showGoals: false,
+    noteLabel: 'Vuoi aggiungere qualcosa?',
+    notePlaceholder: "Facoltativo. Cosa vorresti dal sito, cosa conta di più per la tua attività.",
+    ctaLabel: 'INIZIAMO',
+    footnote: '299 € una tantum, IVA inclusa. Nessun canone Hearth.',
+    doneEyebrow: 'Ci siamo',
+    doneTitle: 'Ti rispondiamo con i prossimi passi.',
+    doneBody: 'Mandaci la richiesta con un tocco: guardiamo la tua attività e ti scriviamo come partiamo, senza impegno.',
+    subject: 'Richiesta sito 299 € — Hearth',
+  },
+};
+
+const CATEGORIE = ['Ristorazione', 'Ospitalità', 'Beauty & Wellness', 'Negozio', 'Artigianato', 'Professionista', 'Servizi', 'Altro'];
+const OBIETTIVI = ['Più richieste', 'Più prenotazioni', "Presentare meglio l'attività", 'Mostrare prodotti o servizi', 'Farmi trovare su Google'];
+
+class Component extends DCLogic {
+  state = { errors: {}, goals: [], sent: null, sending: false };
+
+  formRef = React.createRef();
+
+  cfg() { return VARIANTS[this.props.variant] || VARIANTS.demo; }
+
+  // The drawer keeps one instance alive across open/close and across the two
+  // flows, so reset everything whenever the flow or the session changes —
+  // otherwise a submitted contact request would be re-shown as a 20 € demo.
+  componentDidUpdate(prevProps) {
+    if (prevProps.variant !== this.props.variant || prevProps.session !== this.props.session) {
+      this.setState({ errors: {}, goals: [], sent: null, sending: false });
+      if (this.formRef.current) this.formRef.current.reset();
+    }
+  }
+
+  toggleGoal(g) {
+    this.setState((s) => ({ goals: s.goals.includes(g) ? s.goals.filter((x) => x !== g) : s.goals.concat(g) }));
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const cfg = this.cfg();
+    const form = e.target;
+    const val = (n) => (form.elements[n] ? String(form.elements[n].value).trim() : '');
+    const data = {};
+    cfg.fields.forEach((f) => { data[f.name] = val(f.name); });
+    if (cfg.showCategory) data.categoria = val('categoria');
+    data.note = val('note');
+    const privacy = form.elements.privacy ? form.elements.privacy.checked : false;
+
+    const errors = {};
+    cfg.fields.forEach((f) => { if (f.required && !data[f.name]) errors[f.name] = 'Campo obbligatorio.'; });
+    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) errors.email = 'Inserisci un indirizzo valido.';
+    if (cfg.showCategory && !data.categoria) errors.categoria = true;
+    if (!privacy) errors.privacy = true;
+
+    if (Object.keys(errors).length) {
+      this.setState({ errors });
+      const el = form.elements[Object.keys(errors)[0]];
+      if (el && el.focus) el.focus();
+      return;
+    }
+
+    const payload = Object.assign({}, data, { flusso: this.props.variant || 'demo' });
+    if (cfg.showGoals) payload.obiettivi = this.state.goals;
+
+    if (this.props.variant === 'contatto' && CONTACT_ENDPOINT) {
+      this.setState({ sending: true, errors: {} });
+      fetch(CONTACT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      }).then((r) => {
+        if (!r.ok) throw new Error('bad status');
+        this.setState({ sending: false, sent: payload, delivered: true });
+      }).catch(() => {
+        this.setState({ sending: false, sent: payload });
+      });
+      return;
+    }
+
+    if (this.props.variant !== 'contatto' && CHECKOUT_URL) {
+      const url = new URL(CHECKOUT_URL);
+      if (payload.email) url.searchParams.set('prefilled_email', payload.email);
+      url.searchParams.set('client_reference_id', (payload.attivita || 'hearth').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40));
+      try { window.sessionStorage.setItem('hearth-richiesta', JSON.stringify(payload)); } catch (err) { /* noop */ }
+      window.location.href = url.toString();
+      return;
+    }
+
+    this.setState({ errors: {}, sent: payload });
+  }
+
+  summary() {
+    const d = this.state.sent || {};
+    const rows = [
+      ['Nome', d.nome], ['Attività', d.attivita], ['Città', d.citta],
+      ['Telefono', d.telefono], ['Email', d.email], ['Link', d.link],
+      ['Categoria', d.categoria], ['Obiettivi', (d.obiettivi || []).join(', ')], ['Note', d.note],
+    ].filter((r) => r[1]);
+    return this.cfg().subject + '\n\n' + rows.map((r) => r[0] + ': ' + r[1]).join('\n');
+  }
+
+  renderVals() {
+    const cfg = this.cfg();
+    const errors = this.state.errors;
+    const sent = !!this.state.sent;
+    const text = sent ? this.summary() : '';
+    return {
+      fields: cfg.fields.map((f) => Object.assign({}, f, { error: errors[f.name] || '' })),
+      categorie: CATEGORIE,
+      showCategory: cfg.showCategory,
+      showGoals: cfg.showGoals,
+      noteLabel: cfg.noteLabel,
+      notePlaceholder: cfg.notePlaceholder,
+      ctaLabel: cfg.ctaLabel,
+      footnote: cfg.footnote,
+      doneEyebrow: cfg.doneEyebrow,
+      doneTitle: cfg.doneTitle,
+      doneBody: cfg.doneBody,
+      sending: this.state.sending,
+      obiettivi: OBIETTIVI.map((label) => {
+        const on = this.state.goals.includes(label);
+        return {
+          label, pressed: on, bg: on ? '#171613' : '#FFFFFF', fg: on ? '#F7F5EF' : '#171613',
+          bd: on ? '#171613' : '#DAD6CB', toggle: () => this.toggleGoal(label),
+        };
+      }),
+      hasErrors: Object.keys(errors).length > 0,
+      errorSummary: 'Controlla i campi evidenziati: ci servono nome, attività, un contatto telefonico e l\u2019email.',
+      privacyError: !!errors.privacy,
+      formRef: this.formRef,
+      onSubmit: (e) => this.handleSubmit(e),
+      onEdit: () => this.setState({ sent: null }),
+      sent, notSent: !sent,
+      waHref: createWhatsAppUrl(text),
+      onWhatsApp: (e) => {
+        // Navigazione nello stesso tab: Safari blocca l'apertura cross-origin
+        // di una nuova finestra generata da JS (Cross-Origin-Opener-Policy).
+        e.preventDefault();
+        window.location.assign(createWhatsAppUrl(this.summary()));
+      },
+      mailHref: 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(cfg.subject) + '&body=' + encodeURIComponent(text),
+    };
+  }
+}
+</script>
+</body>
+</html>

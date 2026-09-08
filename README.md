@@ -2,6 +2,9 @@
 
 Landing page statica pronta per GitHub Pages.
 
+La landing dedicata alle attività è pubblicata nel percorso
+`/website-business/` (URL pubblico: `https://hearth.travel/website-business/`).
+
 La pagina funziona sia tramite GitHub Pages/HTTP sia aprendo direttamente
 `index.html` con un doppio clic. In modalità `file://` vengono caricati i font
 offline, evitando richieste bloccate dal browser.
@@ -19,6 +22,7 @@ percorso di progetto `/hearth_travel/`.
 ## Struttura
 
 - `index.html`: shell HTML valida, metadati SEO e bootstrap.
+- `website-business/`: landing e risorse autonome per le piccole attività.
 - `css/styles.css`: stile responsive.
 - `assets/brand`: marchio e logotipo.
 - `assets/fonts`: font locali.
