@@ -321,7 +321,12 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 const RES = (id, fallback) => (window.__resources && window.__resources[id]) || fallback;
 
 /* Routing dell'ecosistema. site/production restano placeholder centralizzati. */
-const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', pass: '/pass', territori: '/territori', creator: '/creator', attivita: '/attivita', site: '/attivita/sito', production: 'https://attivita.hearth.app/produzione' };
+// Ponte temporaneo: i sottodomini eventi/attivita/creator.hearth.app non sono ancora
+// attivi, quindi le CTA di conversione aprono WhatsApp con un messaggio precompilato.
+// Quando i domini esistono, rimettere qui gli URL reali e rimuovere WA().
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
+const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', pass: '/pass', territori: '/territori', creator: '/creator', attivita: '/attivita', site: '/attivita/sito', production: WA('Ciao Hearth, vorrei richiedere foto e video per la mia attività.') };
 
 const NAV = [{ label: 'Esplora', value: 'esplora', href: ROUTES.app }, { label: 'Per i territori', value: 'territori', href: ROUTES.territori }, { label: 'Attività', value: 'attivita', href: ROUTES.attivita }, { label: 'Creator', value: 'creator', href: ROUTES.creator }, { label: 'Hearth Pass', value: 'pass', href: ROUTES.pass }];
 

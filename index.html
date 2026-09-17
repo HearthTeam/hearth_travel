@@ -324,7 +324,12 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroPhoto&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;paese-dal-mare&quot;,&quot;tsType&quot;:&quot;'paese-dal-mare' | 'torre-macchia' | 'campo-monte-mare'&quot;,&quot;options&quot;:[&quot;paese-dal-mare&quot;,&quot;torre-macchia&quot;,&quot;campo-monte-mare&quot;],&quot;section&quot;:&quot;Hero&quot;},&quot;accentEvents&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prodotto&quot;}}">
 // Routing dell'ecosistema. EVENT_TOOL è un PLACEHOLDER: sostituire con l'URL definitivo del tool Eventi.
-const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass' };
+// Ponte temporaneo: i sottodomini eventi/attivita/creator.hearth.app non sono ancora
+// attivi, quindi le CTA di conversione aprono WhatsApp con un messaggio precompilato.
+// Quando i domini esistono, rimettere qui gli URL reali e rimuovere WA().
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
+const ROUTES = { app: 'https://hearth.app', eventTool: WA('Ciao Hearth, vorrei configurare un evento sul mio territorio.'), territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass' };
 // CTA contestuale dell'header, per pagina.
 const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
 class Component extends DCLogic {

@@ -469,10 +469,15 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 <script type="text/x-dc" data-dc-script>
 // Routing dell'ecosistema. applyUrl / missionsUrl / pointsUrl sono PLACEHOLDER da sostituire.
 // Store e deep link: PLACEHOLDER da sostituire con gli URL definitivi.
+// Ponte temporaneo: i sottodomini eventi/attivita/creator.hearth.app non sono ancora
+// attivi, quindi le CTA di conversione aprono WhatsApp con un messaggio precompilato.
+// Quando i domini esistono, rimettere qui gli URL reali e rimuovere WA().
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
 const APP_STORE_URL = 'https://apps.apple.com/app/hearth-creator/PLACEHOLDER';
 const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=PLACEHOLDER';
-const CREATOR_DEEP_LINK = 'https://creator.hearth.app/apri';
-const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', apply: 'https://creator.hearth.app/candidatura', missions: 'https://creator.hearth.app/missioni', points: '/creator/punti-hearth' };
+const CREATOR_DEEP_LINK = WA('Ciao Hearth, vorrei provare l\u2019app Hearth Creator.');
+const ROUTES = { app: 'https://hearth.app', eventTool: WA('Ciao Hearth, vorrei configurare un evento sul mio territorio.'), home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', apply: WA('Ciao Hearth, vorrei candidarmi come Creator.'), missions: WA('Ciao Hearth, vorrei sapere di più sulle Missioni Creator.'), points: '/creator/punti-hearth' };
 const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
 class Component extends DCLogic {
   state = { menuOpen: false, modalOpen: false, mobile: typeof window !== 'undefined' && window.innerWidth < 768 };

@@ -431,7 +431,12 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 // Routing dell'ecosistema. register / production / services sono PLACEHOLDER da sostituire.
-const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', passAttivita: '/pass#attivita', register: 'https://attivita.hearth.app/registrazione', production: 'https://attivita.hearth.app/produzione', services: 'https://attivita.hearth.app/servizi', site: '/attivita/sito' };
+// Ponte temporaneo: i sottodomini eventi/attivita/creator.hearth.app non sono ancora
+// attivi, quindi le CTA di conversione aprono WhatsApp con un messaggio precompilato.
+// Quando i domini esistono, rimettere qui gli URL reali e rimuovere WA().
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
+const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', passAttivita: '/pass#attivita', register: WA('Ciao Hearth, vorrei registrare la mia attività.'), production: WA('Ciao Hearth, vorrei richiedere foto e video per la mia attività.'), services: WA('Ciao Hearth, vorrei informazioni sui servizi per le attività.'), site: '/attivita/sito' };
 const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
 class Component extends DCLogic {
   state = { menuOpen: false };

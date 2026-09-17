@@ -348,7 +348,12 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 // Routing dell'ecosistema. EVENT_TOOL è un PLACEHOLDER: sostituire con l'URL definitivo del tool Eventi.
-const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', home: '/', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass' };
+// Ponte temporaneo: i sottodomini eventi/attivita/creator.hearth.app non sono ancora
+// attivi, quindi le CTA di conversione aprono WhatsApp con un messaggio precompilato.
+// Quando i domini esistono, rimettere qui gli URL reali e rimuovere WA().
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
+const ROUTES = { app: 'https://hearth.app', eventTool: WA('Ciao Hearth, vorrei configurare un evento sul mio territorio.'), home: '/', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass' };
 const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
 class Component extends DCLogic {
   state = { menuOpen: false };

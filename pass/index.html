@@ -387,7 +387,12 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 // Routing dell'ecosistema. buy / join / rules sono PLACEHOLDER da sostituire.
-const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', buy: 'https://hearth.app/pass', join: 'https://attivita.hearth.app/pass', rules: '/pass/regole' };
+// Ponte temporaneo: i sottodomini eventi/attivita/creator.hearth.app non sono ancora
+// attivi, quindi le CTA di conversione aprono WhatsApp con un messaggio precompilato.
+// Quando i domini esistono, rimettere qui gli URL reali e rimuovere WA().
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
+const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', buy: WA('Ciao Hearth, vorrei informazioni su Hearth Pass.'), join: WA('Ciao Hearth, vorrei far partecipare la mia attività a Hearth Pass.'), rules: '/pass/regole' };
 const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni Hearth Pass' };
 class Component extends DCLogic {
   state = { menuOpen: false };
@@ -429,9 +434,9 @@ class Component extends DCLogic {
         { n: '01', text: 'Scegli Hearth Pass.' }, { n: '02', text: 'Esplora Hearth.' }, { n: '03', text: 'Riconosci le attività partecipanti.' }, { n: '04', text: 'Scopri il vantaggio.' }, { n: '05', text: 'Vai nell\u2019attività.' }, { n: '06', text: 'Utilizza il Pass.' }
       ],
       passes: [
-        { name: '3 Day', dur: '03', unit: 'day', photo: 'oste-bancone', accent: 'terra', focal: '60% 50%', price: '€9,90', people: '2 persone', duration: '3 giorni', for: 'Per un weekend o una breve fuga.', url: ROUTES.buy + '?pass=3day' },
-        { name: '10 Day', dur: '10', unit: 'day', photo: 'torre-macchia', accent: 'blu', focal: '50% 50%', price: '€15,90', people: '2 persone', duration: '10 giorni', for: 'Per un viaggio più lungo o più territori.', url: ROUTES.buy + '?pass=10day' },
-        { name: 'Annuale', dur: '365', unit: 'days', photo: 'campo-monte-mare', accent: 'verde', focal: '50% 60%', price: '€29,90', people: '1 persona', duration: '1 anno', for: 'Per chi vuole continuare a scoprire Hearth durante l\u2019anno.', url: ROUTES.buy + '?pass=annuale' }
+        { name: '3 Day', dur: '03', unit: 'day', photo: 'oste-bancone', accent: 'terra', focal: '60% 50%', price: '€9,90', people: '2 persone', duration: '3 giorni', for: 'Per un weekend o una breve fuga.', url: WA('Ciao Hearth, vorrei acquistare Hearth Pass 3 Day.') },
+        { name: '10 Day', dur: '10', unit: 'day', photo: 'torre-macchia', accent: 'blu', focal: '50% 50%', price: '€15,90', people: '2 persone', duration: '10 giorni', for: 'Per un viaggio più lungo o più territori.', url: WA('Ciao Hearth, vorrei acquistare Hearth Pass 10 Day.') },
+        { name: 'Annuale', dur: '365', unit: 'days', photo: 'campo-monte-mare', accent: 'verde', focal: '50% 60%', price: '€29,90', people: '1 persona', duration: '1 anno', for: 'Per chi vuole continuare a scoprire Hearth durante l\u2019anno.', url: WA('Ciao Hearth, vorrei acquistare Hearth Pass Annuale.') }
       ],
       examples: [
         { kind: 'Forno', text: 'Assaggio della specialità del giorno.' }, { kind: 'Cantina', text: 'Calice di benvenuto incluso.' }, { kind: 'Visita', text: 'Upgrade incluso nell\u2019esperienza.' }, { kind: 'Bottega', text: 'Piccolo omaggio con l\u2019acquisto.' }

@@ -63,12 +63,37 @@ e pagina pubblicata.
 
 `_deploy/` non è parte del sito: è escluso da `robots.txt` e non è in sitemap.
 
+## CTA di conversione — ponte WhatsApp
+
+I sottodomini `eventi.hearth.app`, `attivita.hearth.app` e `creator.hearth.app`
+previsti dal pacchetto **non risolvono in DNS**: i link li puntavano comunque, e
+il visitatore vedeva la pagina di errore del browser. Anche `hearth.app/pass`
+non esiste (risponde 200 ma è un soft-404).
+
+Finché quei domini non sono attivi, le CTA aprono WhatsApp sul numero reale
+(`+39 379 28 444 77`) con un messaggio precompilato. Tutto è centralizzato in
+testa allo `<script data-dc-script>` di ogni pagina:
+
+```js
+const WA_NUMBER = '393792844477';
+const WA = m => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(m);
+```
+
+Le voci coinvolte in `ROUTES` sono `eventTool`, `register`, `production`,
+`services`, `join`, `buy`, `apply`, `missions`, più `CREATOR_DEEP_LINK` e i tre
+tagli del Pass in `/pass`. Quando i domini esistono, si rimettono gli URL reali
+al posto delle chiamate `WA(...)` e si rimuove l'helper.
+
+Restano rotti, e non sono sistemabili da qui: `APP_STORE_URL` e
+`GOOGLE_PLAY_URL` in `/creator` puntano a schede app che non esistono ancora.
+
 ## Da completare prima del lancio
 
-Vedi `_deploy/README_DEPLOY.md` (URL di conversione ancora placeholder, form
-demo senza backend, pagine `/creator/punti-hearth` e `/pass/regole` mancanti,
+Vedi `_deploy/README_DEPLOY.md` (form demo senza backend, pagine
+`/creator/punti-hearth` e `/pass/regole` mancanti,
 `assets/video/territori-hero.mp4` da ricomprimere: 19,3 MB) e
-`_deploy/RELEASE_CHECKLIST.md`.
+`_deploy/RELEASE_CHECKLIST.md`. La tabella degli URL di conversione in quel
+documento descrive lo stato precedente al ponte WhatsApp.
 
 ## Pubblicazione
 
