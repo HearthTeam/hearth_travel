@@ -1,0 +1,5 @@
+/* Provided files: Albra Light (300), Albra Light Italic (300), Avenir Roman (400), Avenir Heavy (mapped to 700). Avenir Next was NOT provided: the family is declared as "Avenir" and the stack falls back to Avenir Next where installed. Missing: Avenir Medium/Demi (500/600) — UI titles use Heavy at 700. */
+@font-face{font-family:"Albra";src:url("../assets/fonts/AlbraLight.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Albra";src:url("../assets/fonts/AlbraLightItalic.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"Avenir";src:url("../assets/fonts/AvenirRoman.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Avenir";src:url("../assets/fonts/AvenirHeavy.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}

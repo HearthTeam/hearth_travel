@@ -3,20 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
+<script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
-<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
-<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
-<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
-<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
-<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
-<script src="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
-<link rel="icon" type="image/svg+xml" href="/assets/hearth-symbol-notext.svg">
-<link rel="apple-touch-icon" href="/assets/hearth-symbol.svg">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
 <title>C'è un'Italia che non esiste sulle guide | Hearth</title>
 <meta name="description" content="Hearth raccoglie le storie, i luoghi, le persone e le esperienze che rendono unico un territorio. E le trasforma in qualcosa che puoi scoprire, vivere e continuare a raccontare.">
 <meta name="robots" content="index, follow">
@@ -63,7 +61,7 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 <main style="font-family:var(--font-ui);background:var(--paper);color:var(--ink);overflow-x:clip">
 
 <div data-navbar="true" style="position:sticky;top:0;z-index:40">
-<x-import component-from-global-scope="HearthDesignSystem_ed33ec.TopNav" mode="stories" wordmark-src="/assets/hearth-wordmark.svg" symbol-src="/assets/hearth-symbol.svg" items="{{ navItems }}" active="home" home-href="#top" action="{{ navAction }}" on-navigate="{{ onNavigate }}" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.TopNav" mode="stories" wordmark-src="assets/hearth-wordmark.svg" symbol-src="assets/hearth-symbol.svg" items="{{ navItems }}" active="home" home-href="#top" action="{{ navAction }}" on-navigate="{{ onNavigate }}" hint-size="100%,64px"></x-import>
   <a href="#top" data-vesta-home="true" aria-label="Hearth · Torna alla homepage" style="position:absolute;left:calc(var(--grid-margin) - 4px);top:10px;width:44px;height:44px;border-radius:50%;z-index:calc(var(--z-sticky) + 1)"></a>
 
 </div>
@@ -76,12 +74,12 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
     <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:1.5;max-width:46ch;text-wrap:pretty;color:var(--ink)">Hearth raccoglie le storie, i luoghi, le persone e le esperienze che rendono unico un territorio. E le trasforma in qualcosa che puoi scoprire, vivere e continuare a raccontare.</p>
     <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
       <a href="https://hearth.app" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Esplora Hearth</x-import></a>
-      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="/territori" arrow="{{ true }}" hint-size="auto,24px">Porta Hearth nel tuo territorio</x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Territori.dc.html" arrow="{{ true }}" hint-size="auto,24px">Porta Hearth nel tuo territorio</x-import>
     </div>
   </div>
   <figure style="flex:1 1 340px;max-width:560px;min-width:0;margin:0;display:grid;gap:12px">
     <div style="aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo-hero, 20px);background:var(--mist)">
-      <img src="/assets/photos/paese-dal-mare.jpg" data-hero-photo="true" alt="L'isola di Capraia vista dal mare" style="width:100%;height:100%;object-fit:cover;object-position:50% 60%;transition:transform 900ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)">
+      <img src="assets/photos/paese-dal-mare.jpg" data-hero-photo="true" alt="L'isola di Capraia vista dal mare" style="width:100%;height:100%;object-fit:cover;object-position:50% 60%;transition:transform 900ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)">
     </div>
     <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Capraia" place="Isola di Capraia, LI" hint-size="100%,40px"></x-import>
   </figure>
@@ -93,20 +91,20 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
   <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:14ch;text-wrap:balance">Un territorio non è una destinazione.<br>È fatto di <em style="font-style:italic;font-weight:300">persone</em>.</h2>
   <div style="margin-top:var(--space-section);display:grid;gap:clamp(40px,6vw,96px)">
     <div data-reveal="wait" style="display:flex;flex-wrap:wrap;align-items:center;gap:24px 40px">
-      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><video src="{{ videoRacconta }}" poster="/assets/video/chi-vive-un-luogo-poster.png" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" aria-label="Chi vive un luogo lo racconta" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></video></div>
+      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><video src="{{ videoRacconta }}" poster="assets/video/chi-vive-un-luogo-poster.png" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" aria-label="Chi vive un luogo lo racconta" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></video></div>
       <p style="margin:0;flex:1 1 320px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;text-wrap:balance;max-width:18ch">Chi vive un luogo <em style="font-style:italic">lo racconta</em>.</p>
     </div>
     <div data-reveal="wait" style="display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:flex-end;gap:24px 40px">
       <p style="margin:0;flex:1 1 320px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;text-wrap:balance;max-width:18ch;text-align:right;margin-left:auto">Chi lo custodisce <em style="font-style:italic">lo organizza</em>.</p>
-      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><img src="/assets/photos/rievocazione-costume.jpg" alt="Un uomo in costume storico durante una rievocazione" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><img src="assets/photos/rievocazione-costume.jpg" alt="Un uomo in costume storico durante una rievocazione" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
     </div>
     <div data-reveal="wait" style="display:flex;flex-wrap:wrap;align-items:center;gap:24px 40px;padding-left:clamp(0px,8vw,160px)">
-      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><img src="/assets/photos/fornaia-pane.jpg" alt="Una fornaia con il pane appena sfornato" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><img src="assets/photos/fornaia-pane.jpg" alt="Una fornaia con il pane appena sfornato" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
       <p style="margin:0;flex:1 1 320px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;text-wrap:balance;max-width:18ch">Chi ha un'attività <em style="font-style:italic">lo rende vivo</em>.</p>
     </div>
     <div data-reveal="wait" style="display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:flex-end;gap:24px 40px">
       <p style="margin:0;flex:1 1 320px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;text-wrap:balance;max-width:18ch;text-align:right;margin-left:auto">Chi arriva <em style="font-style:italic">lo scopre</em>.</p>
-      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><img src="/assets/photos/campo-monte-mare.jpg" alt="Campi, montagna e mare in un'unica veduta" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="flex:0 0 clamp(140px,16vw,220px);aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px)"><img src="assets/photos/campo-monte-mare.jpg" alt="Campi, montagna e mare in un'unica veduta" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
     </div>
   </div>
   <p data-reveal="wait" style="margin:var(--space-section) 0 0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:18ch">Hearth trasforma ciò che un territorio <em style="font-style:italic">vive</em> in un patrimonio che rimane.</p>
@@ -124,20 +122,20 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
   <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px) var(--grid-gutter);margin-top:clamp(32px,4vw,56px)">
     <!-- Territori -->
     <article id="territori-ingresso" data-reveal="wait" style="flex:1 1 580px;min-width:0;display:grid;gap:24px;align-content:start">
-      <div style="aspect-ratio:3/2;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/banco-mercato.jpg" alt="Un banco di mercato con i prodotti esposti" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="aspect-ratio:3/2;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/banco-mercato.jpg" alt="Un banco di mercato con i prodotti esposti" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
       <div style="display:grid;gap:16px;max-width:60ch">
         <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Territori, Comuni e Pro Loco</div>
         <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;text-wrap:balance">Organizza ciò che accade. Racconta ciò che rimane.</h3>
         <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:56ch;text-wrap:pretty">Crea gratuitamente la mappa digitale del tuo evento, coinvolgi gli stand e raccogli tutte le informazioni in un unico posto. Quando vuoi, Hearth può aiutarti a trasformare tutto il territorio in una guida viva.</p>
         <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;padding-top:8px">
           <a href="{{ eventToolUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="md" hint-size="auto,40px">Crea il tuo evento gratis</x-import></a>
-          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="/territori" arrow="{{ true }}" hint-size="auto,24px">Scopri Hearth per i territori</x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Territori.dc.html" arrow="{{ true }}" hint-size="auto,24px">Scopri Hearth per i territori</x-import>
         </div>
       </div>
     </article>
     <!-- Viaggiatori -->
     <article data-reveal="wait" style="flex:1 1 320px;max-width:560px;min-width:0;display:grid;gap:24px;align-content:start;transition-delay:120ms">
-      <div style="aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/torre-macchia.jpg" alt="Una torre di pietra tra la macchia, con il mare dietro" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/torre-macchia.jpg" alt="Una torre di pietra tra la macchia, con il mare dietro" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
       <div style="display:grid;gap:16px">
         <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Viaggiatori</div>
         <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12;letter-spacing:-.01em;text-wrap:balance">Non visitare soltanto. Entra dentro un luogo.</h3>
@@ -147,25 +145,25 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
     </article>
     <!-- Creator -->
     <article data-reveal="wait" style="flex:1 1 320px;max-width:560px;min-width:0;display:grid;gap:24px;align-content:start">
-      <div style="aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/pescatore-reti.jpg" alt="Un pescatore sistema le reti" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/pescatore-reti.jpg" alt="Un pescatore sistema le reti" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
       <div style="display:grid;gap:16px">
         <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Creator</div>
         <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12;letter-spacing:-.01em;text-wrap:balance">Vai dove gli altri non guardano.</h3>
         <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);text-wrap:pretty">Fotografi, videomaker ed esploratori costruiscono ogni giorno il patrimonio Hearth raccontando luoghi, persone e storie che rischierebbero di rimanere invisibili.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px 28px;padding-top:8px">
-          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="/creator" arrow="{{ true }}" hint-size="auto,24px">Diventa Creator</x-import>
-          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="/creator#missioni" quiet="{{ true }}" hint-size="auto,24px">Scopri le missioni</x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Creator.dc.html" arrow="{{ true }}" hint-size="auto,24px">Diventa Creator</x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Creator.dc.html#missioni" quiet="{{ true }}" hint-size="auto,24px">Scopri le missioni</x-import>
         </div>
       </div>
     </article>
     <!-- Business -->
     <article data-reveal="wait" style="flex:1 1 580px;min-width:0;display:flex;flex-wrap:wrap;gap:24px var(--grid-gutter);align-items:flex-end;transition-delay:120ms">
-      <div style="flex:1 1 260px;max-width:420px;aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/chef-cucina.jpg" alt="Un cuoco in cucina mostra un taglio di carne" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div style="flex:1 1 260px;max-width:420px;aspect-ratio:1/1;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/chef-cucina.jpg" alt="Un cuoco in cucina mostra un taglio di carne" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
       <div style="flex:1 1 260px;display:grid;gap:16px;padding-bottom:4px">
         <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Attività</div>
         <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12;letter-spacing:-.01em;text-wrap:balance">Fai parte del luogo che le persone scopriranno.</h3>
         <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);text-wrap:pretty">Porta la tua attività dentro Hearth, racconta ciò che ti rende unico e crea un vantaggio dedicato a chi possiede un Hearth Pass.</p>
-        <div style="padding-top:8px"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="/attivita" arrow="{{ true }}" hint-size="auto,24px">Registra la tua attività</x-import></div>
+        <div style="padding-top:8px"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Attivita.dc.html" arrow="{{ true }}" hint-size="auto,24px">Registra la tua attività</x-import></div>
       </div>
     </article>
   </div>
@@ -185,7 +183,7 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
     <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) clamp(24px,3vw,48px);margin-top:clamp(40px,5vw,80px);align-items:stretch">
       <!-- La mappa è la struttura -->
       <div data-reveal="wait" style="flex:3 1 520px;min-width:0;display:grid;gap:16px;align-content:start">
-        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapSurface" image="/assets/hearth-borgo-map.svg" alt="Mappa del borgo con vicoli, piazze e punti segnalati" ratio="4/3" controls="{{ true }}" hint-size="100%,520px">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapSurface" image="assets/hearth-borgo-map.svg" alt="Mappa del borgo con vicoli, piazze e punti segnalati" ratio="4/3" controls="{{ true }}" hint-size="100%,520px">
           <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Antonia · il forno" active="{{ true }}" style="position:absolute;left:30%;top:42%" hint-size="auto,28px"></x-import>
           <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Osteria da Gennaro" style="position:absolute;left:56%;top:58%" hint-size="auto,28px"></x-import>
           <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Parco sommerso di Baia" style="position:absolute;left:18%;top:72%" hint-size="auto,28px"></x-import>
@@ -198,7 +196,7 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
       <div style="flex:2 1 320px;min-width:0;max-width:520px;border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,40px);display:grid;gap:clamp(28px,3vw,44px);align-content:start">
         <div data-reveal="wait" style="display:grid;gap:14px">
           <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500);display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;border-radius:50%;background:var(--ink);display:inline-block;flex:none"></span><span>Chi apre il paese</span></div>
-          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.PersonCard" href="{{ null }}" image="/assets/photos/fornaia-pane.jpg" name="Antonia" role="Sforna il pane dal 1962" place="Bacoli, NA" horizontal="{{ true }}" hint-size="100%,120px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.PersonCard" href="{{ null }}" image="assets/photos/fornaia-pane.jpg" name="Antonia" role="Sforna il pane dal 1962" place="Bacoli, NA" horizontal="{{ true }}" hint-size="100%,120px"></x-import>
         </div>
         <div data-reveal="wait" style="display:grid;gap:14px;transition-delay:80ms">
           <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500);display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;border-radius:50%;background:var(--ink);display:inline-block;flex:none"></span><span>Quando conviene esserci</span></div>
@@ -228,7 +226,7 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 
 <!-- 5 · RESPIRO -->
 <figure data-screen-label="Respiro" style="margin:0;position:relative;background:var(--ink)">
-  <div style="aspect-ratio:21/9;min-height:52vh;max-height:88vh;overflow:hidden"><img src="/assets/photos/campo-monte-mare.jpg" alt="Campi coltivati, una montagna e il mare in un'unica veduta" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%"></div>
+  <div style="aspect-ratio:21/9;min-height:52vh;max-height:88vh;overflow:hidden"><img src="assets/photos/campo-monte-mare.jpg" alt="Campi coltivati, una montagna e il mare in un'unica veduta" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%"></div>
   <figcaption style="position:absolute;left:var(--grid-margin);bottom:20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);text-shadow:0 1px 2px rgba(21,20,18,.4)">Campo, monte, mare</figcaption>
 </figure>
 
@@ -255,7 +253,7 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,64px) var(--grid-gutter);margin-top:clamp(32px,4vw,56px);align-items:flex-start">
     <a href="#storia-1" data-reveal="wait" style="flex:2 1 520px;min-width:0;display:grid;gap:16px;text-decoration:none;color:inherit">
-      <span style="display:block;aspect-ratio:3/2;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/chef-cucina.jpg" alt="Un cuoco in cucina" style="width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
+      <span style="display:block;aspect-ratio:3/2;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/chef-cucina.jpg" alt="Un cuoco in cucina" style="width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
       <span style="display:block;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:20ch;text-wrap:balance">Qui la pasta viene ancora preparata come nel <em style="font-style:italic">1968</em>.</span>
       <span style="display:block;font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Firenze, FI</span>
     </a>
@@ -266,11 +264,11 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
       <span style="display:block;font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Agnone, IS</span>
     </a> -->
     <a href="#storia-3" data-reveal="wait" style="flex:1 1 260px;max-width:420px;min-width:0;display:grid;gap:16px;text-decoration:none;color:inherit;transition-delay:200ms">
-      <span style="display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/rievocazione-costume.jpg" alt="Un uomo in costume durante una rievocazione" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
+      <span style="display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/rievocazione-costume.jpg" alt="Un uomo in costume durante una rievocazione" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
       <span style="display:block;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12;letter-spacing:-.01em;text-wrap:balance">Ogni <em style="font-style:italic">agosto</em> questo paese si sveglia prima dell'alba.</span>
     </a>
     <a href="#storia-4" data-reveal="wait" style="flex:1 1 260px;max-width:420px;min-width:0;display:grid;gap:16px;text-decoration:none;color:inherit;transition-delay:300ms">
-      <span style="display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="/assets/photos/pescatore-reti.jpg" alt="Reti da pesca sul molo" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
+      <span style="display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius-photo,12px);background:var(--mist)"><img src="assets/photos/pescatore-reti.jpg" alt="Reti da pesca sul molo" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
       <span style="display:block;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12;letter-spacing:-.01em;text-wrap:balance">Sotto il mare di <em style="font-style:italic">Baia</em> esiste ancora una città romana.</span>
       <span style="display:block;font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Bacoli, NA</span>
     </a>
@@ -286,7 +284,7 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
       <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:52ch;text-wrap:pretty">Eventi, persone, attività, prodotti, luoghi e storie spesso rimangono dispersi tra siti, social, Pro Loco, archivi e materiali diversi.<br><br>Hearth li raccoglie, li organizza e li trasforma in un patrimonio digitale stabile, aggiornabile e riutilizzabile.</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;padding-top:8px">
         <a href="{{ eventToolUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Crea il tuo evento gratis</x-import></a>
-        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="/territori" arrow="{{ true }}" hint-size="auto,24px">Porta Hearth nel tuo territorio</x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Territori.dc.html" arrow="{{ true }}" hint-size="auto,24px">Porta Hearth nel tuo territorio</x-import>
       </div>
       <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Gratuito. Si parte dal tuo prossimo evento, il resto viene dopo.</div>
     </div>
@@ -308,23 +306,23 @@ header img[alt=""]{transition:transform var(--motion-default) var(--ease-editori
 
 <!-- 9 · CLOSING -->
 <section data-screen-label="Chiusura" style="margin-top:var(--space-silence)">
-  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Hero" variant="image" image="/assets/photos/vignaiolo-cantina.jpg" image-alt="Un vignaiolo nella sua cantina" focal="50% 40%" min-height="92vh" title="Migliaia di luoghi aspettano ancora qualcuno che li racconti." caption="Vignaiolo in cantina" hint-size="100%,720px"></x-import>
+  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Hero" variant="image" image="assets/photos/vignaiolo-cantina.jpg" image-alt="Un vignaiolo nella sua cantina" focal="50% 40%" min-height="92vh" title="Migliaia di luoghi aspettano ancora qualcuno che li racconti." caption="Vignaiolo in cantina" hint-size="100%,720px"></x-import>
   <nav aria-label="Percorsi" style="max-width:1440px;margin:0 auto;padding:clamp(32px,4vw,64px) var(--grid-margin) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 var(--grid-gutter);border-top:1px solid var(--ink)">
     <a href="https://hearth.app" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Esplora</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Luoghi, persone, storie →</span></a>
-    <a href="/creator" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Racconta</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Diventa Creator →</span></a>
-    <a href="/attivita" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Partecipa</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Registra la tua attività →</span></a>
-    <a href="/territori" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Porta Hearth nel tuo territorio</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Comuni, Pro Loco, organizzatori →</span></a>
+    <a href="Hearth Creator.dc.html" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Racconta</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Diventa Creator →</span></a>
+    <a href="Hearth Attivita.dc.html" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Partecipa</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Registra la tua attività →</span></a>
+    <a href="Hearth Territori.dc.html" style="display:grid;gap:8px;padding:24px 0;border-bottom:1px solid var(--color-border-hairline);text-decoration:none;color:inherit"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1;letter-spacing:-.015em">Porta Hearth nel tuo territorio</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Comuni, Pro Loco, organizzatori →</span></a>
   </nav>
 </section>
 
-<x-import component-from-global-scope="HearthDesignSystem_ed33ec.SiteFooter" wordmark-src="/assets/hearth-wordmark.svg" note="Hearth S.r.l. Società Benefit" year="{{ 2026 }}" links="{{ footerLinks }}" hint-size="100%,140px"></x-import>
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.SiteFooter" wordmark-src="assets/hearth-wordmark.svg" note="Hearth S.r.l. Società Benefit" year="{{ 2026 }}" links="{{ footerLinks }}" hint-size="100%,140px"></x-import>
 
 
 </main>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroPhoto&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;paese-dal-mare&quot;,&quot;tsType&quot;:&quot;'paese-dal-mare' | 'torre-macchia' | 'campo-monte-mare'&quot;,&quot;options&quot;:[&quot;paese-dal-mare&quot;,&quot;torre-macchia&quot;,&quot;campo-monte-mare&quot;],&quot;section&quot;:&quot;Hero&quot;},&quot;accentEvents&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prodotto&quot;}}">
 // Routing dell'ecosistema. EVENT_TOOL è un PLACEHOLDER: sostituire con l'URL definitivo del tool Eventi.
-const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass' };
+const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', territori: 'Hearth Territori.dc.html', creator: 'Hearth Creator.dc.html', attivita: 'Hearth Attivita.dc.html', pass: 'Hearth Pass.dc.html' };
 // CTA contestuale dell'header, per pagina.
 const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
 class Component extends DCLogic {
@@ -333,14 +331,14 @@ class Component extends DCLogic {
     const el = document.querySelector('[data-hero-photo]');
     const name = this.props.heroPhoto ?? 'paese-dal-mare';
     const res = window.__resources && window.__resources['c_' + name.replace(/-/g, '_')];
-    const src = res || '/assets/photos/' + name + '.jpg';
+    const src = res || 'assets/photos/' + name + '.jpg';
     if (el && el.getAttribute('src') !== src) el.setAttribute('src', src);
   }
   componentDidUpdate() { this.syncHero(); }
   componentDidMount() {
     this.syncHero();
     // il media element non regge lo streaming da questa origin: carico via blob
-    fetch('/assets/video/chi-vive-un-luogo.mp4').then(r => r.blob()).then(b => { this._videoUrl = URL.createObjectURL(b); this.setState({ videoRacconta: this._videoUrl }, () => { const el = document.querySelector('section video'); if (el) { el.load(); el.play().catch(() => {}); } }); }).catch(() => {});
+    fetch('assets/video/chi-vive-un-luogo.mp4').then(r => r.blob()).then(b => { this._videoUrl = URL.createObjectURL(b); this.setState({ videoRacconta: this._videoUrl }, () => { const el = document.querySelector('section video'); if (el) { el.load(); el.play().catch(() => {}); } }); }).catch(() => {});
     this._doc = e => { if (this.state.menuOpen && !e.target.closest('[data-nav-menu]') && !e.target.closest('header')) this.setState({ menuOpen: false }); };
     document.addEventListener('click', this._doc);
     document.documentElement.setAttribute('data-reveal-ready', '');

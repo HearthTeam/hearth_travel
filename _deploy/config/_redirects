@@ -1,0 +1,5 @@
+# Netlify · redirect legacy 301
+/hearth-pass          /pass              301!
+/hearth-pass/*        /pass              301!
+/website-business     /attivita/sito     301!
+/website-business/*   /attivita/sito     301!

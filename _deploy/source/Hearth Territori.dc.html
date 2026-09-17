@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
+<title>Hearth per i territori · Comuni, Pro Loco e organizzatori | Hearth</title>
+<meta name="description" content="Hearth aiuta Comuni, Pro Loco e organizzatori a partire da ciò che accade oggi — eventi, sagre, persone e attività — e trasformarlo in un patrimonio digitale che il territorio può continuare a utilizzare nel tempo.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#faf8f3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Hearth">
+<meta property="og:title" content="Una festa dura tre giorni. Quello che racconta può rimanere per anni.">
+<meta property="og:description" content="Hearth aiuta Comuni, Pro Loco e organizzatori a partire da ciò che accade oggi — eventi, sagre, persone e attività — e trasformarlo in un patrimonio digitale che il territorio può continuare a utilizzare nel tempo.">
+<meta property="og:image" content="https://hearth.travel/assets/photos/banco-mercato.jpg">
+<meta name="twitter:image" content="https://hearth.travel/assets/photos/banco-mercato.jpg">
+<meta property="og:url" content="https://hearth.travel/territori">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hearth.travel/territori">
+
+<style>
+body{margin:0;background:#faf8f3;color:#151412;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:#151412;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] summary span[data-plus]{transform:rotate(45deg)}
+html[data-reveal-ready] [data-reveal="wait"]{opacity:0;transform:translateY(14px)}
+[data-reveal]{transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){[data-reveal]{transition:none;opacity:1 !important;transform:none !important}}
+
+[data-vesta-home]{display:block}
+header img[alt=""]{transition:transform var(--motion-default) var(--ease-editorial);transform-origin:50% 50%}
+[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:scale(1.04) rotate(5deg)}
+@media (hover:none){[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+@media (max-width:1023px){[data-vesta-home]{display:none}}
+@media (prefers-reduced-motion:reduce){header img[alt=""]{transition:none}[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+
+/* navbar: le voci non vanno mai a capo */
+@media (min-width:1024px){
+  [data-navbar] header nav a{white-space:nowrap;flex:none}
+  [data-navbar] header nav{gap:22px}
+}
+/* sotto 1600px il wordmark non sta al centro: lockup a sinistra, voci a destra */
+@media (min-width:1024px) and (max-width:1599px){
+  [data-navbar] header{grid-template-columns:auto auto minmax(0,1fr) !important;column-gap:clamp(20px,2.4vw,32px) !important}
+  [data-navbar] header nav{gap:clamp(14px,1.6vw,22px);justify-content:flex-end}
+}
+</style>
+</helmet>
+<main style="font-family:var(--font-ui);background:var(--paper);color:var(--ink);overflow-x:clip">
+
+<div data-navbar="true" style="position:sticky;top:0;z-index:40">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.TopNav" mode="stories" wordmark-src="assets/hearth-wordmark.svg" symbol-src="assets/hearth-symbol.svg" items="{{ navItems }}" active="territori" home-href="Hearth Homepage.dc.html" action="{{ navAction }}" on-navigate="{{ onNavigate }}" hint-size="100%,64px"></x-import>
+  <a href="Hearth Homepage.dc.html" data-vesta-home="true" aria-label="Hearth · Torna alla homepage" style="position:absolute;left:calc(var(--grid-margin) - 4px);top:10px;width:44px;height:44px;border-radius:50%;z-index:calc(var(--z-sticky) + 1)"></a>
+
+</div>
+
+<!-- 1 · HERO -->
+<section id="top" data-screen-label="Hero" style="max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,96px) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-end">
+  <div style="flex:1 1 520px;min-width:0;display:grid;gap:clamp(24px,3vw,40px);padding-bottom:clamp(16px,2vw,40px)">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Hearth per i territori</div>
+    <h1 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:clamp(44px,5.6vw,100px);line-height:.96;letter-spacing:-.025em;text-wrap:balance;max-width:18ch">Una festa dura tre giorni.<br>Quello che racconta può rimanere per anni.</h1>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:1.5;max-width:50ch;text-wrap:pretty">Hearth aiuta Comuni, Pro Loco e organizzatori a partire da ciò che accade oggi — eventi, sagre, persone e attività — e trasformarlo in un patrimonio digitale che il territorio può continuare a utilizzare nel tempo.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+      <a href="{{ eventToolUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Configura gratis il tuo evento</x-import></a>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="#territorio" arrow="{{ true }}" hint-size="auto,24px">Racconta il tuo territorio</x-import>
+    </div>
+    <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Configuri gratuitamente. Paghi solo quando scegli di pubblicare.</div>
+  </div>
+  <figure style="flex:1 1 380px;max-width:640px;min-width:0;margin:0;display:grid;gap:12px">
+    <div style="aspect-ratio:4/5;overflow:hidden;border-radius:20px;background:var(--mist)"><video src="{{ videoTerritori }}" poster="assets/video/territori-hero-poster-v3.png" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" aria-label="Una festa di paese" style="width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></video></div>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Immagini di feste, eventi e sagre seguite da Hearth" hint-size="100%,40px"></x-import>
+  </figure>
+</section>
+
+<!-- 2 · PROBLEMA -->
+<section data-screen-label="Problema" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,80px) var(--grid-gutter);align-items:flex-start">
+  <div style="flex:1 1 360px;min-width:0;display:grid;gap:24px">
+    <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:12ch">Hai già tutto.<br>È solo sparso ovunque.</h2>
+    <p data-reveal="wait" style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:44ch;text-wrap:pretty">Durante una sagra le informazioni vivono tre giorni e poi si perdono. Chi organizza le ripete a voce, chi partecipa le cerca nelle chat.</p>
+  </div>
+  <div data-reveal="wait" style="flex:1 1 480px;min-width:0;position:relative;min-height:360px;font-family:var(--font-editorial);font-weight:300;color:var(--grey-500);font-size:clamp(22px,2.4vw,34px);line-height:1.1;letter-spacing:-.01em;padding:8px 0">
+    <div style="display:flex;flex-wrap:wrap;gap:20px 40px;align-items:baseline">
+      <span style="margin-left:12%">volantini</span><span style="font-style:italic">un PDF da qualche parte</span><span style="margin-left:22%">post su Facebook</span><span>tre gruppi WhatsApp</span><span style="margin-left:8%;font-style:italic">la mappa stampata</span><span>una pagina Instagram</span><span style="margin-left:30%">gli standisti</span><span style="font-style:italic">il programma</span><span style="margin-left:14%">i cartelli</span><span style="font-style:italic;color:var(--ink)">«chiedi a Marina, lo sa lei»</span>
+    </div>
+    <p style="margin:clamp(32px,4vw,56px) 0 0;font-family:var(--font-editorial);font-weight:300;color:var(--ink);font-size:var(--type-editorial-heading-size);line-height:1.12;max-width:26ch;text-wrap:balance;border-top:1px solid var(--ink);padding-top:20px">Hearth raccoglie tutto in una mappa digitale semplice da consultare e condividere.</p>
+  </div>
+</section>
+
+<!-- 3 · TOOL EVENTI -->
+<section id="eventi" data-screen-label="Tool Eventi" style="background:var(--white);margin-top:var(--space-silence);padding:var(--space-section) 0;border-top:1px solid var(--color-border-hairline);border-bottom:1px solid var(--color-border-hairline)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px">
+      <div style="display:grid;gap:20px;max-width:720px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Inizia da qui</div>
+        <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:14ch">Il tuo prossimo evento può essere online oggi.</h2>
+      </div>
+      <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500);max-width:34ch;text-wrap:pretty">Strumento Eventi · demo su un evento di esempio, Sagra del Pesce di Baia.</div>
+    </div>
+
+    <div data-mode="core" data-density="compact" style="display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,40px);margin-top:clamp(40px,5vw,72px);align-items:stretch">
+      <!-- Backoffice organizzatore -->
+      <div data-reveal="wait" style="flex:1 1 360px;min-width:0;max-width:560px;border:1px solid var(--grey-200);border-radius:12px;padding:20px;display:grid;gap:20px;align-content:start;background:var(--white)">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Stepper" step="{{ 2 }}" total="{{ 4 }}" label="Stand e responsabili" hint-size="100%,40px"></x-import>
+        <div style="display:grid;gap:12px">
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Input" label="Nome dello stand" value="Friggitoria del Porto" hint-size="100%,64px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Input" label="Email del responsabile" value="marina@friggitoriadelporto.it" hint="Riceve un accesso dedicato per completare descrizione, foto e orari." hint-size="100%,84px"></x-import>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" hint-size="auto,32px">Invita il responsabile</x-import><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="secondary" size="sm" hint-size="auto,32px">Aggiungi un altro stand</x-import></div>
+        <div style="border-top:1px solid var(--color-border-hairline);padding-top:8px">
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Friggitoria del Porto" meta="Stand 12 · Marina R. · foto, descrizione, orari" trailing="{{ statusDone }}" hint-size="100%,56px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Cantina Flegrea" meta="Stand 07 · invito inviato ieri" trailing="{{ statusWait }}" hint-size="100%,56px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Palco · piazza del porto" meta="Spettacoli · sabato 21:30, domenica 19:00" trailing="{{ statusDraft }}" hint-size="100%,56px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Servizi · bagni, acqua, punto medico" meta="3 punti sulla mappa" trailing="{{ statusDone }}" hint-size="100%,56px"></x-import>
+        </div>
+      </div>
+      <!-- Mappa -->
+      <div data-reveal="wait" style="flex:2 1 420px;min-width:0;display:grid;gap:12px;align-content:start;transition-delay:100ms">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapSurface" image="assets/hearth-borgo-map.svg" alt="Mappa del borgo con vicoli, piazze e punti segnalati" ratio="4/3" controls="{{ true }}" hint-size="100%,480px">
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Ingresso · via del Porto" style="position:absolute;left:12%;top:70%" hint-size="auto,28px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Stand 12 · Friggitoria" active="{{ true }}" style="position:absolute;left:38%;top:44%" hint-size="auto,28px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Palco" style="position:absolute;left:60%;top:26%" hint-size="auto,28px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Servizi" style="position:absolute;left:70%;top:62%" hint-size="auto,28px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.MapMarker" label="Percorso a mare" style="position:absolute;left:22%;top:20%" hint-size="auto,28px"></x-import>
+        </x-import>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12px;letter-spacing:.02em;color:var(--grey-500);font-variant-numeric:tabular-nums"><span>Aree · percorsi · stand · servizi · spettacoli · orari</span><span>Bozza · non ancora pubblicata</span></div>
+      </div>
+      <!-- Anteprima telefono -->
+      <div data-reveal="wait" style="flex:0 1 280px;min-width:240px;display:grid;gap:12px;align-content:start;transition-delay:200ms">
+        <div style="border:1px solid var(--grey-200);border-radius:20px;padding:16px 14px;background:var(--paper);display:grid;gap:14px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Anteprima · telefono</div>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.EventCard" href="{{ null }}" day="12" month="Ott" name="Sagra del Pesce di Baia" date="12–13 ottobre" place="Baia, Bacoli · NA" hint-size="100%,96px"></x-import>
+          <div style="aspect-ratio:1/1;overflow:hidden;border-radius:12px"><img src="assets/photos/banco-mercato.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="display:grid;gap:4px"><span style="font-size:14px;font-weight:700">Friggitoria del Porto</span><span style="font-size:12px;color:var(--grey-500)">Stand 12 · frittura di paranza · 12:00–23:00</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:var(--grey-500)"><span style="width:44px;height:44px;border:1px solid var(--ink);border-radius:4px;display:grid;place-items:center;font-size:9px;font-weight:700;letter-spacing:.1em">QR</span><span>Stampato sui cartelli e sui tavoli: la mappa in mano a chi c'è.</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,4vw,64px);margin-top:clamp(40px,5vw,64px);padding-top:24px;border-top:1px solid var(--ink);align-items:flex-start">
+      <p data-reveal="wait" style="margin:0;flex:1 1 280px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;text-wrap:pretty;max-width:30ch">Tu inserisci il nome dello stand e l'email di chi lo gestisce. <em style="font-style:italic">Marina</em> completa da sola foto, descrizione e orari. Tu moderi e integri.</p>
+      <div data-reveal="wait" style="flex:1 1 280px;display:grid;gap:16px;align-content:start;transition-delay:100ms">
+        <a href="{{ eventToolUrl }}" style="text-decoration:none;justify-self:start"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Configura gratis il tuo evento</x-import></a>
+        <div style="font-size:14px;line-height:1.5;color:var(--grey-600);max-width:40ch">Configuri gratuitamente. Paghi solo quando scegli di pubblicare.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · COME FUNZIONA -->
+<section id="come-funziona" data-screen-label="Come funziona" style="max-width:1440px;margin:0 auto;padding:var(--space-section) var(--grid-margin) 0">
+  <ol style="list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)">
+    <li data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:20px var(--grid-gutter);padding:clamp(28px,4vw,56px) 0;border-bottom:1px solid var(--color-border-hairline);align-items:flex-start">
+      <span style="flex:0 0 clamp(72px,10vw,160px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em;font-variant-numeric:lining-nums">01</span>
+      <span style="flex:1 1 260px;display:grid;gap:12px;max-width:44ch"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Costruisci la mappa.</span><span style="font-size:15px;line-height:1.55;color:var(--grey-600)">Inserisci aree, percorsi, stand, servizi e spettacoli.</span></span>
+      <span data-mode="core" style="flex:1 1 280px;max-width:420px;display:grid;gap:0;border:1px solid var(--grey-200);border-radius:12px;padding:8px 12px;background:var(--white)">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Area food · lungomare" meta="14 stand · 2 servizi" hint-size="100%,56px"></x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Percorso a mare" meta="1,2 km · 6 tappe" hint-size="100%,56px"></x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Palco · piazza del porto" meta="Sabato 21:30 · domenica 19:00" hint-size="100%,56px"></x-import>
+      </span>
+    </li>
+    <li data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:20px var(--grid-gutter);padding:clamp(28px,4vw,56px) 0;border-bottom:1px solid var(--color-border-hairline);align-items:flex-start">
+      <span style="flex:0 0 clamp(72px,10vw,160px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em;font-variant-numeric:lining-nums">02</span>
+      <span style="flex:1 1 260px;display:grid;gap:12px;max-width:44ch"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Coinvolgi chi partecipa.</span><span style="font-size:15px;line-height:1.55;color:var(--grey-600)">Invita i responsabili degli stand a completare direttamente le proprie informazioni.</span></span>
+      <span data-mode="core" style="flex:1 1 280px;max-width:420px;display:grid;gap:12px;border:1px solid var(--grey-200);border-radius:12px;padding:16px;background:var(--white)">
+        <span style="font-size:12px;color:var(--grey-500)">Accesso di Marina · Friggitoria del Porto</span>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Uploader" files="{{ standPhotos }}" cover="{{ 1 }}" label="Fotografie dello stand" hint-size="100%,120px"></x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Input" label="Cosa si mangia" value="Frittura di paranza, alici, calamari" hint-size="100%,64px"></x-import>
+      </span>
+    </li>
+    <li data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:20px var(--grid-gutter);padding:clamp(28px,4vw,56px) 0;border-bottom:1px solid var(--ink);align-items:flex-start">
+      <span style="flex:0 0 clamp(72px,10vw,160px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em;font-variant-numeric:lining-nums">03</span>
+      <span style="flex:1 1 260px;display:grid;gap:12px;max-width:44ch"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Portala nelle mani delle persone.</span><span style="font-size:15px;line-height:1.55;color:var(--grey-600)">Pubblica la mappa, condividila e utilizzala tramite QR durante l'evento.</span></span>
+      <span data-mode="core" style="flex:1 1 280px;max-width:420px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;border:1px solid var(--grey-200);border-radius:12px;padding:16px;background:var(--white)">
+        <span style="width:96px;height:96px;border:1px solid var(--ink);border-radius:4px;display:grid;place-items:center;font-size:10px;font-weight:700;letter-spacing:.12em;flex:none">QR</span>
+        <span style="flex:1 1 140px;display:grid;gap:8px"><span style="font-size:14px;font-weight:700">hearth.app/e/sagra-del-pesce-baia</span><span style="font-size:12px;color:var(--grey-500)">Link pubblico · QR stampabile · aggiornabile fino all'ultimo minuto</span><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" hint-size="auto,32px">Pubblica la mappa</x-import></span>
+      </span>
+    </li>
+  </ol>
+</section>
+
+<!-- 5 · CESURA — un solo momento, scroll-driven -->
+<section id="cesura" data-screen-label="Cesura" style="margin-top:var(--space-silence);position:relative;height:150vh">
+  <figure style="margin:0;position:sticky;top:0;height:100vh;overflow:hidden;background:var(--ink)">
+    <img src="assets/photos/banco-mercato.jpg" alt="Un banco di mercato con i prodotti esposti" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%">
+    <img id="cesura-after" src="assets/photos/torre-macchia.jpg" alt="Una torre di pietra tra la macchia con il mare dietro" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;opacity:0">
+    <div style="position:absolute;inset:0;background:var(--color-overlay-scrim)"></div>
+    <figcaption id="cesura-a" style="position:absolute;left:var(--grid-margin);right:var(--grid-margin);bottom:clamp(40px,8vh,96px);color:var(--paper);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:.92;letter-spacing:-.025em;text-wrap:balance">Poi la festa finisce.</figcaption>
+    <figcaption id="cesura-b" style="position:absolute;left:var(--grid-margin);right:var(--grid-margin);bottom:clamp(40px,8vh,96px);color:var(--paper);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:.92;letter-spacing:-.025em;text-wrap:balance;opacity:0;text-align:right">Ma il territorio <em style="font-style:italic">resta</em>.</figcaption>
+  </figure>
+</section>
+
+<!-- 6 · COSA RIMANE -->
+<section id="territorio" data-screen-label="Cosa rimane" style="max-width:1440px;margin:0 auto;padding:var(--space-section) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+    <div style="display:grid;gap:16px;max-width:720px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Cosa rimane?</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:14ch">Una base digitale che raccoglie e collega.</h2></div>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:46ch;text-wrap:pretty">Le persone, le attività, i luoghi e le storie che emergono durante un evento non devono tornare a disperdersi quando l'evento finisce. Hearth li organizza in un patrimonio digitale permanente, aggiornabile e riutilizzabile.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+    <div data-reveal="wait" style="flex:1 1 320px;min-width:0"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.TerritoryIndex" items="{{ baseItems }}" numbered="{{ false }}" size="md" columns="{{ 2 }}" hint-size="100%,320px"></x-import></div>
+    <div data-reveal="wait" style="flex:1 1 380px;min-width:0;display:grid;gap:clamp(24px,3vw,40px);border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,48px);transition-delay:120ms">
+      <div style="display:flex;flex-wrap:wrap;gap:var(--grid-gutter)">
+        <div style="flex:1 1 180px;max-width:260px"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.PersonCard" href="{{ null }}" image="assets/photos/oste-bancone.jpg" name="Marina" role="Frigge la paranza dal 1998" place="Baia, Bacoli · NA" hint-size="100%,340px"></x-import></div>
+        <div style="flex:1 1 180px;max-width:260px"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.PlaceCard" href="{{ null }}" image="assets/photos/torre-macchia.jpg" name="Il porto di Baia" territory="Bacoli, Campi Flegrei" category="Luogo" hint-size="100%,340px"></x-import></div>
+      </div>
+      <div style="display:grid;gap:16px;border-top:1px solid var(--ink);padding-top:20px">
+        <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;text-wrap:pretty;max-width:30ch">I Ritmi dicono non solo cosa esiste, ma <em style="font-style:italic">quando</em> viverlo, quando accade, quando qualcosa cambia.</p>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Rhythm" rows="{{ rhythmRows }}" hint-size="100%,160px"></x-import>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CHI LO COSTRUISCE -->
+<section data-screen-label="Chi lo costruisce" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap-reverse;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-end">
+  <div data-reveal="wait" style="flex:1 1 360px;min-width:0;display:grid;gap:24px;padding-bottom:8px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Chi costruisce questo patrimonio?</div>
+    <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:14ch">Non chiediamo al territorio di raccontarsi da solo.</h2>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:46ch;text-wrap:pretty">Hearth costruisce e coordina una rete di fotografi, videomaker, creator ed esploratori locali che documentano persone, attività, luoghi, eventi, tradizioni e Ritmi.</p>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;max-width:28ch;text-wrap:pretty;border-top:1px solid var(--ink);padding-top:20px">Non forniamo soltanto uno strumento. Aiutiamo a costruire il patrimonio che lo strumento <em style="font-style:italic">contiene</em>.</p>
+  </div>
+  <figure style="flex:1 1 400px;max-width:720px;min-width:0;margin:0;display:grid;gap:12px">
+    <div style="aspect-ratio:3/2;overflow:hidden;border-radius:12px;background:var(--mist)"><img src="assets/photos/pescatore-reti.jpg" alt="Un pescatore sistema le reti" style="width:100%;height:100%;object-fit:cover;transition:transform 900ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Pescatore e reti" hint-size="100%,40px"></x-import>
+  </figure>
+</section>
+
+<!-- 8 · DOVE SI RIUTILIZZA -->
+<section data-screen-label="Dove si riutilizza" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:grid;gap:16px;max-width:720px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Dove può essere riutilizzato?</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:16ch">Quello che raccogli una volta, puoi usarlo ancora.</h2></div>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+    <div data-reveal="wait" style="flex:1 1 260px;max-width:360px;display:grid;gap:12px">
+      <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Una volta</div>
+      <div style="display:grid;gap:8px;border-top:1px solid var(--ink);padding-top:16px">
+        <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12"><em style="font-style:italic">Marina</em>, ritratto e storia</span>
+        <span style="font-size:13px;color:var(--grey-500)">12 fotografie · 1 video · scheda Persona · Ritmo</span>
+      </div>
+    </div>
+    <div data-reveal="wait" style="flex:2 1 420px;min-width:0;transition-delay:100ms">
+      <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500);padding-bottom:12px">Ancora</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0 var(--grid-gutter);border-top:1px solid var(--ink)">
+        <sc-for list="{{ reuse }}" as="r" hint-placeholder-count="8">
+          <div style="display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.1">{{ r.label }}</span><span style="font-size:12px;color:var(--grey-500)">{{ r.note }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div data-reveal="wait" style="display:flex;flex-wrap:nowrap;gap:12px;align-items:center;margin-top:clamp(24px,3vw,40px);padding:16px 0 8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500);white-space:nowrap;overflow-x:auto;scrollbar-width:none;mask-image:linear-gradient(90deg,#000 92%,transparent)">
+    <span style="color:var(--ink)">Produrre</span><span>→</span><span>Organizzare</span><span>→</span><span>Aggiornare</span><span>→</span><span>Distribuire</span><span>→</span><span style="color:var(--ink)">Riutilizzare</span>
+  </div>
+</section>
+
+<!-- 9 · NEL TEMPO -->
+<section id="collaborazione" data-screen-label="Nel tempo" style="background:var(--white);margin-top:var(--space-silence);padding:var(--space-section) 0;border-top:1px solid var(--color-border-hairline);border-bottom:1px solid var(--color-border-hairline)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+      <div style="display:grid;gap:16px;max-width:720px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Cosa succede nel tempo?</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:12ch">Non ripartire da zero ogni anno.</h2></div>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:46ch;text-wrap:pretty">Non una campagna: una base che cresce nel tempo. Il patrimonio viene aggiornato — orari, stagioni, nuove persone — e ampliato quando ha senso: una frazione, una tradizione, un'altra festa.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,80px) 0;margin-top:clamp(40px,5vw,72px)">
+      <div data-reveal="wait" style="flex:1 1 320px;min-width:0;padding-right:clamp(20px,4vw,64px);display:grid;gap:24px;align-content:start">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Prima</div>
+        <div style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15;color:var(--grey-400);display:grid;gap:14px">
+          <span style="margin-left:6%">social sparsi</span><span style="margin-left:28%">PDF</span><span>sito non aggiornato</span><span style="margin-left:16%;font-style:italic">materiale della Pro Loco</span><span style="margin-left:40%">fotografie senza archivio</span><span style="margin-left:8%">informazioni nelle chat</span><span style="margin-left:22%;font-style:italic">contenuti che spariscono dopo l'evento</span>
+        </div>
+      </div>
+      <div data-reveal="wait" style="flex:1 1 320px;min-width:0;border-left:1px solid var(--ink);padding-left:clamp(20px,4vw,64px);display:grid;gap:24px;align-content:start;transition-delay:150ms">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)">Con Hearth</div>
+        <div style="display:grid;gap:0">
+          <sc-for list="{{ after }}" as="a" hint-placeholder-count="8">
+            <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--color-border-hairline);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15"><span style="width:8px;height:8px;border-radius:50%;background:var(--ink);flex:none"></span>{{ a }}</div>
+          </sc-for>
+        </div>
+        <div style="font-size:14px;color:var(--grey-600)">tutto collegato e riutilizzabile, anno dopo anno</div>
+      </div>
+    </div>
+    <div data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;margin-top:clamp(40px,5vw,64px);padding-top:24px;border-top:1px solid var(--ink)">
+      <a href="mailto:territori@hearth.travel" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Parliamo del tuo territorio</x-import></a>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ eventToolUrl }}" arrow="{{ true }}" hint-size="auto,24px">Inizia dal tuo prossimo evento</x-import>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · TERRITORI REALI -->
+<section data-screen-label="Territori reali" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;padding-bottom:20px;border-bottom:1px solid var(--ink)">
+    <div style="display:grid;gap:12px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Archivio · territori Hearth</div>
+      <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Dove Hearth è già al lavoro.</h2>
+    </div>
+    <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Dati indicativi · in attesa dei conteggi definitivi</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,4vw,56px) var(--grid-gutter);margin-top:clamp(32px,4vw,56px)">
+    <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+      <article data-reveal="wait" style="display:grid;gap:16px">
+        <div style="aspect-ratio:3/2;border-radius:12px;overflow:hidden;background:var(--mist)"><img src="{{ c.src }}" alt="{{ c.alt }}" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+        <div style="display:grid;gap:4px"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">{{ c.name }}</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">{{ c.ente }}</span></div>
+        <dl style="margin:0;display:grid;grid-template-columns:1fr auto;gap:6px 16px;font-size:13px;border-top:1px solid var(--color-border-hairline);padding-top:12px;font-variant-numeric:tabular-nums">
+          <dt style="color:var(--grey-500)">Luoghi</dt><dd style="margin:0">{{ c.luoghi }}</dd>
+          <dt style="color:var(--grey-500)">Persone e attività</dt><dd style="margin:0">{{ c.soggetti }}</dd>
+          <dt style="color:var(--grey-500)">Eventi</dt><dd style="margin:0">{{ c.eventi }}</dd>
+        </dl>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 13 · FAQ -->
+<section data-screen-label="FAQ" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <h2 style="margin:0;flex:1 1 240px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:12ch">Domande concrete.</h2>
+  <div style="flex:2 1 480px;min-width:0;border-top:1px solid var(--ink)">
+    <sc-for list="{{ faq }}" as="f" hint-placeholder-count="6">
+      <details style="border-bottom:1px solid var(--color-border-hairline)">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">{{ f.q }}<span data-plus="true" aria-hidden="true" style="font-family:var(--font-ui);font-size:22px;line-height:1;color:var(--grey-500);transition:transform 200ms;flex:none">+</span></summary>
+        <p style="margin:0;padding:0 0 24px;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:56ch;text-wrap:pretty">{{ f.a }}</p>
+      </details>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 14 · CLOSING -->
+<section data-screen-label="Chiusura" style="margin-top:var(--space-silence)">
+  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Hero" variant="image" image="assets/photos/campo-monte-mare.jpg" image-alt="Campi, montagna e mare in un'unica veduta" focal="50% 55%" min-height="88vh" eyebrow="Hearth per i territori" title="Parti dal prossimo evento. Costruisci da lì il patrimonio del tuo territorio." caption="Campo, monte, mare" hint-size="100%,680px"></x-import>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(32px,4vw,64px) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;border-top:1px solid var(--ink)">
+    <a href="{{ eventToolUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Configura gratis il tuo evento</x-import></a>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="#territorio" arrow="{{ true }}" hint-size="auto,24px">Racconta il tuo territorio</x-import>
+    <span style="margin-left:auto;font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Configuri gratuitamente. Paghi solo quando scegli di pubblicare.</span>
+  </div>
+</section>
+
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.SiteFooter" wordmark-src="assets/hearth-wordmark.svg" note="Hearth S.r.l. Società Benefit" year="{{ 2026 }}" links="{{ footerLinks }}" hint-size="100%,140px"></x-import>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Routing dell'ecosistema. EVENT_TOOL è un PLACEHOLDER: sostituire con l'URL definitivo del tool Eventi.
+const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', home: 'Hearth Homepage.dc.html', territori: 'Hearth Territori.dc.html', creator: 'Hearth Creator.dc.html', attivita: 'Hearth Attivita.dc.html', pass: 'Hearth Pass.dc.html' };
+const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  componentDidMount() {
+    fetch('assets/video/territori-hero.mp4').then(r => r.blob()).then(b => { this._videoUrl = URL.createObjectURL(b); this.setState({ videoTerritori: this._videoUrl }, () => { const el = document.querySelector('section video'); if (el) { el.load(); el.play().catch(() => {}); } }); }).catch(() => {});
+    this._doc = e => { if (this.state.menuOpen && !e.target.closest('[data-nav-menu]') && !e.target.closest('header')) this.setState({ menuOpen: false }); };
+    document.addEventListener('click', this._doc);
+    document.documentElement.setAttribute('data-reveal-ready', '');
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.setAttribute('data-reveal', 'in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px', threshold: 0.06 }) : null;
+    const scan = () => document.querySelectorAll('[data-reveal="wait"]').forEach(el => io ? io.observe(el) : el.setAttribute('data-reveal', 'in'));
+    scan();
+    this._mo = new MutationObserver(scan);
+    this._mo.observe(document.body, { childList: true, subtree: true });
+    if (!window.HearthDesignSystem_ed33ec) this._t = setTimeout(() => this.forceUpdate(), 400);
+    // Cesura: crossfade guidato dallo scroll lungo i 50vh extra della sezione
+    this._sc = () => {
+      const sec = document.getElementById('cesura'); if (!sec) return;
+      const r = sec.getBoundingClientRect(); const travel = r.height - window.innerHeight;
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, travel)));
+      const ease = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      const img = document.getElementById('cesura-after'), a = document.getElementById('cesura-a'), b = document.getElementById('cesura-b');
+      if (img) img.style.opacity = ease; if (a) a.style.opacity = 1 - Math.min(1, ease * 1.6); if (b) b.style.opacity = Math.max(0, (ease - .4) / .6);
+    };
+    window.addEventListener('scroll', this._sc, { passive: true }); this._sc();
+  }
+  componentWillUnmount() { if (this._videoUrl) URL.revokeObjectURL(this._videoUrl); this._mo && this._mo.disconnect(); clearTimeout(this._t); document.removeEventListener('click', this._doc); window.removeEventListener('scroll', this._sc); }
+  renderVals() {
+    const DS = window.HearthDesignSystem_ed33ec;
+    const scrollTo = href => { const t = document.querySelector(href); if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' }); };
+    const page = 'territori';
+    const st = (state, label) => DS ? React.createElement(DS.Status, { state, label }) : null;
+    return {
+      videoTerritori: this.state.videoTerritori,
+      eventToolUrl: ROUTES.eventTool,
+      menuOpen: this.state.menuOpen,
+      onNavigate: (value, href) => {
+        this.setState({ menuOpen: false });
+        if (href && href.startsWith('#')) { scrollTo(href); return; }
+        if (href) window.location.href = href;
+      },
+      navItems: [{ label: 'Esplora', value: 'esplora', href: ROUTES.app }, { label: 'Per i territori', value: 'territori', href: ROUTES.territori }, { label: 'Attività', value: 'attivita', href: ROUTES.attivita }, { label: 'Creator', value: 'creator', href: ROUTES.creator }, { label: 'Hearth Pass', value: 'pass', href: ROUTES.pass }],
+      navAction: DS ? React.createElement(DS.Button, { variant: 'primary', shape: 'pill', size: 'sm', onClick: () => { window.location.href = ROUTES.eventTool; } }, NAV_CTA[page]) : null,
+      statusDone: st('published', 'Completato'),
+      statusWait: st('review', 'In attesa'),
+      statusDraft: st('draft', 'Bozza'),
+      standPhotos: [{ id: 1, src: 'assets/photos/banco-mercato.jpg', name: 'banco.jpg' }, { id: 2, src: 'assets/photos/oste-bancone.jpg', name: 'marina.jpg' }],
+      rhythmRows: [
+        { label: 'Sagra del Pesce', note: 'il porto si riempie', months: [10], accent: true },
+        { label: 'Friggitoria del Porto', note: 'aperta da Pasqua a ottobre', months: [4, 5, 6, 7, 8, 9, 10] },
+        { label: 'Parco sommerso', note: 'visite in barca, acqua limpida', months: [5, 6, 7, 8, 9] },
+        { label: 'Processione a mare', note: 'una domenica di agosto', months: [8] }
+      ],
+      baseItems: [
+        { href: ROUTES.app, label: 'Persone', sub: 'chi apre il paese' }, { href: ROUTES.app, label: 'Luoghi', sub: 'con coordinate e stagione' }, { href: ROUTES.app, label: 'Attività', sub: 'botteghe, cucine, cantine' }, { href: ROUTES.app, label: 'Prodotti', sub: 'cosa si fa qui e solo qui' }, { href: ROUTES.app, label: 'Eventi', sub: 'quelli che tornano ogni anno' }, { href: ROUTES.app, label: 'Fotografie', sub: 'con autore e data' }, { href: ROUTES.app, label: 'Video', sub: 'brevi, sul posto' }, { href: ROUTES.app, label: 'Storie', sub: 'raccontate da chi le vive' }, { href: ROUTES.app, label: 'Ritmi', sub: 'quando accade' }
+      ],
+      reuse: [
+        { label: 'Hearth', note: 'scheda pubblica, mappa, Pass' }, { label: 'Portale del Comune', note: 'stesso contenuto, tuo dominio' }, { label: 'QR sul territorio', note: 'davanti alla bottega' }, { label: 'Materiali informativi', note: 'pieghevoli, pannelli' }, { label: 'Itinerari', note: 'a piedi, in barca' }, { label: 'Eventi', note: 'la sagra del prossimo anno' }, { label: 'Promozione', note: 'social, stampa' }, { label: 'Progetti e bandi', note: 'patrimonio e contenuti già disponibili' }
+      ],
+      after: ['Persone', 'Attività', 'Luoghi', 'Eventi', 'Contenuti', 'Ritmi', 'Mappe', 'Guide'],
+      cases: [
+        { name: 'Capraia', ente: 'Comune di Capraia Isola', photo: 'paese-dal-mare', alt: 'L\u2019isola di Capraia vista dal mare', luoghi: '20', soggetti: '10', eventi: '2' },
+        { name: 'Agnone', ente: 'Comune di Agnone', photo: 'agnone-campane', alt: 'Campane appese nella fonderia, tra catene e attrezzi', luoghi: '20', soggetti: '10', eventi: '3' },
+        { name: 'Fabbriche di Vergemoli', ente: 'Comune di Fabbriche di Vergemoli', photo: 'vergemoli-ponte-dogana', alt: 'Il ponte della Dogana e le case in pietra sul torrente', luoghi: '20', soggetti: '10', eventi: '2' }
+      ].map(c => Object.assign({}, c, { src: 'assets/photos/' + c.photo + '.jpg' })),
+      faq: [
+        { q: 'Posso usare Hearth solo per un evento?', a: 'Sì. Lo strumento Eventi funziona da solo. Il resto viene dopo, se e quando vuoi.' },
+        { q: 'Quanto costa creare la mappa?', a: 'Configuri gratuitamente. Paghi solo quando scegli di pubblicare.' },
+        { q: 'Chi inserisce gli stand?', a: 'Tu inserisci nome e email del responsabile. Il responsabile completa foto, descrizione e orari dal proprio accesso. Tu moderi.' },
+        { q: 'Dobbiamo già avere fotografie e contenuti?', a: 'No. Si parte da quello che c\u2019è; per il resto Hearth coordina fotografi e creator sul territorio.' },
+        { q: 'Possiamo utilizzare i contenuti anche sul nostro sito?', a: 'Sì. I contenuti prodotti nell\u2019ambito del progetto possono essere riutilizzati dal territorio nei canali e nei materiali previsti dall\u2019accordo.' },
+        { q: 'Hearth sostituisce il sito del Comune?', a: 'No. Il sito istituzionale resta; Hearth raccoglie e tiene aggiornato ciò che il sito di solito non riesce a raccontare.' }
+      ],
+      footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.home + '#storie'], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Contatti', 'mailto:info@hearth.email']].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+    };
+  }
+}
+</script>
+</body>
+</html>

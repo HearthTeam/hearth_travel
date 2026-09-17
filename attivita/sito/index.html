@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
+<link rel="icon" type="image/svg+xml" href="/assets/hearth-symbol-notext.svg">
+<link rel="apple-touch-icon" href="/assets/hearth-symbol.svg">
+<title>Sito web Hearth per la tua attività · €300 | Hearth</title>
+<meta name="description" content="Con €20 Hearth prepara una prima demo del sito della tua attività. La vedi prima di decidere: se prosegui, i €20 vengono scalati dai €300 complessivi.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#faf8f3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Hearth">
+<meta property="og:title" content="Prima te lo facciamo vedere. Poi decidi.">
+<meta property="og:description" content="Con €20 prepariamo una prima demo del sito della tua attività. Se ti piace, i €20 vengono scalati dai €300 e completiamo il progetto.">
+<meta property="og:image" content="https://hearth.travel/assets/photos/fornaia-pane.jpg">
+<meta name="twitter:image" content="https://hearth.travel/assets/photos/fornaia-pane.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hearth.travel/attivita/sito">
+<meta property="og:url" content="https://hearth.travel/attivita/sito">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Hearth — Sito web per le attività","description":"Hearth progetta il sito web di piccole attività e realtà locali. Con €20 si avvia una prima demo navigabile, scalati dai €300 complessivi se il progetto viene completato.","url":"https://hearth.travel","email":"info@hearth.email","telephone":"+393792844477","areaServed":"IT","address":{"@type":"PostalAddress","streetAddress":"III Traversa Via Alvanella 4","addressLocality":"Monteforte Irpino","addressRegion":"AV","addressCountry":"IT"},"vatID":"02960700645","offers":{"@type":"Offer","name":"Sito web Hearth","price":"300","priceCurrency":"EUR"}}</script>
+<style>
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper, #faf8f3);color:#151412;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:#151412}
+a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+[data-vesta-home]{display:block}
+header img[alt=""]{transition:transform var(--motion-default) var(--ease-editorial);transform-origin:50% 50%}
+[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:scale(1.04) rotate(5deg)}
+@media (hover:none){[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+@media (max-width:1023px){[data-vesta-home]{display:none}}
+@media (prefers-reduced-motion:reduce){header img[alt=""]{transition:none}[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+
+/* navbar: le voci non vanno mai a capo */
+@media (min-width:1024px){
+  [data-navbar] header nav a{white-space:nowrap;flex:none}
+  [data-navbar] header nav{gap:22px}
+}
+/* sotto 1600px il wordmark non sta al centro: lockup a sinistra, voci a destra */
+@media (min-width:1024px) and (max-width:1599px){
+  [data-navbar] header{grid-template-columns:auto auto minmax(0,1fr) !important;column-gap:clamp(20px,2.4vw,32px) !important}
+  [data-navbar] header nav{gap:clamp(14px,1.6vw,22px);justify-content:flex-end}
+}
+</style>
+</helmet>
+
+<main style="font-family:var(--font-ui);color:var(--ink)">
+
+<a href="#apertura" style="position:absolute;left:-9999px;top:0;z-index:500;padding:12px 20px;background:var(--ink);color:var(--paper);text-decoration:none" style-focus="left:12px;top:12px">Vai al contenuto</a>
+
+<div data-navbar="true" style="position:sticky;top:0;z-index:var(--z-sticky);background:var(--paper)">
+  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.TopNav" mode="stories" wordmark-src="{{ wordmarkSrc }}" symbol-src="{{ symbolSrc }}" items="{{ navItems }}" active="attivita" home-href="/" action="{{ navAction }}" on-navigate="{{ onNavigate }}" hint-size="100%,64px"></x-import>
+  <a href="/" data-vesta-home="true" aria-label="Hearth · Torna alla homepage" style="position:absolute;left:calc(var(--grid-margin) - 4px);top:10px;width:44px;height:44px;border-radius:50%;z-index:calc(var(--z-sticky) + 1)"></a>
+
+</div>
+
+<!-- ═══ APERTURA · Text Monument ═══ -->
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,520px">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--space-block) var(--grid-gutter)">
+  <div style="flex:2.4 1 min(100%,440px);display:grid;gap:var(--space-8);min-width:0" id="apertura">
+    <div data-rv="0" style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:var(--type-eyebrow-lh);letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:var(--color-text-secondary)">Siti web per le attività</div>
+    <h1 data-rv="1" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:var(--type-display-l-lh);letter-spacing:var(--type-display-l-ls);text-wrap:balance;max-width:22ch">Prima te lo facciamo <em style="font-style:italic;font-weight:300">vedere</em>. Poi decidi.</h1>
+    <div data-rv="2" style="display:grid;gap:var(--space-6)">
+      <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:var(--type-editorial-body-lh);max-width:var(--measure-editorial);text-wrap:pretty">Parti con €20. Prepariamo una prima demo del sito della tua attività. Se ti piace, i €20 vengono scalati dai €300 e completiamo il progetto.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4)">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" size="lg" shape="pill" on-click="{{ openDrawer }}" hint-size="auto,48px">Richiedi la tua demo · €20</x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="#come-funziona" arrow="{{ true }}" hint-size="auto,24px">Scopri come funziona</x-import>
+      </div>
+    </div>
+  </div>
+
+  <figure data-rv="3" style="flex:1 1 min(100%,260px);margin:0;display:grid;gap:var(--space-3);min-width:0">
+    <img src="/assets/photos/fornaia-pane.jpg" alt="Una fornaia mostra due fette di pane appena tagliate nel suo forno" width="1066" height="1600" style="width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:var(--radius-photo)">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Il forno" descriptor="il pane, ogni mattina" variant="portrait" hint-size="100%,40px"></x-import>
+  </figure>
+  </div>
+</x-import>
+
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="block" columns="{{ false }}" hint-size="100%,160px">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--space-8) var(--grid-gutter)">
+  <div data-rv="4" style="flex:3 1 min(100%,420px);min-width:0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Facts" items="{{ prezzi }}" hint-size="100%,120px"></x-import>
+  </div>
+  <p data-rv="5" style="flex:1 1 min(100%,220px);margin:0;font-size:var(--type-metadata-size);line-height:var(--type-metadata-lh);letter-spacing:var(--type-metadata-ls);color:var(--color-text-secondary);min-width:0">Un servizio, un prezzo. I €20 non sono un costo in più: sono la prima parte dei €300.</p>
+  </div>
+</x-import>
+
+<!-- ═══ PERCHÉ POSSIAMO MOSTRARTELO PRIMA ═══ -->
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,480px">
+  <div data-rv="0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.SectionHead" eyebrow="Perché possiamo mostrartelo prima" title="Non partiamo da un foglio bianco." as="h2" hint-size="100%,120px"></x-import>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:var(--space-block) var(--grid-gutter);align-items:start">
+    <div data-rv="1" style="display:grid;gap:var(--space-6);min-width:0">
+      <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:var(--type-editorial-body-lh);max-width:var(--measure-editorial);text-wrap:pretty">Hearth documenta i territori italiani e le attività che li tengono in vita: <em style="font-style:italic;font-weight:300">i forni</em>, le botteghe, le cantine, gli <em style="font-style:italic;font-weight:300">osti</em> dietro al bancone. Fotografie, descrizioni, luoghi, persone.</p>
+      <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:var(--type-editorial-body-lh);max-width:var(--measure-editorial);text-wrap:pretty">È lo stesso lavoro che serve per progettare un sito. Per questo possiamo prepararti una proposta vera prima che tu debba decidere.</p>
+      <div style="padding-top:var(--space-4)">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.PullQuote" size="md" hint-size="100%,140px">Se Hearth conosce già la tua attività, non dobbiamo ricominciare <em style="font-style:italic;font-weight:300">da zero</em>.</x-import>
+      </div>
+    </div>
+    <figure data-rv="2" style="margin:0;display:grid;gap:var(--space-3);min-width:0">
+      <img src="/assets/photos/oste-bancone.jpg" alt="Un oste appoggiato al bancone parla con un cliente, bicchieri e bottiglia in primo piano" loading="lazy" width="1280" height="1600" style="width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:60% 40%;border-radius:var(--radius-photo)">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Il bancone" descriptor="dove si spiega il vino" variant="portrait" hint-size="100%,40px"></x-import>
+    </figure>
+  </div>
+</x-import>
+
+<!-- ═══ COME FUNZIONA ═══ -->
+<div id="come-funziona" style="scroll-margin-top:88px">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,640px">
+  <div data-rv="0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.SectionHead" eyebrow="Come funziona" title="€20 per vederlo. €300 se lo vuoi." as="h2" hint-size="100%,120px"></x-import>
+  </div>
+  <ol style="margin:0;padding:0;list-style:none;border-top:1px solid var(--ink)">
+    <sc-for list="{{ passi }}" as="p" hint-placeholder-count="5">
+      <li data-rv="{{ p.i }}" style="display:grid;grid-template-columns:clamp(56px,7vw,120px) minmax(0,1fr);gap:var(--space-4) var(--grid-gutter);padding:var(--space-8) 0;border-bottom:1px solid var(--color-border-hairline)">
+        <span aria-hidden="true" style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:1;letter-spacing:-.02em;font-variant-numeric:lining-nums;color:var(--grey-400)">{{ p.n }}</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:var(--space-4) var(--grid-gutter);align-items:baseline;min-width:0">
+          <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:var(--type-editorial-heading-lh);letter-spacing:var(--type-editorial-heading-ls);text-wrap:pretty;min-width:0">{{ p.titolo }}</h3>
+          <p style="margin:0;font-size:var(--type-body-size);line-height:var(--type-body-lh);color:var(--color-text-secondary);max-width:46ch;min-width:0">{{ p.testo }}</p>
+        </div>
+      </li>
+    </sc-for>
+  </ol>
+  <div data-rv="6" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-4) var(--space-10);padding-top:var(--space-8)">
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:var(--type-editorial-heading-lh);letter-spacing:var(--type-editorial-heading-ls);max-width:30ch">I €20 sono già dentro i €300. Se prosegui, restano <em style="font-style:italic;font-weight:300">€280</em>.</p>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="secondary" on-click="{{ openDrawer }}" hint-size="auto,40px">Richiedi la tua demo · €20</x-import>
+  </div>
+</x-import>
+</div>
+
+<!-- ═══ ESEMPIO ═══ -->
+<div id="esempio" style="scroll-margin-top:88px">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,720px">
+  <div data-rv="0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.SectionHead" eyebrow="Esempio" title="Un sito Hearth, nel concreto." as="h2" hint-size="100%,120px"></x-import>
+  </div>
+  <sc-for list="{{ progetti }}" as="pr" hint-placeholder-count="1">
+    <article style="display:grid;gap:var(--space-8)">
+      <figure data-rv="1" style="margin:0;display:grid;gap:var(--space-4)">
+        <img src="{{ pr.immagine }}" alt="{{ pr.alt }}" loading="lazy" width="2422" height="1362" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 0%;border-radius:var(--radius-photo-hero)">
+        <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4) var(--space-8)">
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="{{ pr.nome }}" place="{{ pr.luogo }}" date="{{ pr.categoria }}" number="{{ pr.numero }}" variant="archive" hint-size="auto,40px"></x-import>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Badge" hint-size="auto,24px">{{ pr.etichetta }}</x-import>
+        </div>
+      </figure>
+      <div data-rv="2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--space-6) var(--grid-gutter);align-items:start">
+        <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:var(--type-editorial-body-lh);max-width:var(--measure-editorial);text-wrap:pretty;min-width:0">{{ pr.concetto }}</p>
+        <div style="display:grid;gap:var(--space-4);justify-items:start;min-width:0">
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ pr.url }}" arrow="{{ true }}" hint-size="auto,24px">Apri la demo</x-import>
+          <p style="margin:0;font-size:var(--type-metadata-size);line-height:var(--type-metadata-lh);letter-spacing:var(--type-metadata-ls);color:var(--color-text-secondary);max-width:40ch">{{ pr.nota }}</p>
+        </div>
+      </div>
+    </article>
+  </sc-for>
+</x-import>
+</div>
+
+<!-- ═══ COSA HEARTH PUÒ GIÀ SAPERE ═══ -->
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,560px">
+  <div data-rv="0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.SectionHead" eyebrow="Se sei già su Hearth" title="Da dove partiamo, quando il materiale esiste già." as="h2" hint-size="100%,120px"></x-import>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:var(--space-block) var(--grid-gutter);align-items:start">
+    <div data-rv="1" style="min-width:0">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.TerritoryIndex" items="{{ materiali }}" numbered="{{ true }}" size="md" hint-size="100%,360px"></x-import>
+    </div>
+    <div data-rv="2" style="display:grid;gap:var(--space-6);min-width:0">
+      <figure style="margin:0;display:grid;gap:var(--space-3)">
+        <img src="/assets/photos/banco-mercato.jpg" alt="Una donna al banco di un mercato consegna un pacchetto a un cliente" loading="lazy" width="936" height="1400" style="width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:50% 35%;border-radius:var(--radius-photo)">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Il banco" descriptor="il cliente che torna" variant="portrait" hint-size="100%,40px"></x-import>
+      </figure>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Alert" tone="info" title="Presenza su Hearth e sito sono due cose separate" hint-size="100%,140px">Acquistare il sito non aumenta la visibilità su Hearth, non migliora il posizionamento, non comporta trattamento editoriale né inserimento nelle guide.</x-import>
+    </div>
+  </div>
+</x-import>
+
+<!-- ═══ COSA OTTIENI ═══ -->
+<div id="cosa-ottieni" style="scroll-margin-top:88px">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,520px">
+  <div data-rv="0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.SectionHead" eyebrow="Cosa ottieni" title="Il sito, pubblicato e funzionante." as="h2" hint-size="100%,120px"></x-import>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 var(--space-10);border-top:1px solid var(--ink)">
+    <sc-for list="{{ contenuti }}" as="c" hint-placeholder-count="9">
+      <li data-rv="{{ c.i }}" style="display:flex;align-items:baseline;gap:var(--space-4);padding:var(--space-5) 0;border-bottom:1px solid var(--color-border-hairline)">
+        <span aria-hidden="true" style="font-size:var(--type-metadata-size);letter-spacing:var(--type-metadata-ls);color:var(--color-text-secondary);font-variant-numeric:tabular-nums;flex:none">{{ c.n }}</span>
+        <span style="font-size:var(--type-body-size);line-height:var(--type-body-lh)">{{ c.t }}</span>
+      </li>
+    </sc-for>
+  </ul>
+  <div data-rv="10" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--space-6) var(--grid-gutter);padding-top:var(--space-8)">
+    <p style="margin:0;font-size:var(--type-body-sm-size);line-height:1.6;color:var(--color-text-secondary);max-width:52ch;min-width:0">E-commerce, sistemi di prenotazione su misura, aree riservate, integrazioni o siti multipagina non rientrano in questo servizio: li valutiamo separatamente, sempre prima di iniziare.</p>
+    <p style="margin:0;font-size:var(--type-body-sm-size);line-height:1.6;color:var(--color-text-secondary);max-width:52ch;min-width:0">Le impostazioni di base per Google riguardano titolo, descrizione e struttura della pagina.</p>
+  </div>
+</x-import>
+</div>
+
+<!-- ═══ CONTENUTI PROFESSIONALI · OPZIONALI ═══ -->
+<div id="produzione" style="scroll-margin-top:88px">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,420px">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-block) var(--grid-gutter);border-top:1px solid var(--ink);padding-top:var(--space-8)">
+    <div data-rv="0" style="flex:1.6 1 min(100%,360px);min-width:0;display:grid;gap:var(--space-6)">
+      <div style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:var(--type-eyebrow-lh);letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:var(--color-text-secondary)">Contenuti professionali · opzionali</div>
+      <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:var(--type-display-m-lh);letter-spacing:var(--type-display-m-ls);text-wrap:balance;max-width:22ch">Il sito può partire da quello che hai. Oppure possiamo raccontarlo <em style="font-style:italic;font-weight:300">meglio</em>.</h2>
+      <p style="margin:0;font-size:var(--type-body-size);line-height:var(--type-body-lh);color:var(--color-text-secondary);max-width:54ch;text-wrap:pretty">Se la tua attività non ha ancora fotografie e video adatti, dalla piattaforma Hearth Business puoi richiedere una produzione professionale realizzata da un Creator Hearth.</p>
+    </div>
+    <div data-rv="1" style="flex:1 1 min(100%,280px);min-width:0;display:grid;gap:var(--space-5);border-left:1px solid var(--color-border-hairline);padding-left:var(--space-8)">
+      <div style="display:grid;gap:var(--space-2)">
+        <div style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:1.2;letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:var(--color-text-secondary)">Produzione foto + video Hearth</div>
+        <div style="font-family:var(--font-editorial);font-weight:300;font-size:clamp(44px,5vw,68px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums">€200</div>
+      </div>
+      <p style="margin:0;font-size:var(--type-body-sm-size);line-height:1.6;color:var(--color-text-secondary);max-width:40ch;text-wrap:pretty">I contenuti migliorano la presenza della tua attività su Hearth e possono essere utilizzati anche nel sito.</p>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ productionUrl }}" arrow="{{ true }}" hint-size="auto,24px">Richiedi foto + video</x-import>
+      <p style="margin:0;font-size:var(--type-metadata-size);line-height:1.5;letter-spacing:var(--type-metadata-ls);color:var(--color-text-secondary);max-width:42ch;padding-top:var(--space-2);border-top:1px solid var(--color-border-hairline)">Servizio separato dal sito. L'acquisto di una produzione non modifica ranking o trattamento editoriale su Hearth.</p>
+    </div>
+  </div>
+</x-import>
+</div>
+
+<!-- ═══ FORM ═══ -->
+<div id="richiedi" style="scroll-margin-top:88px">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,760px">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-block) var(--grid-gutter)">
+  <div data-rv="0" style="flex:1 1 min(100%,280px);display:grid;gap:var(--space-6);min-width:0">
+    <div style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:var(--type-eyebrow-lh);letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:var(--color-text-secondary)">Richiedi la tua demo</div>
+    <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:var(--type-display-m-lh);letter-spacing:var(--type-display-m-ls);text-wrap:balance">Raccontaci la tua attività.</h2>
+    <p style="margin:0;font-size:var(--type-body-size);line-height:var(--type-body-lh);color:var(--color-text-secondary);max-width:40ch">Ci bastano poche informazioni per capire da dove partire. Il resto lo troviamo noi.</p>
+    <div style="display:grid;gap:var(--space-2);padding-top:var(--space-4);border-top:1px solid var(--color-border-hairline)">
+      <div style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:var(--type-eyebrow-lh);letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:var(--color-text-secondary)">Preferisci scrivere</div>
+      <a href="https://wa.me/393792844477" target="_blank" rel="noopener noreferrer" style="font-size:var(--type-body-size)">WhatsApp +39 379 28 444 77</a>
+      <a href="mailto:info@hearth.email" style="font-size:var(--type-body-size)">info@hearth.email</a>
+    </div>
+  </div>
+  <div data-rv="1" style="flex:1.8 1 min(100%,380px);min-width:0">
+    <dc-import name="DemoRequest" hint-size="100%,760px"></dc-import>
+  </div>
+  </div>
+</x-import>
+</div>
+
+<!-- ═══ DOMANDE ═══ -->
+<div id="domande" style="scroll-margin-top:88px">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" space-top="section" columns="{{ false }}" hint-size="100%,560px">
+  <div data-rv="0">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.SectionHead" eyebrow="Domande" title="Domande semplici. Risposte chiare." as="h2" hint-size="100%,120px"></x-import>
+  </div>
+  <div style="border-top:1px solid var(--ink);max-width:var(--grid-max)">
+    <sc-for list="{{ domande }}" as="d" hint-placeholder-count="6">
+      <div data-rv="{{ d.i }}" style="border-bottom:1px solid var(--color-border-hairline)">
+        <h3 style="margin:0">
+          <button type="button" aria-expanded="{{ d.aperta }}" sc-camel-on-click="{{ d.tocca }}" style="display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-6);width:100%;padding:var(--space-6) 0;background:none;border:none;text-align:left;cursor:pointer;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:var(--type-editorial-quote-lh);color:var(--ink)">
+            <span style="min-width:0">{{ d.q }}</span>
+            <span aria-hidden="true" style="flex:none;width:20px;height:20px;margin-right:5px;position:relative;transform:rotate({{ d.rot }});transition:transform var(--motion-default) var(--ease-standard)">
+              <span style="position:absolute;top:9px;left:0;width:20px;height:1px;background:var(--ink)"></span>
+              <span style="position:absolute;top:0;left:9px;width:1px;height:20px;background:var(--ink)"></span>
+            </span>
+          </button>
+        </h3>
+        <sc-if value="{{ d.aperta }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;padding:0 var(--space-10) var(--space-6) 0;font-size:var(--type-body-size);line-height:1.65;color:var(--color-text-secondary);max-width:64ch">{{ d.a }}</p>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+</x-import>
+</div>
+
+<!-- ═══ CHIUSURA · campo ink ═══ -->
+<section style="margin-top:var(--space-silence);padding:var(--space-section) 0;background:var(--ink);color:var(--paper)">
+  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.PageGrid" columns="{{ false }}" hint-size="100%,480px">
+    <div data-rv="0" style="display:grid;gap:var(--space-10)">
+      <div style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:var(--type-eyebrow-lh);letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:rgba(250,248,243,.72)">Siti web per le attività</div>
+      <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:var(--type-display-l-lh);letter-spacing:var(--type-display-l-ls);text-wrap:balance;max-width:20ch">Prima te lo facciamo <em style="font-style:italic;font-weight:300">vedere</em>. Poi decidi.</h2>
+      <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:var(--space-6);border-top:1px solid rgba(250,248,243,.32);padding-top:var(--space-4);max-width:760px">
+        <sc-for list="{{ prezzi }}" as="pz" hint-placeholder-count="3">
+          <div style="display:grid;gap:var(--space-2)">
+            <dt style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:1.2;letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:rgba(250,248,243,.72)">{{ pz.label }}</dt>
+            <dd style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:clamp(36px,4.4vw,56px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums">{{ pz.value }}</dd>
+          </div>
+        </sc-for>
+      </dl>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-4)">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="inverse" size="lg" on-click="{{ openDrawer }}" hint-size="auto,48px">Richiedi la tua demo · €20</x-import>
+        <a href="#come-funziona" style="font-family:var(--font-ui);font-size:var(--type-body-size);color:var(--paper);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(250,248,243,.5)" style-hover="text-decoration-color:#faf8f3;color:#faf8f3">Come funziona →</a>
+      </div>
+    </div>
+  </x-import>
+</section>
+
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.SiteFooter" wordmark-src="{{ wordmarkSrc }}" note="Hearth S.r.l. Società Benefit · P. IVA 02960700645 · info@hearth.email" year="{{ 2026 }}" links="{{ footerLinks }}" hint-size="100%,140px"></x-import>
+
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.Drawer" open="{{ drawerOpen }}" on-close="{{ closeDrawer }}" title="Richiedi la tua demo · €20" width="{{ 640 }}" hint-size="100%,100%">
+  <div style="display:grid;gap:var(--space-6)">
+    <p style="margin:0;font-size:var(--type-body-size);line-height:var(--type-body-lh);color:var(--color-text-secondary);max-width:52ch">Ci bastano poche informazioni per capire da dove partire. I €20 vengono scalati dai €300 se decidi di completare il sito.</p>
+    <dc-import name="DemoRequest" hint-size="100%,760px"></dc-import>
+  </div>
+</x-import>
+
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+/* Nel file standalone le risorse referenziate da codice arrivano come blob
+   URL in window.__resources; nel sorgente restano i percorsi relativi. */
+const RES = (id, fallback) => (window.__resources && window.__resources[id]) || fallback;
+
+/* Routing dell'ecosistema. site/production restano placeholder centralizzati. */
+const ROUTES = { app: 'https://hearth.app', home: '/', storie: '/#storie', pass: '/pass', territori: '/territori', creator: '/creator', attivita: '/attivita', site: '/attivita/sito', production: 'https://attivita.hearth.app/produzione' };
+
+const NAV = [{ label: 'Esplora', value: 'esplora', href: ROUTES.app }, { label: 'Per i territori', value: 'territori', href: ROUTES.territori }, { label: 'Attività', value: 'attivita', href: ROUTES.attivita }, { label: 'Creator', value: 'creator', href: ROUTES.creator }, { label: 'Hearth Pass', value: 'pass', href: ROUTES.pass }];
+
+const PREZZI = [
+  { label: 'Per iniziare', value: '€20', editorial: true },
+  { label: 'Sito completo', value: '€300', editorial: true },
+  { label: 'Se prosegui, restano', value: '€280', editorial: true },
+];
+
+const PASSI = [
+  { n: '01', titolo: 'Ci racconti la tua attività', testo: 'Instagram, Google Maps, fotografie e le informazioni essenziali. Basta un link per iniziare.' },
+  { n: '02', titolo: 'Parti con €20', testo: "È l'avvio del lavoro: da qui iniziamo a progettare." },
+  { n: '03', titolo: 'Prepariamo la demo', testo: 'Una prima proposta di design e struttura, costruita intorno alla tua attività.' },
+  { n: '04', titolo: 'La vedi prima di decidere', testo: 'Online su un indirizzo temporaneo: la navighi dal telefono o dal computer.' },
+  { n: '05', titolo: 'Se vuoi proseguire, completiamo il sito', testo: 'I €20 sono già scalati dal totale di €300. Restano €280.' },
+];
+
+/* Portfolio — per aggiungere un lavoro basta un altro oggetto in questa lista. */
+const PROGETTI = [
+  {
+    nome: 'Dama Point',
+    luogo: 'Benevento',
+    categoria: 'Estetica avanzata',
+    numero: 'N° 01',
+    etichetta: 'Concept demo',
+    immagine: RES('damapoint', '/assets/damapoint-progetto.jpg'),
+    alt: 'Home page del concept demo Dama Point: titolo editoriale in serif su fondo chiaro e fotografia calda a destra',
+    concetto: 'Una proposta di presenza digitale dedicata alla sede locale, progettata per trasformare reputazione, recensioni e presenza social in richieste di consulenza.',
+    nota: 'Concept demo. Mostra la direzione di progetto, non un lavoro commissionato.',
+    url: 'https://damapointbenevento.vercel.app',
+  },
+];
+
+const MATERIALI = [
+  { href: ROUTES.app, label: 'Le informazioni', sub: 'orari, contatti, indirizzo', meta: 'Scheda attività' },
+  { href: ROUTES.app, label: 'Le descrizioni', sub: 'cosa fai e come lo fai', meta: 'Contenuti Hearth' },
+  { href: ROUTES.app, label: 'Le fotografie', sub: 'e i video, quando ci sono', meta: 'Archivio' },
+  { href: ROUTES.app, label: 'La persona', sub: 'chi c\u2019è dietro al bancone', meta: 'Scheda persona' },
+  { href: ROUTES.app, label: 'Il territorio', sub: 'dove si trova la tua attività', meta: 'Territori' },
+  { href: ROUTES.app, label: 'I Ritmi', sub: 'le stagioni del tuo lavoro', meta: 'Ritmi' },
+];
+
+const CONTENUTI = [
+  'Sito personalizzato per la tua attività',
+  'Progettato prima per il telefono, poi per il computer',
+  'Struttura e testi essenziali',
+  'Inserimento delle fotografie già disponibili',
+  'WhatsApp, telefono e social collegati',
+  'Google Maps e indicazioni',
+  'Modulo contatti',
+  'Impostazioni di base per Google',
+  'Configurazione e pubblicazione',
+];
+
+/* FAQ — nuove voci: basta aggiungerle qui. */
+const DOMANDE = [
+  { q: 'Cosa comprendono i €300?', a: 'Il sito descritto in questa pagina: progettazione, struttura, testi essenziali, inserimento delle fotografie già disponibili o fornite dall\u2019attività, contatti collegati, configurazione e pubblicazione. La produzione di nuove fotografie e video non è inclusa ed è disponibile separatamente attraverso Hearth Business. Funzioni diverse da queste vengono concordate prima di iniziare.' },
+  { q: 'Non ho fotografie adatte. Potete realizzarle voi?', a: 'Sì. Dalla piattaforma Hearth Business puoi richiedere una produzione foto + video Hearth da €200. I contenuti vengono realizzati per valorizzare la tua attività su Hearth e possono essere utilizzati anche nel sito. Il servizio è separato dai €300 del sito.' },
+  { q: 'Cosa succede ai €20 della demo?', a: 'Se decidi di completare il sito vengono interamente scalati dal totale: restano €280.' },
+  { q: 'E se la demo non mi convince?', a: 'Non sei obbligato a proseguire. I €20 coprono il lavoro necessario a prepararti la proposta.' },
+  { q: 'Il sito funziona anche da telefono?', a: 'Sì. Lo progettiamo pensando prima di tutto alla navigazione da telefono.' },
+  { q: 'Comprare il sito cambia la mia presenza su Hearth?', a: 'No. Sono due cose separate: il sito non aumenta la visibilità su Hearth, non migliora il posizionamento e non comporta trattamento editoriale o inserimento nelle guide.' },
+  { q: 'Posso avere un e-commerce o un sistema di prenotazione?', a: 'Sì, ma non rientrano in questo servizio: vengono valutati e concordati separatamente.' },
+];
+
+class Component extends DCLogic {
+  state = { drawerOpen: false, apertaFaq: 0, menuOpen: false };
+
+  /* Nessuna animazione d'ingresso gated su JS: il contenuto è leggibile
+     sempre, anche se la timeline delle animazioni è ferma. Gli attributi
+     data-rv restano come ancore per un'eventuale regia di scroll futura. */
+  componentDidMount() {
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.drawerOpen) this.setState({ drawerOpen: false }); };
+    window.addEventListener('keydown', this.onKey);
+    this.onDoc = (e) => { if (this.state.menuOpen && !e.target.closest('[data-nav-menu]') && !e.target.closest('header')) this.setState({ menuOpen: false }); };
+    document.addEventListener('click', this.onDoc);
+    if (!window.HearthDesignSystem_ed33ec) this.dsTimer = setTimeout(() => this.forceUpdate(), 400);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onKey);
+    document.removeEventListener('click', this.onDoc);
+    clearTimeout(this.dsTimer);
+  }
+
+  renderVals() {
+    const DS = window.HearthDesignSystem_ed33ec;
+    return {
+      navItems: NAV,
+      menuOpen: this.state.menuOpen,
+      onNavigate: (value, href) => {
+        this.setState({ menuOpen: false });
+        if (href && href.startsWith('#')) { const t = document.querySelector(href); if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' }); return; }
+        if (href) window.location.href = href;
+      },
+      productionUrl: ROUTES.production,
+      wordmarkSrc: RES('wordmark', '/assets/hearth-wordmark.svg'),
+      symbolSrc: RES('symbol', '/assets/hearth-symbol.svg'),
+      navAction: DS ? React.createElement(
+        DS.Button,
+        { size: 'sm', shape: 'pill', onClick: () => this.setState({ drawerOpen: true }) },
+        'Richiedi la demo · €20'
+      ) : null,
+      footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Sito per le attività', ROUTES.site]].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null,
+      prezzi: PREZZI,
+      passi: PASSI.map((p, i) => Object.assign({}, p, { i })),
+      progetti: PROGETTI,
+      materiali: MATERIALI,
+      contenuti: CONTENUTI.map((t, i) => ({ t, i, n: (i + 1 < 10 ? '0' : '') + (i + 1) })),
+      domande: DOMANDE.map((d, i) => ({
+        q: d.q, a: d.a, i,
+        aperta: this.state.apertaFaq === i,
+        rot: this.state.apertaFaq === i ? '45deg' : '0deg',
+        tocca: () => this.setState((s) => ({ apertaFaq: s.apertaFaq === i ? -1 : i })),
+      })),
+      drawerOpen: this.state.drawerOpen,
+      openDrawer: () => this.setState({ drawerOpen: true }),
+      closeDrawer: () => this.setState({ drawerOpen: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>

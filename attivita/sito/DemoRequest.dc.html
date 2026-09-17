@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
+</helmet>
+<div style="font-family:var(--font-ui);color:var(--ink);width:100%">
+
+  <sc-if value="{{ editing }}" hint-placeholder-val="{{ true }}">
+  <form novalidate="novalidate" onSubmit="{{ onSubmit }}" style="display:grid;gap:24px;width:100%">
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px 20px">
+      <sc-for list="{{ fields }}" as="f" hint-placeholder-count="6">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Input" label="{{ f.label }}" name="{{ f.name }}" type="{{ f.type }}" placeholder="{{ f.placeholder }}" hint="{{ f.hint }}" error="{{ f.error }}" required="{{ f.required }}" auto-complete="{{ f.autocomplete }}" input-mode="{{ f.inputmode }}" hint-size="100%,72px"></x-import>
+      </sc-for>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px 20px">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Select" label="Categoria" name="categoria" required="{{ true }}" placeholder="Scegli" options="{{ categorie }}" error="{{ errCategoria }}" hint-size="100%,72px"></x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Select" label="Cosa vuoi ottenere dal sito" name="obiettivo" required="{{ true }}" placeholder="Scegli" options="{{ obiettivi }}" error="{{ errObiettivo }}" hint-size="100%,72px"></x-import>
+    </div>
+
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Textarea" label="C'è qualcosa che dobbiamo sapere" name="note" rows="{{ 3 }}" placeholder="Orari, servizi, una storia, un vincolo. Facoltativo." hint-size="100%,120px"></x-import>
+
+    <div style="border-top:1px solid var(--color-border-hairline);padding-top:20px;display:grid;gap:20px">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Checkbox" checked="{{ privacy }}" on-change="{{ setPrivacy }}" label="Acconsento al trattamento dei dati per essere ricontattato su questa richiesta." description="{{ privacyError }}" hint-size="100%,44px"></x-import>
+
+      <sc-if value="{{ hasErrors }}" hint-placeholder-val="{{ false }}">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Alert" tone="error" title="Manca qualche informazione" hint-size="100%,72px">Controlla i campi segnati: ci servono nome, attività, città, un contatto e un link per capire da dove partire.</x-import>
+      </sc-if>
+
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" type="submit" size="lg" shape="pill" hint-size="auto,48px">{{ submitLabel }}</x-import>
+        <p style="margin:0;font-size:var(--type-metadata-size);line-height:1.45;color:var(--color-text-secondary);max-width:44ch">I €20 vengono scalati dai €300 se decidi di completare il sito.</p>
+      </div>
+    </div>
+  </form>
+  </sc-if>
+
+  <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid;gap:24px;border-top:1px solid var(--ink);padding-top:24px">
+      <div style="font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:1.2;letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase;color:var(--color-text-secondary)">Ultimo passaggio</div>
+      <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:var(--type-editorial-heading-lh);letter-spacing:var(--type-editorial-heading-ls);max-width:24ch">Abbiamo quello che serve per iniziare.</h3>
+      <p style="margin:0;font-size:var(--type-body-size);line-height:var(--type-body-lh);max-width:58ch;color:var(--color-text-secondary)">Il pagamento online non è ancora attivo su questa pagina. Mandaci la richiesta: la ricevi già compilata, ti rispondiamo con il riferimento per l'avvio e partiamo con la demo.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" on-click="{{ onWhatsApp }}" hint-size="auto,48px">Invia su WhatsApp</x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="secondary" size="lg" on-click="{{ onEmail }}" hint-size="auto,48px">Invia per email</x-import>
+      </div>
+      <button type="button" onClick="{{ onEdit }}" style="justify-self:start;background:none;border:none;padding:0;font-family:var(--font-ui);font-size:var(--type-body-sm-size);color:var(--color-text-secondary);text-decoration:underline;text-underline-offset:3px;cursor:pointer">Modifica i dati</button>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:720,&quot;height&quot;:760}}">
+/* ============================================================
+   RICHIESTA DEMO — configurazione
+   CHECKOUT_URL: incolla qui il Payment Link (Stripe o altro) per
+   attivare l'avvio da €20. Finché resta null non viene simulato
+   nessun pagamento: il form consegna la richiesta compilata su
+   WhatsApp o email.
+   CONTACT_ENDPOINT: endpoint opzionale (POST JSON) per salvare la
+   richiesta prima del pagamento.
+   ============================================================ */
+const CHECKOUT_URL = null;
+const CONTACT_ENDPOINT = null;
+const HEARTH_WHATSAPP_NUMBER = '393792844477';
+const CONTACT_EMAIL = 'info@hearth.email';
+
+function createWhatsAppUrl(message) {
+  return 'https://wa.me/' + HEARTH_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+}
+
+const FIELDS = [
+  { name: 'nome', label: 'Nome e cognome', type: 'text', placeholder: 'Come ti chiami', autocomplete: 'name', required: true },
+  { name: 'attivita', label: 'Nome attività', type: 'text', placeholder: "Come si chiama l'attività", autocomplete: 'organization', required: true },
+  { name: 'citta', label: 'Città', type: 'text', placeholder: 'Dove si trova', autocomplete: 'address-level2', required: true },
+  { name: 'telefono', label: 'Telefono o WhatsApp', type: 'tel', placeholder: '+39', autocomplete: 'tel', inputmode: 'tel', required: true },
+  { name: 'email', label: 'Email', type: 'email', placeholder: 'nome@esempio.it', autocomplete: 'email', inputmode: 'email', required: true },
+  { name: 'link', label: 'Instagram, sito o Google Maps', type: 'url', placeholder: 'https://', inputmode: 'url', required: true, hint: 'Basta un link: da lì vediamo foto, recensioni e informazioni.' },
+];
+
+const CATEGORIE = ['Ristorazione', 'Ospitalità', 'Beauty e benessere', 'Negozio', 'Artigianato', 'Professionista', 'Servizi', 'Altro'];
+const OBIETTIVI = ['Più richieste di contatto', 'Più prenotazioni', 'Presentare meglio l\u2019attività', 'Mostrare prodotti o servizi', 'Essere trovato più facilmente', 'Altro'];
+
+class Component extends DCLogic {
+  state = { errors: {}, privacy: false, sent: null };
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = {};
+    FIELDS.forEach((f) => { data[f.name] = (form.elements[f.name] ? form.elements[f.name].value : '').trim(); });
+    data.categoria = form.elements.categoria ? form.elements.categoria.value : '';
+    data.obiettivo = form.elements.obiettivo ? form.elements.obiettivo.value : '';
+    data.note = form.elements.note ? form.elements.note.value.trim() : '';
+
+    const errors = {};
+    FIELDS.forEach((f) => { if (f.required && !data[f.name]) errors[f.name] = 'Serve questa informazione.'; });
+    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) errors.email = 'Controlla l\u2019indirizzo.';
+    if (!data.categoria) errors.categoria = 'Scegli una categoria.';
+    if (!data.obiettivo) errors.obiettivo = 'Scegli un obiettivo.';
+    if (!this.state.privacy) errors.privacy = true;
+
+    if (Object.keys(errors).length) {
+      this.setState({ errors });
+      const first = Object.keys(errors).find((k) => k !== 'privacy');
+      const el = first && form.elements[first];
+      if (el && el.focus) el.focus();
+      return;
+    }
+
+    if (CONTACT_ENDPOINT) {
+      try {
+        fetch(CONTACT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      } catch (err) { /* la consegna manuale resta disponibile */ }
+    }
+
+    if (CHECKOUT_URL) {
+      const url = new URL(CHECKOUT_URL);
+      if (data.email) url.searchParams.set('prefilled_email', data.email);
+      url.searchParams.set('client_reference_id', (data.attivita || 'hearth').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40));
+      try { window.sessionStorage.setItem('hearth-richiesta-demo', JSON.stringify(data)); } catch (err) { /* noop */ }
+      window.location.assign(url.toString());
+      return;
+    }
+
+    this.setState({ errors: {}, sent: data });
+  }
+
+  message() {
+    const d = this.state.sent || {};
+    const lines = ['Richiesta demo €20 — Hearth', ''];
+    const add = (label, value) => { if (value && String(value).trim()) lines.push(label + ': ' + String(value).trim()); };
+    add('Nome', d.nome);
+    add('Attività', d.attivita);
+    add('Città', d.citta);
+    add('Telefono', d.telefono);
+    add('Email', d.email);
+    add('Link', d.link);
+    add('Categoria', d.categoria);
+    add('Obiettivo', d.obiettivo);
+    add('Note', d.note);
+    return lines.join('\n');
+  }
+
+  renderVals() {
+    const errors = this.state.errors;
+    const sent = !!this.state.sent;
+    return {
+      fields: FIELDS.map((f) => Object.assign({}, f, { error: errors[f.name] || '' })),
+      categorie: CATEGORIE,
+      obiettivi: OBIETTIVI,
+      errCategoria: errors.categoria || '',
+      errObiettivo: errors.obiettivo || '',
+      privacy: this.state.privacy,
+      privacyError: errors.privacy ? 'Serve il tuo consenso per procedere.' : '',
+      setPrivacy: (checked) => this.setState({ privacy: checked }),
+      hasErrors: Object.keys(errors).length > 0,
+      submitLabel: CHECKOUT_URL ? 'Avvia la demo · €20' : 'Invia la richiesta',
+      onSubmit: (e) => this.handleSubmit(e),
+      onEdit: () => this.setState({ sent: null }),
+      sent, editing: !sent,
+      // Navigazione nello stesso tab: Safari blocca l'apertura cross-origin
+      // di una nuova finestra generata da JavaScript.
+      onWhatsApp: () => window.location.assign(createWhatsAppUrl(this.message())),
+      onEmail: () => window.location.assign('mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Richiesta demo €20 — Hearth') + '&body=' + encodeURIComponent(this.message())),
+    };
+  }
+}
+</script>
+</body>
+</html>

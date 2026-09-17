@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
+<link rel="stylesheet" href="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="/_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
+<link rel="icon" type="image/svg+xml" href="/assets/hearth-symbol-notext.svg">
+<link rel="apple-touch-icon" href="/assets/hearth-symbol.svg">
+<title>Diventa Creator Hearth | Hearth</title>
+<meta name="description" content="Hearth costruisce un patrimonio fatto di persone, luoghi, attività, storie e momenti che spesso non arrivano sulle guide. I Creator li scoprono sul territorio e aiutano a documentarli.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#faf8f3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Hearth">
+<meta property="og:title" content="Vai dove gli altri non guardano.">
+<meta property="og:description" content="Hearth costruisce un patrimonio fatto di persone, luoghi, attività, storie e momenti che spesso non arrivano sulle guide. I Creator li scoprono sul territorio e aiutano a documentarli.">
+<meta property="og:image" content="https://hearth.travel/assets/photos/pescatore-reti.jpg">
+<meta name="twitter:image" content="https://hearth.travel/assets/photos/pescatore-reti.jpg">
+<meta property="og:url" content="https://hearth.travel/creator">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hearth.travel/creator">
+
+<script src="/image-slot.js"></script>
+<style>
+body{margin:0;background:#faf8f3;color:#151412;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:#151412;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] summary span[data-plus]{transform:rotate(45deg)}
+html[data-reveal-ready] [data-reveal="wait"]{opacity:0;transform:translateY(14px)}
+[data-reveal]{transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){[data-reveal]{transition:none;opacity:1 !important;transform:none !important}}
+
+[data-vesta-home]{display:block}
+header img[alt=""]{transition:transform var(--motion-default) var(--ease-editorial);transform-origin:50% 50%}
+[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:scale(1.04) rotate(5deg)}
+@media (hover:none){[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+@media (max-width:1023px){[data-vesta-home]{display:none}}
+@media (prefers-reduced-motion:reduce){header img[alt=""]{transition:none}[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+
+/* navbar: le voci non vanno mai a capo */
+@media (min-width:1024px){
+  [data-navbar] header nav a{white-space:nowrap;flex:none}
+  [data-navbar] header nav{gap:22px}
+}
+/* sotto 1600px il wordmark non sta al centro: lockup a sinistra, voci a destra */
+@media (min-width:1024px) and (max-width:1599px){
+  [data-navbar] header{grid-template-columns:auto auto minmax(0,1fr) !important;column-gap:clamp(20px,2.4vw,32px) !important}
+  [data-navbar] header nav{gap:clamp(14px,1.6vw,22px);justify-content:flex-end}
+}
+</style>
+</helmet>
+<main style="font-family:var(--font-ui);background:var(--paper);color:var(--ink);overflow-x:clip">
+
+<div data-navbar="true" style="position:sticky;top:0;z-index:40">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.TopNav" mode="stories" wordmark-src="/assets/hearth-wordmark.svg" symbol-src="/assets/hearth-symbol.svg" items="{{ navItems }}" active="creator" home-href="/" action="{{ navAction }}" on-navigate="{{ onNavigate }}" hint-size="100%,64px"></x-import>
+  <a href="/" data-vesta-home="true" aria-label="Hearth · Torna alla homepage" style="position:absolute;left:calc(var(--grid-margin) - 4px);top:10px;width:44px;height:44px;border-radius:50%;z-index:calc(var(--z-sticky) + 1)"></a>
+
+</div>
+
+<!-- 1 · HERO -->
+<section id="top" data-screen-label="Hero" style="max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,96px) var(--grid-margin) 0;display:flex;flex-wrap:wrap-reverse;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-end">
+  <figure style="flex:1 1 380px;max-width:680px;min-width:0;margin:0;display:grid;gap:12px">
+    <div style="aspect-ratio:4/5;overflow:hidden;border-radius:20px;background:var(--mist)"><img src="/assets/photos/oste-bancone.jpg" alt="Un oste dietro il bancone parla con un cliente, in una luce calda" style="width:100%;height:100%;object-fit:cover;object-position:60% 50%;transition:transform 900ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Oste al bancone" hint-size="100%,40px"></x-import>
+  </figure>
+  <div style="flex:1 1 480px;min-width:0;display:grid;gap:clamp(24px,3vw,40px);padding-bottom:clamp(16px,2vw,40px)">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Hearth Creator</div>
+    <h1 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:clamp(52px,8vw,144px);line-height:.92;letter-spacing:-.025em;text-wrap:balance;max-width:11ch">Vai dove gli altri non guardano.</h1>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:1.5;max-width:46ch;text-wrap:pretty">Hearth costruisce un patrimonio fatto di persone, luoghi, attività, storie e momenti che spesso non arrivano sulle guide. I Creator li scoprono sul territorio e aiutano a documentarli.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" on-click="{{ openModal }}" hint-size="auto,48px">Diventa Creator</x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="#come-contribuisci" arrow="{{ true }}" hint-size="auto,24px">Scopri come funziona</x-import>
+    </div>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;border-top:1px solid var(--ink);padding-top:20px;max-width:26ch;text-wrap:balance">Non servono migliaia di follower. Serve saper <em style="font-style:italic">guardare</em>.</p>
+  </div>
+</section>
+
+<!-- 2 · COSA CERCHIAMO -->
+<section data-screen-label="Cosa cerchiamo" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:16ch">Non cerchiamo contenuti. Cerchiamo cose che vale la pena ricordare.</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,56px) var(--grid-gutter);margin-top:clamp(40px,5vw,80px);align-items:flex-start">
+    <figure data-reveal="wait" style="flex:1 1 300px;max-width:420px;margin:0;display:grid;gap:12px">
+      <div style="aspect-ratio:3/4;overflow:hidden;border-radius:12px"><img src="/assets/photos/fornaia-pane.jpg" alt="Una fornaia con il pane appena sfornato" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <figcaption style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">Il forno apre prima dell'<em style="font-style:italic">alba</em>.</figcaption>
+      <span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Una persona · un'abitudine</span>
+    </figure>
+    <div data-reveal="wait" style="flex:1 1 240px;max-width:360px;display:grid;gap:40px;padding-top:clamp(0px,6vw,120px);transition-delay:100ms">
+      <div style="display:grid;gap:12px"><div style="aspect-ratio:1/1;overflow:hidden;border-radius:12px"><img src="/assets/photos/chef-cucina.jpg" alt="Un cuoco in cucina" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2"><em style="font-style:italic">Maria</em> prepara soltanto venti pezzi al giorno.</span><span style="font-size:12px;color:var(--grey-500)">Un prodotto · un limite</span></div>
+      <div style="display:grid;gap:8px;border-top:1px solid var(--ink);padding-top:16px"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">Questa spiaggia in <em style="font-style:italic">ottobre</em> è completamente diversa.</span><span style="font-size:12px;color:var(--grey-500)">Un luogo · una stagione</span></div>
+    </div>
+    <div data-reveal="wait" style="flex:1 1 280px;max-width:440px;display:grid;gap:40px;transition-delay:200ms">
+      <div style="display:grid;gap:12px"><div style="aspect-ratio:4/5;overflow:hidden;border-radius:12px"><img src="/assets/photos/rievocazione-costume.jpg" alt="Un uomo in costume durante una rievocazione" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">Qui ad agosto il paese si sveglia alle <em style="font-style:italic">cinque</em>.</span><span style="font-size:12px;color:var(--grey-500)">Una tradizione · un piccolo evento</span></div>
+      <div style="display:grid;gap:8px;border-top:1px solid var(--ink);padding-top:16px"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2"><em style="font-style:italic">Antonio</em> costruisce ancora tutto a mano.</span><span style="font-size:12px;color:var(--grey-500)">Una bottega · un gesto</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · COME CONTRIBUISCI -->
+<section id="come-contribuisci" data-screen-label="Come contribuisci" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <div data-reveal="wait" style="flex:1 1 320px;min-width:0;display:grid;gap:28px">
+    <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:.92;letter-spacing:-.025em;max-width:8ch">Prima scopri.<br>Poi racconti.</h2>
+    <div style="display:grid;gap:0;border-top:1px solid var(--ink);max-width:440px">
+      <div style="display:grid;gap:8px;padding:20px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">Scopri qualcosa che manca.</span><span style="font-size:14px;line-height:1.5;color:var(--grey-600)">Una persona, un luogo, un'attività, un evento: informazioni, fotografie e video.</span></div>
+      <div style="display:grid;gap:8px;padding:20px 0;border-bottom:1px solid var(--ink)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">Oppure arricchisci qualcosa che Hearth già conosce.</span><span style="font-size:14px;line-height:1.5;color:var(--grey-600)">Un Ritmo, nuove foto, un dettaglio che mancava. Anche su schede create da altri.</span></div>
+    </div>
+  </div>
+  <div data-reveal="wait" style="flex:1 1 380px;min-width:0;display:grid;gap:24px;border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,48px);transition-delay:100ms">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">La stessa scheda, quattro Creator</div>
+    <div style="display:grid;gap:0;border-top:1px solid var(--ink)">
+      <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2;flex:1 1 200px">Antonia entra su Hearth</span><span style="font-size:12px;color:var(--grey-500)">un Creator, marzo</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2;flex:1 1 200px">riceve un <em style="font-style:italic">Ritmo</em>: sforna alle 6:30</span><span style="font-size:12px;color:var(--grey-500)">un altro Creator, maggio</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2;flex:1 1 200px">nuove fotografie, un video</span><span style="font-size:12px;color:var(--grey-500)">un terzo, agosto</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--ink)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2;flex:1 1 200px">chiude ad agosto: aggiornato</span><span style="font-size:12px;color:var(--grey-500)">il primo, un anno dopo</span></div>
+    </div>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;max-width:28ch;text-wrap:pretty">Un patrimonio <em style="font-style:italic">collaborativo</em>, non una raccolta di post personali.</p>
+  </div>
+</section>
+
+<!-- 5 · RITMI -->
+<section id="ritmi" data-screen-label="Ritmi" style="background:var(--white);margin-top:var(--space-silence);padding:var(--space-section) 0;border-top:1px solid var(--color-border-hairline);border-bottom:1px solid var(--color-border-hairline)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+      <div style="display:grid;gap:20px;max-width:720px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Ritmi</div>
+        <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:14ch">Sapere dove andare non basta. Conta sapere <em style="font-style:italic">quando</em> esserci.</h2>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:40ch;text-wrap:pretty">Un Ritmo è un'informazione viva: quando un luogo apre, torna, cambia. Non stiamo indicando cosa esiste. Stiamo cercando di capire quando è vivo.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,56px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+      <div data-reveal="wait" style="flex:1 1 240px;max-width:320px"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.PersonCard" href="{{ null }}" image="/assets/photos/pescatore-reti.jpg" name="Gennaro" role="Rientra soltanto al mattino" place="Bacoli, NA" hint-size="100%,400px"></x-import></div>
+      <div data-reveal="wait" style="flex:2 1 420px;min-width:0;display:grid;gap:24px;transition-delay:100ms">
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Rhythm" title="Ritmi di Gennaro e del suo molo" rows="{{ rhythmRows }}" hint-size="100%,220px"></x-import>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.02em;color:var(--grey-500)">
+          <span>Tre Ritmi, tre Creator diversi</span>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="secondary" size="sm" hint-size="auto,32px">Aggiungi un Ritmo</x-import>
+        </div>
+      </div>
+      <div data-reveal="wait" style="flex:1 1 240px;max-width:360px;display:grid;gap:14px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.25;transition-delay:200ms">
+        <span style="border-top:1px solid var(--ink);padding-top:14px">Il forno sforna alle <em style="font-style:italic">6:30</em>.</span>
+        <span style="border-top:1px solid var(--color-border-hairline);padding-top:14px">La festa avviene la seconda domenica di <em style="font-style:italic">agosto</em>.</span>
+        <span style="border-top:1px solid var(--color-border-hairline);padding-top:14px">Da maggio a settembre si arriva in <em style="font-style:italic">barca</em>.</span>
+        <span style="border-top:1px solid var(--color-border-hairline);padding-top:14px">In autunno qui succede qualcosa che negli altri mesi non esiste.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · NON DEVI PARTIRE DA ZERO -->
+<section data-screen-label="Già su Hearth" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <div style="flex:1 1 340px;min-width:0;display:grid;gap:24px">
+    <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:10ch">A volte il posto è già su Hearth.</h2>
+    <p data-reveal="wait" style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:42ch;text-wrap:pretty">Cerca, trova quello che c'è, aggiungi quello che manca. Anche un contributo piccolo è utile.</p>
+  </div>
+  <div data-reveal="wait" data-mode="core" data-density="compact" style="flex:1 1 360px;max-width:420px;min-width:0;border:1px solid var(--grey-200);border-radius:20px;padding:16px;background:var(--white);display:grid;gap:14px;transition-delay:120ms">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">App Creator · cerca</div>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Search" value="Antonia forno Atripalda" shortcut="{{ null }}" hint-size="100%,40px"></x-import>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Segmented" options="{{ searchKinds }}" value="persona" size="sm" label="Tipo" hint-size="100%,32px"></x-import>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" image="/assets/photos/fornaia-pane.jpg" title="Antonia" meta="Persona · Atripalda, AV · 8 foto · 1 Ritmo" trailing="{{ statusPublished }}" hint-size="100%,64px"></x-import>
+    <div style="display:grid;gap:8px;padding-top:4px">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" full-width="{{ true }}" hint-size="100%,32px">Aggiungi un Ritmo</x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="secondary" size="sm" full-width="{{ true }}" hint-size="100%,32px">Aggiungi foto o video</x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="ghost" size="sm" full-width="{{ true }}" hint-size="100%,32px">Completa ciò che manca</x-import>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · MISSIONI -->
+<section id="missioni" data-screen-label="Missioni" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:18ch">A volte sei tu a trovare una storia. A volte è Hearth a indicarti dove cercare.</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+    <div data-reveal="wait" style="flex:1 1 320px;min-width:0;display:grid;gap:20px">
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:44ch;text-wrap:pretty">Territori e progetti Hearth possono aprire Missioni: documentare una persona, fotografare un'attività, raccontare un luogo, aggiungere Ritmi, completare contenuti già esistenti, lavorare su un territorio preciso. Hanno indicazioni e scadenze chiare. Non tutte sono retribuite: quando una Missione prevede un compenso economico aggiuntivo, lo indica esplicitamente. Non sono offerte di lavoro.</p>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ missionsUrl }}" arrow="{{ true }}" hint-size="auto,24px">Scopri le Missioni</x-import>
+    </div>
+    <ol data-reveal="wait" style="flex:2 1 460px;min-width:0;list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);transition-delay:100ms">
+      <sc-for list="{{ missions }}" as="m" hint-placeholder-count="3">
+        <li style="display:flex;flex-wrap:wrap;gap:8px var(--grid-gutter);align-items:baseline;padding:18px 0;border-bottom:1px solid var(--color-border-hairline)">
+          <span style="flex:0 0 120px;font-size:12px;letter-spacing:.02em;color:var(--grey-500)">{{ m.territory }}</span>
+          <span style="flex:1 1 240px;display:grid;gap:4px"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">{{ m.title }}</span><span style="font-size:13px;color:var(--grey-600)">{{ m.note }}</span></span>
+          <span style="flex:0 0 auto;font-size:12px;letter-spacing:.02em;color:var(--grey-500);font-variant-numeric:tabular-nums">{{ m.meta }}</span>
+        </li>
+      </sc-for>
+    </ol>
+  </div>
+</section>
+
+<!-- 8 · COME FUNZIONA -->
+<section id="come-funziona" data-screen-label="Come funziona" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <div style="flex:1 1 320px;min-width:0;display:grid;gap:24px">
+    <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:10ch">Poco processo.<br>Molta attenzione.</h2>
+    <p data-reveal="wait" style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:42ch;text-wrap:pretty">Se una parte ha bisogno di integrazioni, ricevi un feedback puntuale e la completi. La revisione è cura del patrimonio, non moderazione.</p>
+  </div>
+  <div style="flex:1 1 420px;min-width:0;display:grid;gap:clamp(24px,3vw,40px)">
+    <div data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;border-top:1px solid var(--ink);padding-top:20px">
+      <span>Scopri</span><span style="color:var(--grey-400)">→</span><span>Raccogli</span><span style="color:var(--grey-400)">→</span><span>Invia</span><span style="color:var(--grey-400)">→</span><span>Hearth revisiona</span><span style="color:var(--grey-400)">→</span><span style="font-style:italic">entra nel patrimonio</span>
+    </div>
+    <div data-reveal="wait" data-mode="core" data-density="compact" style="border:1px solid var(--grey-200);border-radius:12px;padding:8px 16px;background:var(--white);transition-delay:100ms">
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Il molo di Gennaro" meta="Luogo · 6 foto · bozza salvata ieri" trailing="{{ statusDraft }}" hint-size="100%,56px"></x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Antonia · Ritmo del forno" meta="Manca l'orario di chiusura estivo" trailing="{{ statusReview }}" hint-size="100%,56px"></x-import>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.DataRow" title="Processione a mare" meta="Evento · pubblicato il 3 settembre" trailing="{{ statusPublished }}" hint-size="100%,56px"></x-import>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · QUALITÀ -->
+<section data-screen-label="Qualità" style="background:var(--ink);color:var(--paper);margin-top:var(--space-silence);padding:var(--space-section) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin);display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+    <h2 data-reveal="wait" style="margin:0;flex:1 1 360px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:12ch">Non conta quanto pubblichi. Conta ciò che <em style="font-style:italic">lasci</em>.</h2>
+    <div data-reveal="wait" style="flex:1 1 360px;min-width:0;display:grid;gap:20px;border-left:1px solid rgba(250,248,243,.25);padding-left:clamp(20px,3vw,48px);transition-delay:100ms">
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-200);max-width:42ch;text-wrap:pretty">I contenuti Hearth vengono revisionati prima della pubblicazione. Preferiamo:</p>
+      <div style="display:grid;gap:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">
+        <span style="padding:10px 0;border-bottom:1px solid rgba(250,248,243,.18)">poche informazioni precise</span>
+        <span style="padding:10px 0;border-bottom:1px solid rgba(250,248,243,.18)">fotografie autentiche</span>
+        <span style="padding:10px 0;border-bottom:1px solid rgba(250,248,243,.18)">video girati davvero sul posto</span>
+        <span style="padding:10px 0;border-bottom:1px solid rgba(250,248,243,.18)">conoscenza reale del soggetto</span>
+        <span style="padding:10px 0;border-bottom:1px solid rgba(250,248,243,.18)">informazioni utili</span>
+        <span style="padding:10px 0;border-bottom:1px solid rgba(250,248,243,.18)">Ritmi concreti</span>
+      </div>
+      <p style="margin:0;font-size:13px;color:var(--grey-300)">a grandi quantità di contenuti generici.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · DOPO -->
+<section data-screen-label="Cosa succede dopo" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <div style="flex:1 1 320px;min-width:0;display:grid;gap:24px">
+    <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:12ch">Il tuo contributo non finisce in un feed.</h2>
+    <p data-reveal="wait" style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:42ch;text-wrap:pretty">Quello che produci non scompare dopo ventiquattro ore e non viene sostituito dal prossimo post. Una fotografia entra in una scheda, in una mappa, in una storia, in una guida, nel progetto di un Comune, nell'esperienza di chi viaggia con Hearth. Diventa parte di un patrimonio.</p>
+  </div>
+  <div data-reveal="wait" style="flex:1 1 420px;min-width:0;display:flex;flex-wrap:wrap;gap:24px var(--grid-gutter);align-items:flex-start;transition-delay:100ms">
+    <figure style="flex:0 1 220px;margin:0;display:grid;gap:10px"><div style="aspect-ratio:4/5;overflow:hidden;border-radius:12px"><img src="/assets/photos/fornaia-pane.jpg" alt="Antonia con il pane" style="width:100%;height:100%;object-fit:cover"></div><figcaption style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Fotografia di Antonia · un Creator</figcaption></figure>
+    <ol style="flex:1 1 220px;list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)">
+      <sc-for list="{{ propagation }}" as="p" hint-placeholder-count="6">
+        <li style="display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="color:var(--grey-400)">→</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">{{ p.label }}</span><span style="margin-left:auto;font-size:12px;color:var(--grey-500);text-align:right">{{ p.note }}</span></li>
+      </sc-for>
+    </ol>
+  </div>
+</section>
+
+<!-- 11 · PROGRAMMA CREATOR -->
+<section id="programma" data-screen-label="Programma Creator" style="background:var(--white);margin-top:var(--space-silence);padding:var(--space-section) 0;border-top:1px solid var(--color-border-hairline);border-bottom:1px solid var(--color-border-hairline)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+      <div style="display:grid;gap:20px;max-width:720px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Il programma Creator</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:16ch">Se quello che crei rimane, può continuare ad avere valore.</h2></div>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:48ch;text-wrap:pretty">I contributi approvati generano Punti Hearth secondo le regole del programma. I Punti rappresentano il contributo di ciascun Creator al patrimonio e determinano la partecipazione al pool Creator. Il valore non si esaurisce al momento dell'approvazione: un contenuto entrato nel patrimonio può continuare a concorrere nel tempo, secondo il regolamento.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);margin-top:clamp(40px,5vw,80px);align-items:flex-start">
+      <div data-reveal="wait" style="flex:1 1 320px;min-width:0;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:baseline">
+        <span style="font-family:var(--font-editorial);font-weight:300;font-size:clamp(96px,14vw,220px);line-height:.85;letter-spacing:-.04em;font-variant-numeric:lining-nums">10%</span>
+        <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;max-width:20ch;text-wrap:pretty">dei ricavi <em style="font-style:italic">idonei</em> Hearth alimenta il pool dedicato ai Creator.</span>
+      </div>
+      <ol data-reveal="wait" style="flex:1 1 300px;max-width:440px;min-width:0;list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);transition-delay:120ms">
+        <li style="display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline);font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2"><span style="color:var(--grey-400);font-family:var(--font-ui);font-size:12px">01</span>Contributo approvato</li>
+        <li style="display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline);font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2"><span style="color:var(--grey-400);font-family:var(--font-ui);font-size:12px">02</span>Punti Hearth</li>
+        <li style="display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline);font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2"><span style="color:var(--grey-400);font-family:var(--font-ui);font-size:12px">03</span>Partecipazione al pool Creator</li>
+        <li style="display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--ink);font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2"><span style="color:var(--grey-400);font-family:var(--font-ui);font-size:12px">04</span>Valore distribuito secondo il regolamento</li>
+        <li style="padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between"><span style="font-family:var(--font-ui);font-size:13px;color:var(--grey-500)">Come funzionano i Punti Hearth</span><span style="font-size:12px;color:var(--grey-500)">Pesi e requisiti nel regolamento, non qui.</span></li>
+      </ol>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) 0;margin-top:clamp(48px,6vw,96px)">
+      <div data-reveal="wait" style="flex:1 1 320px;min-width:0;padding-right:clamp(20px,4vw,64px);display:grid;gap:16px;align-content:start">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">A · Partecipazione al valore creato</div>
+        <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:14ch">Deriva dai contributi approvati.</span>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:40ch;text-wrap:pretty">Passa dai Punti Hearth, è collegata al pool Creator e può continuare nel tempo secondo le regole del programma. Non conta quanti contenuti pubblichi: contano i contributi approvati e i pesi previsti.</p>
+      </div>
+      <div data-reveal="wait" style="flex:1 1 320px;min-width:0;border-left:1px solid var(--ink);padding-left:clamp(20px,4vw,64px);display:grid;gap:16px;align-content:start;transition-delay:120ms">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">B · Lavoro commissionato, retribuito direttamente</div>
+        <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:14ch">È un incarico specifico.</span>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:40ch;text-wrap:pretty">Attività definita, deliverable, eventuale scadenza, compenso diretto. Non dipende dai Punti Hearth e non passa dal pool.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · CREATOR CONSOLIDATI -->
+<section id="consolidati" data-screen-label="Creator consolidati" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+    <div style="display:grid;gap:20px;max-width:720px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Quando il rapporto cresce</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:16ch">Quando Hearth conosce il tuo lavoro, può affidartene altro.</h2></div>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:46ch;text-wrap:pretty">Un Creator che nel tempo dimostra qualità, continuità e affidabilità può diventare un Creator consolidato ed essere coinvolto in incarichi professionali commissionati attraverso Hearth. Nessun livello, nessun badge: fiducia.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+    <div data-reveal="wait" style="flex:1 1 300px;max-width:440px;min-width:0;display:grid;gap:12px">
+      <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500);padding-bottom:12px">Un Creator consolidato può essere coinvolto in</div>
+      <div style="display:grid;gap:0;border-top:1px solid var(--ink)">
+        <sc-for list="{{ paidWork }}" as="w" hint-placeholder-count="7"><span style="display:block;padding:10px 0;border-bottom:1px solid var(--color-border-hairline);font-family:var(--font-editorial);font-weight:300;font-size:22px;line-height:1.2">{{ w }}</span></sc-for>
+      </div>
+    </div>
+    <div data-reveal="wait" style="flex:2 1 420px;min-width:0;display:grid;gap:20px;border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,48px);transition-delay:120ms">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Un caso</div>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:56ch;text-wrap:pretty">Un'attività è su Hearth e offre un vantaggio Hearth Pass. Vuole un profilo migliore: fotografie professionali, video brevi, contenuti nello stile Hearth. Acquista un servizio di produzione. Hearth può affidarlo a un Creator consolidato del territorio.</p>
+      <ol style="list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)">
+        <li style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 100px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">Attività</span><span style="flex:1 1 200px;font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:22px;line-height:1.25;color:var(--grey-600)">→ richiede una produzione</span></li>
+        <li style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 100px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">Hearth</span><span style="flex:1 1 200px;font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:22px;line-height:1.25;color:var(--grey-600)">→ individua un Creator affidabile del territorio</span></li>
+        <li style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 100px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">Creator</span><span style="flex:1 1 200px;font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:22px;line-height:1.25;color:var(--grey-600)">→ realizza foto e video</span></li>
+        <li style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 100px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">Attività</span><span style="flex:1 1 200px;font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:22px;line-height:1.25;color:var(--grey-600)">→ riceve i contenuti</span></li>
+        <li style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 100px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">Creator</span><span style="flex:1 1 200px;font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:22px;line-height:1.25;color:var(--grey-600)">→ viene compensato per il progetto</span></li>
+      </ol>
+    </div>
+  </div>
+  <div data-reveal="wait" style="margin-top:clamp(48px,6vw,96px);display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-start;justify-content:space-between;border-top:1px solid var(--ink);padding-top:clamp(24px,3vw,40px)">
+    <p style="margin:0;flex:1 1 320px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:16ch">Nessuno paga per essere <em style="font-style:italic">raccontato</em>.</p>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:52ch;text-wrap:pretty">Un'attività non compra l'inserimento nella guida, il posizionamento o una recensione. Può acquistare un servizio professionale: fotografie, video, produzione di contenuti. Il pagamento riguarda il servizio e non determina presenza editoriale, rilevanza, giudizio o contenuto della storia. Anche partecipare a Hearth Pass non equivale a comprare visibilità editoriale.</p>
+  </div>
+  <ol style="list-style:none;margin:clamp(48px,6vw,96px) 0 0;padding:0;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0 var(--grid-gutter)">
+    <sc-for list="{{ progression }}" as="p" hint-placeholder-count="6">
+      <li data-reveal="wait" style="display:grid;gap:8px;padding:20px 0;border-bottom:1px solid var(--color-border-hairline);align-content:start"><span style="font-size:12px;color:var(--grey-500);font-variant-numeric:tabular-nums">{{ p.n }}</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">{{ p.title }}</span><span style="font-size:13px;line-height:1.5;color:var(--grey-600)">{{ p.note }}</span></li>
+    </sc-for>
+  </ol>
+</section>
+
+<!-- 13 · CANDIDATURA -->
+<section id="candidatura" data-screen-label="Candidatura" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+    <div style="display:grid;gap:20px;max-width:720px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Come si diventa Creator</div>
+      <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:12ch">Prima di entrare, raccontaci qualcosa.</h2>
+    </div>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:40ch;text-wrap:pretty">Non un portfolio da inviare e aspettare. Un percorso breve, con qualcuno che guarda davvero quello che fai.</p>
+  </div>
+  <ol style="list-style:none;margin:clamp(40px,5vw,72px) 0 0;padding:0;border-top:1px solid var(--ink)">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+      <li data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:12px var(--grid-gutter);align-items:baseline;padding:clamp(20px,2.5vw,32px) 0;border-bottom:1px solid var(--color-border-hairline)">
+        <span style="flex:0 0 clamp(56px,8vw,120px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em;font-variant-numeric:lining-nums">{{ s.n }}</span>
+        <span style="flex:1 1 220px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:16ch">{{ s.title }}</span>
+        <span style="flex:1 1 260px;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:40ch">{{ s.note }}</span>
+      </li>
+    </sc-for>
+  </ol>
+  <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;padding-top:24px">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" on-click="{{ openModal }}" hint-size="auto,48px">Inizia la candidatura</x-import>
+    <span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Non servono migliaia di follower. Serve saper guardare.</span>
+  </div>
+  <div data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:16px clamp(32px,5vw,96px);align-items:baseline;margin-top:clamp(32px,4vw,56px);padding-top:20px;border-top:1px solid var(--color-border-hairline)">
+    <span style="flex:1 1 260px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;max-width:24ch">Entrare nella rete è il punto di partenza, non il traguardo.</span>
+    <span style="flex:2 1 320px;font-size:14px;line-height:1.6;color:var(--grey-600);max-width:56ch">Da lì continui a contribuire liberamente, partecipi alle Missioni, costruisci Punti Hearth, consolidi il rapporto con Hearth e puoi essere coinvolto in progetti commissionati.</span>
+  </div>
+</section>
+
+<!-- 14 · CHI PUÒ + RETE -->
+<section data-screen-label="Chi può" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+    <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;text-wrap:balance;max-width:14ch">Non esiste un solo tipo di Creator Hearth.</h2>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:1.3;max-width:26ch;text-wrap:pretty">E non devi essere il primo ad arrivare: più Creator possono contribuire allo stesso patrimonio.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+    <div style="flex:2 1 480px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0 var(--grid-gutter);border-top:1px solid var(--ink)">
+      <sc-for list="{{ profiles }}" as="p" hint-placeholder-count="4">
+        <div data-reveal="wait" style="display:grid;gap:10px;padding:20px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">{{ p.title }}</span><span style="font-size:14px;line-height:1.5;color:var(--grey-600);max-width:34ch">{{ p.note }}</span></div>
+      </sc-for>
+    </div>
+    <div data-reveal="wait" style="flex:1 1 260px;max-width:360px;min-width:0;display:grid;gap:8px;border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,48px);transition-delay:150ms">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Cosa serve</div>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15;padding-top:8px">Curiosità.</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">Rispetto per chi incontri.</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">Attenzione ai dettagli.</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">Uno smartphone o una fotocamera.</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">La voglia di andare a vedere di persona.</span>
+      <span style="font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15;border-top:1px solid var(--ink);padding-top:12px;margin-top:8px">Il resto si impara.</span>
+    </div>
+  </div>
+</section>
+
+<!-- 15 · CREATOR REALI -->
+<section data-screen-label="Creator reali" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;padding-bottom:20px;border-bottom:1px solid var(--ink)">
+    <div style="display:grid;gap:12px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Archivio · Creator Hearth</div>
+      <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Chi sta già guardando.</h2>
+    </div>
+    <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Segnaposto · nomi, numeri e fotografie in attesa dei contenuti reali</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(32px,4vw,56px) var(--grid-gutter);margin-top:clamp(32px,4vw,56px)">
+    <sc-for list="{{ creators }}" as="c" hint-placeholder-count="3">
+      <article data-reveal="wait" style="display:grid;gap:14px">
+        <div style="aspect-ratio:4/5;border-radius:12px;background:var(--mist);display:grid;place-items:end start;padding:16px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-500)">Foto da inserire · contributo del Creator</div>
+        <div style="display:grid;gap:4px"><span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12">{{ c.name }}</span><span style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">{{ c.territory }}</span></div>
+        <div style="font-size:13px;color:var(--grey-600);border-top:1px solid var(--color-border-hairline);padding-top:10px">Ha raccontato: — persone · — luoghi · — Ritmi</div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 16 · FAQ -->
+<section data-screen-label="FAQ" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <h2 style="margin:0;flex:1 1 240px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:12ch">Domande frequenti.</h2>
+  <div style="flex:2 1 480px;min-width:0;border-top:1px solid var(--ink)">
+    <sc-for list="{{ faq }}" as="f" hint-placeholder-count="10">
+      <details style="border-bottom:1px solid var(--color-border-hairline)">
+        <summary style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">{{ f.q }}<span data-plus="true" aria-hidden="true" style="font-family:var(--font-ui);font-size:22px;line-height:1;color:var(--grey-500);transition:transform 200ms;flex:none">+</span></summary>
+        <p style="margin:0;padding:0 0 24px;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:56ch;text-wrap:pretty">{{ f.a }}</p>
+      </details>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 17 · CLOSING -->
+<section data-screen-label="Chiusura" style="margin-top:var(--space-silence)">
+  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Hero" variant="image" image="/assets/photos/vignaiolo-cantina.jpg" image-alt="Un vignaiolo nella sua cantina" focal="50% 40%" min-height="88vh" eyebrow="Hearth Creator" title="La prossima storia potrebbe essere a dieci minuti da casa tua." caption="Vignaiolo in cantina" hint-size="100%,680px"></x-import>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(32px,4vw,64px) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;border-top:1px solid var(--ink)">
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" on-click="{{ openModal }}" hint-size="auto,48px">Diventa Creator</x-import>
+    <span style="font-family:var(--font-editorial);font-weight:300;font-size:22px;line-height:1.3">Non servono migliaia di follower. Serve saper <em style="font-style:italic">guardare</em>.</span>
+  </div>
+</section>
+
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.SiteFooter" wordmark-src="/assets/hearth-wordmark.svg" note="Hearth S.r.l. Società Benefit" year="{{ 2026 }}" links="{{ footerLinks }}" hint-size="100%,140px"></x-import>
+
+<!-- MODAL · Hearth Creator (riutilizzabile) -->
+<sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+  <div data-creator-modal="true" role="presentation" onClick="{{ onOverlayClick }}" style="position:fixed;inset:0;z-index:100;background:rgba(21,20,18,.4);display:grid;align-items:center;justify-items:center;padding:0">
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <!-- Mobile · bottom sheet -->
+      <div role="dialog" aria-modal="true" aria-labelledby="creator-modal-title" style="align-self:end;justify-self:stretch;width:100%;background:var(--paper);border-radius:20px 20px 0 0;box-shadow:var(--shadow-dialog);padding:12px var(--grid-margin) calc(24px + env(safe-area-inset-bottom));display:grid;gap:20px;font-family:var(--font-ui)">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="width:40px;height:4px;border-radius:2px;background:var(--grey-200);margin:0 auto"></span><button type="button" aria-label="Chiudi" onClick="{{ closeModal }}" data-modal-close="true" style="width:44px;height:44px;border:0;background:none;color:var(--ink);cursor:pointer;font-size:22px;line-height:1;border-radius:8px;margin-right:-12px">×</button></div>
+        <div style="display:grid;gap:12px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Hearth Creator</div>
+          <h2 id="creator-modal-title" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Inizia da Hearth Creator.</h2>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600)">Scarica l'app e avvia la tua candidatura.</p>
+        </div>
+        <div style="display:grid;gap:10px">
+          <a href="{{ primaryStoreUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" full-width="{{ true }}" hint-size="100%,48px">{{ primaryStoreLabel }}</x-import></a>
+          <a href="{{ secondaryStoreUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="secondary" size="lg" full-width="{{ true }}" hint-size="100%,48px">{{ secondaryStoreLabel }}</x-import></a>
+        </div>
+        <div style="display:flex;justify-content:center;padding-top:4px"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ deepLink }}" arrow="{{ true }}" hint-size="auto,24px">Hai già l'app? Apri Hearth Creator</x-import></div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
+      <!-- Desktop · dialog -->
+      <div role="dialog" aria-modal="true" aria-labelledby="creator-modal-title" style="width:min(960px,calc(100vw - 48px));max-height:calc(100vh - 48px);overflow:auto;background:var(--paper);border-radius:12px;box-shadow:var(--shadow-dialog);padding:clamp(24px,3vw,48px);display:grid;gap:clamp(16px,2vw,24px);font-family:var(--font-ui)">
+        <div style="display:flex;justify-content:flex-end;margin:-8px -8px -8px 0"><button type="button" aria-label="Chiudi" onClick="{{ closeModal }}" data-modal-close="true" style="width:44px;height:44px;border:0;background:none;color:var(--ink);cursor:pointer;font-size:24px;line-height:1;border-radius:8px" style-hover="background:var(--mist)">×</button></div>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,48px);align-items:center">
+        <div style="flex:1 1 320px;min-width:0;display:grid;gap:24px">
+          <div style="display:grid;gap:14px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Hearth Creator</div>
+            <h2 id="creator-modal-title" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:12ch">Diventa Creator Hearth.</h2>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:38ch;text-wrap:pretty">La candidatura e tutto il percorso Creator iniziano dall'app Hearth Creator.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <a href="{{ appStoreUrl }}" data-badge="app-store" style="display:grid;align-content:center;gap:1px;width:150px;height:48px;padding:0 14px;border-radius:8px;background:var(--ink);color:var(--paper);text-decoration:none" style-hover="background:var(--ink-soft);text-decoration:none"><span style="font-size:9px;letter-spacing:.06em;text-transform:uppercase;opacity:.8">Scarica su</span><span style="font-size:16px;font-weight:700;line-height:1.1">App Store</span></a>
+            <a href="{{ googlePlayUrl }}" data-badge="google-play" style="display:grid;align-content:center;gap:1px;width:150px;height:48px;padding:0 14px;border-radius:8px;background:var(--ink);color:var(--paper);text-decoration:none" style-hover="background:var(--ink-soft);text-decoration:none"><span style="font-size:9px;letter-spacing:.06em;text-transform:uppercase;opacity:.8">Disponibile su</span><span style="font-size:16px;font-weight:700;line-height:1.1">Google Play</span></a>
+          </div>
+          <div style="display:flex;gap:16px;align-items:center;border-top:1px solid var(--color-border-hairline);padding-top:20px">
+            <span aria-label="QR code per scaricare Hearth Creator" style="width:96px;height:96px;border:1px solid var(--ink);border-radius:4px;display:grid;place-items:center;font-size:10px;font-weight:700;letter-spacing:.12em;flex:none;text-align:center;line-height:1.4">QR<br>da generare</span>
+            <span style="display:grid;gap:6px"><span style="font-size:14px;font-weight:700">Apri dal telefono</span><span style="font-size:13px;color:var(--grey-500);max-width:24ch">Inquadra il codice per scaricare o aprire l'app.</span></span>
+          </div>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ deepLink }}" arrow="{{ true }}" hint-size="auto,24px">Hai già Hearth Creator? Apri l'app</x-import>
+        </div>
+        <div style="flex:0 0 auto;width:260px;height:540px;border-radius:36px;background:var(--ink);padding:10px;margin:0 auto"><div style="width:100%;height:100%;border-radius:28px;overflow:hidden;background:var(--white)"><image-slot id="creator-app-screenshot" shape="rect" placeholder="Screenshot app Hearth Creator" style="width:100%;height:100%"></image-slot></div></div>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+</sc-if>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Routing dell'ecosistema. applyUrl / missionsUrl / pointsUrl sono PLACEHOLDER da sostituire.
+// Store e deep link: PLACEHOLDER da sostituire con gli URL definitivi.
+const APP_STORE_URL = 'https://apps.apple.com/app/hearth-creator/PLACEHOLDER';
+const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=PLACEHOLDER';
+const CREATOR_DEEP_LINK = 'https://creator.hearth.app/apri';
+const ROUTES = { app: 'https://hearth.app', eventTool: 'https://eventi.hearth.app/crea', home: '/', storie: '/#storie', territori: '/territori', creator: '/creator', attivita: '/attivita', pass: '/pass', apply: 'https://creator.hearth.app/candidatura', missions: 'https://creator.hearth.app/missioni', points: '/creator/punti-hearth' };
+const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni il Pass' };
+class Component extends DCLogic {
+  state = { menuOpen: false, modalOpen: false, mobile: typeof window !== 'undefined' && window.innerWidth < 768 };
+  openModal = e => {
+    if (e && e.preventDefault) e.preventDefault();
+    this._opener = document.activeElement; this._overflow = document.body.style.overflow; document.body.style.overflow = 'hidden';
+    this.setState({ modalOpen: true, menuOpen: false }, () => { let n = 0; const f = () => { const b = document.querySelector('[data-modal-close]'); if (b) b.focus(); else if (n++ < 20) setTimeout(f, 50); }; setTimeout(f, 30); });
+  };
+  closeModal = () => { document.body.style.overflow = this._overflow || ''; this.setState({ modalOpen: false }, () => { this._opener && this._opener.focus && this._opener.focus(); }); };
+  componentDidMount() {
+    this._r = () => this.setState({ mobile: window.innerWidth < 768 });
+    window.addEventListener('resize', this._r);
+    this._key = e => {
+      if (!this.state.modalOpen) return;
+      if (e.key === 'Escape') { this.closeModal(); return; }
+      if (e.key === 'Tab') { const f = Array.from(document.querySelectorAll('[data-creator-modal] a[href], [data-creator-modal] button')).filter(el => !el.disabled); if (!f.length) return; const first = f[0], last = f[f.length - 1]; if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    };
+    document.addEventListener('keydown', this._key);
+    this._doc = e => { if (this.state.menuOpen && !e.target.closest('[data-nav-menu]') && !e.target.closest('header')) this.setState({ menuOpen: false }); };
+    document.addEventListener('click', this._doc);
+    document.documentElement.setAttribute('data-reveal-ready', '');
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.setAttribute('data-reveal', 'in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px', threshold: 0.06 }) : null;
+    const scan = () => document.querySelectorAll('[data-reveal="wait"]').forEach(el => io ? io.observe(el) : el.setAttribute('data-reveal', 'in'));
+    scan();
+    this._mo = new MutationObserver(scan);
+    this._mo.observe(document.body, { childList: true, subtree: true });
+    if (!window.HearthDesignSystem_ed33ec) this._t = setTimeout(() => this.forceUpdate(), 400);
+  }
+  componentWillUnmount() { this._mo && this._mo.disconnect(); clearTimeout(this._t); document.removeEventListener('click', this._doc); document.removeEventListener('keydown', this._key); window.removeEventListener('resize', this._r); document.body.style.overflow = this._overflow || ''; }
+  renderVals() {
+    const DS = window.HearthDesignSystem_ed33ec;
+    const scrollTo = href => { const t = document.querySelector(href); if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' }); };
+    const st = (state, label) => DS ? React.createElement(DS.Status, { state, label }) : null;
+    const ua = navigator.userAgent || '';
+    const os = /iPhone|iPad|iPod/i.test(ua) ? 'ios' : /Android/i.test(ua) ? 'android' : 'other';
+    const stores = { ios: ['Scarica su App Store', APP_STORE_URL], android: ['Scarica su Google Play', GOOGLE_PLAY_URL] };
+    const primary = os === 'android' ? stores.android : stores.ios, secondary = os === 'android' ? stores.ios : stores.android;
+    return {
+      missionsUrl: ROUTES.missions, pointsUrl: ROUTES.points,
+      modalOpen: this.state.modalOpen, isMobile: this.state.modalOpen && this.state.mobile, isDesktop: this.state.modalOpen && !this.state.mobile,
+      openModal: this.openModal, closeModal: this.closeModal,
+      onOverlayClick: e => { if (e.target === e.currentTarget) this.closeModal(); },
+      appStoreUrl: APP_STORE_URL, googlePlayUrl: GOOGLE_PLAY_URL, deepLink: CREATOR_DEEP_LINK,
+      primaryStoreLabel: primary[0], primaryStoreUrl: primary[1], secondaryStoreLabel: secondary[0], secondaryStoreUrl: secondary[1],
+      menuOpen: this.state.menuOpen,
+      onNavigate: (value, href) => {
+        this.setState({ menuOpen: false });
+        if (href && href.startsWith('#')) { scrollTo(href); return; }
+        if (href) window.location.href = href;
+      },
+      navItems: [{ label: 'Esplora', value: 'esplora', href: ROUTES.app }, { label: 'Per i territori', value: 'territori', href: ROUTES.territori }, { label: 'Attività', value: 'attivita', href: ROUTES.attivita }, { label: 'Creator', value: 'creator', href: ROUTES.creator }, { label: 'Hearth Pass', value: 'pass', href: ROUTES.pass }],
+      navAction: DS ? React.createElement(DS.Button, { variant: 'primary', shape: 'pill', size: 'sm', onClick: this.openModal }, NAV_CTA.creator) : null,
+      statusPublished: st('published', 'Pubblicato'), statusReview: st('review', 'Integrazione richiesta'), statusDraft: st('draft', 'Da fare'),
+      searchKinds: [{ value: 'persona', label: 'Persona' }, { value: 'luogo', label: 'Luogo' }, { value: 'attivita', label: 'Attività' }],
+      rhythmRows: [
+        { label: 'Rientro delle barche', note: 'solo al mattino, tutto l\u2019anno', months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+        { label: 'Si arriva in barca', note: 'da maggio a settembre', months: [5, 6, 7, 8, 9] },
+        { label: 'Processione a mare', note: 'seconda domenica di agosto', months: [8], accent: true }
+      ],
+      missions: [
+        { territory: 'Campi Flegrei', title: 'Documentare tre botteghe del porto', note: 'Persone, orari, fotografie. Indicazioni nel brief della Missione.', meta: 'entro il 30 ott · compenso previsto' },
+        { territory: 'Irpinia', title: 'Aggiungere i Ritmi ai luoghi già presenti', note: 'Stagioni, aperture, giorni di festa su 14 schede esistenti.', meta: 'entro il 15 nov' },
+        { territory: 'Territorio da definire', title: 'Raccontare una processione', note: 'Video breve girato sul posto e scheda Evento.', meta: 'data da definire' }
+      ],
+      steps: [
+        { n: '01', title: 'Candidati', note: 'Fornisci i dati richiesti e accedi al percorso Creator.' },
+        { n: '02', title: 'Realizza un primo contenuto test', note: 'Hearth valuta il modo in cui osservi, raccogli informazioni e racconti.' },
+        { n: '03', title: 'Se serve, integri', note: 'Il team può chiedere correzioni o informazioni mancanti.' },
+        { n: '04', title: 'Realizza altri due contributi', note: 'Servono a verificare continuità e qualità.' },
+        { n: '05', title: 'Entri nella rete Creator Hearth', note: 'Se il percorso raggiunge il livello qualitativo richiesto.' }
+      ],
+      propagation: [
+        { label: 'Scheda Persona', note: 'Antonia · Atripalda' }, { label: 'Mappa del territorio', note: 'Irpinia' }, { label: 'Storia', note: '«Il forno apre alle quattro»' }, { label: 'Guida', note: 'Irpinia, edizione 2026' }, { label: 'Progetto del Comune', note: 'QR davanti al forno' }, { label: 'Hearth, per chi viaggia', note: 'hearth.app' }
+      ],
+      profiles: [
+        { title: 'Chi conosce bene il proprio territorio', note: 'Sa chi incontrare e cosa succede davvero durante l\u2019anno.' },
+        { title: 'Chi viaggia con curiosità', note: 'Trova persone e luoghi che non aveva pianificato.' },
+        { title: 'Chi fotografa o gira video', note: 'Sa documentare ciò che incontra.' },
+        { title: 'Chi ama cercare storie', note: 'Fa domande, ascolta e raccoglie dettagli.' }
+      ],
+      creators: [
+        { name: '[Nome Creator]', territory: 'Territorio da inserire' }, { name: '[Nome Creator]', territory: 'Territorio da inserire' }, { name: '[Nome Creator]', territory: 'Territorio da inserire' }
+      ],
+      faq: [
+        { q: 'Devo essere fotografo professionista?', a: 'No. La qualità conta, ma Hearth cerca soprattutto capacità di osservare, documentare e raccontare.' },
+        { q: 'Devo avere follower?', a: 'No. Il numero di follower non fa parte dei criteri fondamentali.' },
+        { q: 'Posso contribuire solo nella mia città?', a: 'No. Puoi contribuire nei territori che conosci e nei luoghi che scopri durante i tuoi viaggi.' },
+        { q: 'Posso contribuire a qualcosa creato da un altro Creator?', a: 'Sì. Hearth è un patrimonio collaborativo: puoi aggiungere Ritmi, media e altri contributi dove mancano.' },
+        { q: 'Tutti i contenuti vengono pubblicati?', a: 'No. I contributi vengono revisionati e possono richiedere integrazioni.' },
+        { q: 'Come funzionano i Punti Hearth?', a: 'I contributi approvati generano Punti Hearth secondo le regole del programma. I Punti determinano la partecipazione del Creator al pool economico alimentato dal 10% dei ricavi idonei Hearth. Il regolamento completo definisce pesi, requisiti e modalità di distribuzione.' },
+        { q: 'Continuo a partecipare anche dopo la pubblicazione?', a: 'I contributi entrati nel patrimonio possono continuare ad avere peso nel programma nel tempo, secondo le regole previste dal regolamento. Non sono previsti importi o durate garantiti.' },
+        { q: 'Tutte le Missioni sono pagate?', a: 'No. Alcune Missioni prevedono un compenso economico specifico e lo indicano chiaramente.' },
+        { q: 'Posso ricevere lavori pagati direttamente da Hearth?', a: 'I Creator che dimostrano nel tempo qualità, continuità e affidabilità possono essere coinvolti in produzioni e progetti commissionati attraverso Hearth, con un compenso specifico distinto dai Punti Hearth.' },
+        { q: 'Un\u2019attività può pagare per essere inserita nella guida?', a: 'No. I servizi professionali acquistati da un\u2019attività non determinano l\u2019inclusione, il posizionamento o il trattamento editoriale su Hearth. Un\u2019attività può invece richiedere servizi aggiuntivi, come produzioni fotografiche o video, che Hearth può affidare ai propri Creator.' }
+      ],
+      paidWork: ['Produzione fotografica per un\u2019attività', 'Video brevi per un\u2019attività Hearth', 'Documentazione di un evento', 'Contenuti per un Comune o un territorio', 'Missione territoriale con compenso', 'Aggiornamento professionale di contenuti esistenti', 'Produzioni commissionate in progetti Hearth'],
+      progression: [
+        { n: '01', title: 'Scopri', note: 'Trovi qualcosa che vale la pena documentare.' },
+        { n: '02', title: 'Contribuisci', note: 'Schede, informazioni, fotografie, video, Ritmi.' },
+        { n: '03', title: 'Costruisci', note: 'I contributi approvati diventano patrimonio Hearth.' },
+        { n: '04', title: 'Partecipi al valore', note: 'I Punti Hearth collegano il contributo al pool Creator.' },
+        { n: '05', title: 'Costruisci fiducia', note: 'Qualità, continuità e affidabilità consolidano il rapporto con Hearth.' },
+        { n: '06', title: 'Puoi ricevere incarichi', note: 'Missioni e progetti professionali con compenso diretto.' }
+      ],
+      footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita]].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+    };
+  }
+}
+</script>
+</body>
+</html>

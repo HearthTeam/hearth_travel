@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/geometry.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
+<title>Hearth Pass | Hearth</title>
+<meta name="description" content="Hearth Pass accompagna chi scopre un territorio dentro le attività che lo rendono vivo. Chi viaggia riceve vantaggi. Chi accoglie partecipa al valore generato dall'ecosistema.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#faf8f3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Hearth">
+<meta property="og:title" content="Un Pass che fa circolare valore nel territorio.">
+<meta property="og:description" content="Hearth Pass accompagna chi scopre un territorio dentro le attività che lo rendono vivo. Chi viaggia riceve vantaggi. Chi accoglie partecipa al valore generato dall'ecosistema.">
+<meta property="og:image" content="https://hearth.travel/assets/photos/chef-cucina.jpg">
+<meta name="twitter:image" content="https://hearth.travel/assets/photos/chef-cucina.jpg">
+<meta property="og:url" content="https://hearth.travel/pass">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hearth.travel/pass">
+
+<style>
+body{margin:0;background:#faf8f3;color:#151412;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:#151412;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] summary span[data-plus]{transform:rotate(45deg)}
+html[data-reveal-ready] [data-reveal="wait"]{opacity:0;transform:translateY(14px)}
+[data-reveal]{transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){[data-reveal]{transition:none;opacity:1 !important;transform:none !important}}
+
+[data-vesta-home]{display:block}
+header img[alt=""]{transition:transform var(--motion-default) var(--ease-editorial);transform-origin:50% 50%}
+[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:scale(1.04) rotate(5deg)}
+@media (hover:none){[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+@media (max-width:1023px){[data-vesta-home]{display:none}}
+@media (prefers-reduced-motion:reduce){header img[alt=""]{transition:none}[data-navbar]:has([data-vesta-home]:hover) header img[alt=""]{transform:none}}
+
+/* navbar: le voci non vanno mai a capo */
+@media (min-width:1024px){
+  [data-navbar] header nav a{white-space:nowrap;flex:none}
+  [data-navbar] header nav{gap:22px}
+}
+/* sotto 1600px il wordmark non sta al centro: lockup a sinistra, voci a destra */
+@media (min-width:1024px) and (max-width:1599px){
+  [data-navbar] header{grid-template-columns:auto auto minmax(0,1fr) !important;column-gap:clamp(20px,2.4vw,32px) !important}
+  [data-navbar] header nav{gap:clamp(14px,1.6vw,22px);justify-content:flex-end}
+}
+</style>
+</helmet>
+<main style="font-family:var(--font-ui);background:var(--paper);color:var(--ink);overflow-x:clip">
+
+<div data-navbar="true" style="position:sticky;top:0;z-index:40">
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.TopNav" mode="stories" wordmark-src="assets/hearth-wordmark.svg" symbol-src="assets/hearth-symbol.svg" items="{{ navItems }}" active="pass" home-href="Hearth Homepage.dc.html" action="{{ navAction }}" on-navigate="{{ onNavigate }}" hint-size="100%,64px"></x-import>
+  <a href="Hearth Homepage.dc.html" data-vesta-home="true" aria-label="Hearth · Torna alla homepage" style="position:absolute;left:calc(var(--grid-margin) - 4px);top:10px;width:44px;height:44px;border-radius:50%;z-index:calc(var(--z-sticky) + 1)"></a>
+
+</div>
+
+<!-- 1 · HERO -->
+<section id="top" data-screen-label="Hero" style="max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,96px) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-end">
+  <div style="flex:1 1 520px;min-width:0;display:grid;gap:clamp(24px,3vw,40px);padding-bottom:clamp(8px,2vw,32px)">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Hearth Pass</div>
+    <h1 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:clamp(52px,8.5vw,152px);line-height:.92;letter-spacing:-.025em;text-wrap:balance;max-width:12ch">Un Pass che fa circolare valore nel territorio.</h1>
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:1.5;max-width:44ch;text-wrap:pretty">Hearth Pass accompagna chi scopre un territorio dentro le attività che lo rendono vivo. Chi viaggia riceve vantaggi. Chi accoglie partecipa al valore generato dall'ecosistema.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+      <a href="{{ buyUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Ottieni Hearth Pass</x-import></a>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="#attivita" arrow="{{ true }}" hint-size="auto,24px">Ho un'attività</x-import>
+    </div>
+  </div>
+  <figure style="flex:1 1 360px;max-width:600px;min-width:0;margin:0;display:grid;gap:12px">
+    <div style="position:relative;padding-bottom:clamp(56px,9vw,120px)">
+      <div style="aspect-ratio:4/5;overflow:hidden;border-radius:20px;background:var(--mist)"><img src="assets/photos/oste-bancone.jpg" alt="Un oste dietro il bancone accoglie chi entra" style="width:100%;height:100%;object-fit:cover;object-position:60% 50%;transition:transform 900ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></div>
+      <div data-reveal="wait" style="position:absolute;left:clamp(-24px,-4vw,-56px);bottom:0;width:min(62%,360px);filter:drop-shadow(0 18px 32px rgba(21,20,18,.18));transition-delay:250ms">
+        <dc-import name="HearthPassCard" duration="10" unit="day" people="2 persone" photo="torre-macchia" accent="blu" hint-size="100%,auto"></dc-import>
+      </div>
+    </div>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Caption" name="Oste al bancone" hint-size="100%,40px"></x-import>
+  </figure>
+</section>
+
+<!-- 2 · DUE LATI -->
+<section data-screen-label="Due lati" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:12ch">Lo stesso Pass. Due modi di viverlo.</h2>
+  <div style="display:flex;flex-wrap:wrap;margin-top:clamp(40px,5vw,72px);border-top:1px solid var(--ink)">
+    <a href="#viaggiatori" data-reveal="wait" style="flex:1 1 320px;min-width:0;display:grid;gap:20px;padding:clamp(24px,3vw,40px) clamp(20px,3vw,48px) clamp(24px,3vw,40px) 0;text-decoration:none;color:inherit;border-bottom:1px solid var(--color-border-hairline)">
+      <span style="aspect-ratio:3/2;overflow:hidden;border-radius:12px;display:block"><img src="assets/photos/torre-macchia.jpg" alt="Una torre tra la macchia, il mare dietro" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Per chi viaggia</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:16ch">Scopri un luogo. Trova un'attività. Usa un vantaggio.</span>
+      <span style="font-size:14px;font-weight:700">Scopri il Pass →</span>
+    </a>
+    <a href="#attivita" data-reveal="wait" style="flex:1 1 320px;min-width:0;display:grid;gap:20px;padding:clamp(24px,3vw,40px) 0 clamp(24px,3vw,40px) clamp(20px,3vw,48px);text-decoration:none;color:inherit;border-left:1px solid var(--color-border-hairline);border-bottom:1px solid var(--color-border-hairline);transition-delay:120ms">
+      <span style="aspect-ratio:3/2;overflow:hidden;border-radius:12px;display:block"><img src="assets/photos/fornaia-pane.jpg" alt="Una fornaia con il pane appena sfornato" style="width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.02)"></span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Per chi ha un'attività</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:16ch">Accogli chi arriva. Fai conoscere Hearth. Partecipa al valore.</span>
+      <span style="font-size:14px;font-weight:700">Scopri Hearth Pass per le attività →</span>
+    </a>
+  </div>
+</section>
+
+<!-- 3 · COME CIRCOLA IL VALORE -->
+<section data-screen-label="Come circola il valore" style="background:var(--ink);color:var(--paper);margin-top:var(--space-silence);padding:var(--space-section) 0">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+      <h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:14ch">Quello che spendi non resta soltanto a Hearth.</h2>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-200);max-width:44ch;text-wrap:pretty">Una parte del valore generato da Hearth Pass alimenta i meccanismi previsti per chi contribuisce all'ecosistema: attività, Creator e Hearth stesso.</p>
+    </div>
+    <ol style="list-style:none;margin:clamp(40px,5vw,72px) 0 0;padding:0;border-top:1px solid rgba(250,248,243,.35)">
+      <sc-for list="{{ cycle }}" as="c" hint-placeholder-count="7">
+        <li data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:8px var(--grid-gutter);align-items:center;padding:clamp(16px,2vw,24px) 0;border-bottom:1px solid rgba(250,248,243,.18)">
+          <span style="flex:0 0 clamp(96px,12vw,180px);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-300)">{{ c.who }}</span>
+          <span style="flex:1 1 260px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">{{ c.text }}</span>
+          <span style="flex:0 0 clamp(72px,8vw,120px);aspect-ratio:3/2;overflow:hidden;border-radius:4px"><img src="{{ c.img }}" alt="" style="width:100%;height:100%;object-fit:cover"></span>
+        </li>
+      </sc-for>
+    </ol>
+    <p style="margin:20px 0 0;font-size:13px;color:var(--grey-300);max-width:48ch">Anche i Creator che documentano il territorio partecipano al valore, secondo il programma Creator. <span style="color:var(--paper)">Regole Hearth Pass</span></p>
+  </div>
+</section>
+
+<!-- 4 · PER CHI VIAGGIA -->
+<section id="viaggiatori" data-screen-label="Per chi viaggia" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-end">
+    <div style="flex:1 1 400px;min-width:0;display:grid;gap:20px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Per chi viaggia</div>
+      <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:.92;letter-spacing:-.025em">Scopri.<br>Entra.<br>Vivi qualcosa in <em style="font-style:italic">più</em>.</h2>
+    </div>
+    <div data-reveal="wait" style="flex:1 1 320px;min-width:0;display:grid;gap:0;border-top:1px solid var(--ink);transition-delay:120ms">
+      <sc-for list="{{ travellerSteps }}" as="s" hint-placeholder-count="6">
+        <div style="display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 24px;font-size:12px;color:var(--grey-500);font-variant-numeric:tabular-nums">{{ s.n }}</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">{{ s.text }}</span></div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- I tre Pass -->
+  <div id="prezzi" style="margin-top:clamp(56px,7vw,112px);display:grid;gap:16px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;align-items:baseline"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Tre Pass · tre modi di vivere Hearth</span><span style="font-size:12px;color:var(--grey-500)">Prezzi per Pass</span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:0 var(--grid-gutter);border-top:1px solid var(--ink)">
+      <sc-for list="{{ passes }}" as="p" hint-placeholder-count="3">
+        <article data-reveal="wait" style="display:grid;gap:20px;align-content:start;padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid var(--color-border-hairline)">
+          <div style="max-width:420px;transition:transform 600ms cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-4px)"><dc-import name="HearthPassCard" duration="{{ p.dur }}" unit="{{ p.unit }}" people="{{ p.people }}" photo="{{ p.photo }}" accent="{{ p.accent }}" focal="{{ p.focal }}" hint-size="100%,auto"></dc-import></div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 16px"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Hearth Pass · {{ p.name }}</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:clamp(40px,4vw,64px);line-height:.9;letter-spacing:-.03em;font-variant-numeric:lining-nums">{{ p.price }}</span></div>
+          <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px;border-top:1px solid var(--color-border-hairline);padding-top:14px"><dt style="color:var(--grey-500)">Valido per</dt><dd style="margin:0">{{ p.people }}</dd><dt style="color:var(--grey-500)">Durata</dt><dd style="margin:0">{{ p.duration }}</dd></dl>
+          <p style="margin:0;font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:22px;line-height:1.3;color:var(--grey-600);max-width:22ch">{{ p.for }}</p>
+          <div><a href="{{ p.url }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="md" hint-size="auto,40px">Ottieni il Pass</x-import></a></div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · COSA PUOI TROVARE -->
+<section data-screen-label="Vantaggi" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+  <div style="flex:1 1 320px;min-width:0;display:grid;gap:24px">
+    <h2 data-reveal="wait" style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:12ch">Non sai sempre che cosa troverai.</h2>
+    <p data-reveal="wait" style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:40ch;text-wrap:pretty">Ed è corretto. Ogni attività decide il proprio vantaggio: un omaggio, uno sconto, un prezzo dedicato, un upgrade, un'esperienza, un servizio incluso. Non un coupon: un gesto di accoglienza.</p>
+    <div data-reveal="wait" style="display:grid;gap:0;border-top:1px solid var(--ink);max-width:480px">
+      <sc-for list="{{ examples }}" as="e" hint-placeholder-count="4">
+        <div style="display:flex;flex-wrap:wrap;gap:4px 20px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--color-border-hairline)"><span style="flex:0 0 90px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">{{ e.kind }}</span><span style="flex:1 1 200px;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2">{{ e.text }}</span></div>
+      </sc-for>
+    </div>
+  </div>
+  <!-- Scheda con Pass -->
+  <div data-reveal="wait" style="flex:0 1 340px;min-width:280px;display:grid;gap:12px;transition-delay:120ms">
+    <div style="font-size:12px;letter-spacing:.02em;color:var(--grey-500)">Come appare su hearth.app · esempio</div>
+    <div style="background:var(--white);border:1px solid var(--grey-200);border-radius:20px;padding:16px 14px;display:grid;gap:12px">
+      <div style="aspect-ratio:4/3;overflow:hidden;border-radius:12px"><img src="assets/photos/vignaiolo-cantina.jpg" alt="Il vignaiolo tra le botti" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="display:grid;gap:4px"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Cantina</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.15">Una cantina del territorio</span><span style="font-size:12px;color:var(--grey-500)">Bacoli, Campi Flegrei</span></div>
+      <div style="display:flex;gap:16px;align-items:baseline;border-top:1px solid var(--color-border-hairline);padding-top:10px"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Ritmo</span><span style="font-size:14px">Visite dalle 11.</span></div>
+      <div style="display:grid;gap:6px;border-top:1px solid var(--ink);padding-top:12px"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Hearth Pass</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:22px;line-height:1.2">Calice di benvenuto incluso con la degustazione.</span></div>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" full-width="{{ true }}" hint-size="100%,32px">Usa il vantaggio</x-import>
+    </div>
+  </div>
+  <!-- L'ultimo pezzo -->
+  <div data-reveal="wait" style="flex:1 1 280px;min-width:0;display:grid;gap:20px;border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,48px);align-self:stretch;transition-delay:200ms">
+    <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:14ch">Il vantaggio è solo l'ultimo pezzo della storia.</h3>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:36ch;text-wrap:pretty">Prima Hearth ti aiuta a capire dove sei, chi c'è, cosa rende speciale quel luogo, quando viverlo, cosa sta accadendo, chi incontrare. Poi il Pass aggiunge una ragione in più per entrare.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-family:var(--font-editorial);font-weight:300;font-size:24px;line-height:1.2;border-top:1px solid var(--ink);padding-top:14px"><span>Scheda</span><span style="color:var(--grey-400)">+</span><span>Storia</span><span style="color:var(--grey-400)">+</span><span>Ritmo</span><span style="color:var(--grey-400)">+</span><span><em style="font-style:italic">Pass</em></span></div>
+    <div style="display:grid;gap:8px;font-size:13px;color:var(--grey-600);border-top:1px solid var(--color-border-hairline);padding-top:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Come si usa</span>
+      <span>Apri Hearth → mostra il Pass → l'attività conferma → l'utilizzo viene registrato. Il dettaglio dell'interazione è in definizione.</span>
+    </div>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="{{ appUrl }}" arrow="{{ true }}" hint-size="auto,24px">Vedi i vantaggi su Hearth</x-import>
+  </div>
+</section>
+
+<!-- 6 · TRANSIZIONE -->
+<section id="attivita" data-screen-label="Transizione" style="margin-top:var(--space-silence);position:relative;background:var(--ink)">
+  <div style="aspect-ratio:21/9;min-height:60vh;max-height:90vh;overflow:hidden"><img src="assets/photos/chef-cucina.jpg" alt="Un cuoco in cucina" style="width:100%;height:100%;object-fit:cover;object-position:50% 40%"></div>
+  <div style="position:absolute;inset:0;background:var(--color-overlay-scrim)"></div>
+  <p style="position:absolute;left:var(--grid-margin);right:var(--grid-margin);bottom:clamp(32px,6vh,80px);margin:0;color:var(--paper);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:.92;letter-spacing:-.025em;text-wrap:balance;max-width:14ch">Dall'altra parte c'è chi ti apre la <em style="font-style:italic">porta</em>.</p>
+</section>
+
+<!-- 7 · PER LE ATTIVITÀ -->
+<section data-screen-label="Per le attività" style="max-width:1440px;margin:0 auto;padding:var(--space-section) var(--grid-margin) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+    <div style="display:grid;gap:20px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Hearth Pass per le attività</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:.92;letter-spacing:-.025em">Accogli.<br>Condividi.<br>Partecipa al valore.</h2></div>
+    <div style="display:grid;gap:20px;max-width:440px">
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);text-wrap:pretty">Offri un vantaggio a chi ti scopre attraverso Hearth e partecipa ai meccanismi economici del programma.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+        <a href="{{ joinUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Partecipa a Hearth Pass</x-import></a>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Attivita.dc.html" arrow="{{ true }}" hint-size="auto,24px">Scopri Hearth per le attività</x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 QR -->
+  <div data-reveal="wait" style="margin-top:clamp(56px,7vw,112px);display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,48px) var(--grid-gutter);align-items:flex-start;border-top:1px solid var(--ink);padding-top:clamp(24px,3vw,40px)">
+    <span style="flex:0 0 clamp(56px,7vw,100px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em">01</span>
+    <div style="flex:1 1 300px;min-width:0;display:grid;gap:16px">
+      <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Fai conoscere Hearth.</h3>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:44ch;text-wrap:pretty">Se una persona arriva su Hearth attraverso il tuo QR, si registra e acquista un Pass attribuito alla tua segnalazione, puoi ricevere fino al 50% del valore del Pass, al netto delle commissioni previste.</p>
+      <ol style="list-style:none;margin:0;padding:0;border-top:1px solid var(--color-border-hairline);max-width:440px">
+        <sc-for list="{{ qrSteps }}" as="q" hint-placeholder-count="5">
+          <li style="display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--color-border-hairline);font-size:15px"><span style="flex:0 0 20px;font-size:12px;color:var(--grey-500);font-variant-numeric:tabular-nums">{{ q.n }}</span>{{ q.text }}</li>
+        </sc-for>
+      </ol>
+    </div>
+    <div style="flex:1 1 240px;display:grid;gap:8px;justify-items:end;text-align:right">
+      <span style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--grey-500)">fino al</span>
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:clamp(88px,12vw,200px);line-height:.85;letter-spacing:-.045em;font-variant-numeric:lining-nums">50%</span>
+      <span style="font-size:13px;color:var(--grey-600);max-width:26ch">del valore del Pass venduto, al netto delle commissioni previste</span>
+    </div>
+  </div>
+  <!-- QR nel mondo reale -->
+  <div data-reveal="wait" style="display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,48px) var(--grid-gutter);align-items:center;margin-top:clamp(32px,4vw,56px);padding-left:clamp(0px,7vw,100px)">
+    <div style="flex:0 1 300px;min-width:240px;display:grid;gap:12px">
+      <div style="aspect-ratio:1/1;border-radius:12px;background:var(--white);border:1px solid var(--grey-200);display:grid;place-items:center;padding:24px">
+        <div style="display:grid;gap:14px;justify-items:center;text-align:center">
+          <div style="width:min(160px,50%);aspect-ratio:1/1;background:repeating-linear-gradient(90deg,var(--ink) 0 12px,transparent 12px 20px),repeating-linear-gradient(0deg,var(--ink) 0 12px,transparent 12px 20px);background-blend-mode:multiply;opacity:.9;border-radius:4px" aria-label="QR Hearth · segnaposto"></div>
+          <img src="assets/hearth-wordmark.svg" alt="Hearth" style="height:18px">
+          <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Scopri cosa c'è intorno</span>
+        </div>
+      </div>
+      <span style="font-size:12px;color:var(--grey-500)">Vetrofania · supporto da banco · stampati · QR nell'attività</span>
+    </div>
+    <p style="margin:0;flex:1 1 280px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:18ch;text-wrap:balance">Chi entra da te può iniziare da qui a scoprire tutto il <em style="font-style:italic">territorio</em>.</p>
+  </div>
+
+  <!-- 02 Utilizzi -->
+  <div data-reveal="wait" style="margin-top:clamp(40px,5vw,72px);display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,48px) var(--grid-gutter);align-items:flex-start;border-top:1px solid var(--ink);padding-top:clamp(24px,3vw,40px)">
+    <span style="flex:0 0 clamp(56px,7vw,100px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em">02</span>
+    <div style="flex:1 1 300px;min-width:0;display:grid;gap:16px">
+      <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Accogli chi ha già Hearth Pass.</h3>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:44ch;text-wrap:pretty">Quando una persona utilizza un vantaggio Hearth Pass nella tua attività, l'utilizzo viene registrato. Gli utilizzi registrati contribuiscono alla distribuzione del valore economico previsto per le attività partecipanti, secondo le regole Hearth Pass.</p>
+      <ol style="list-style:none;margin:0;padding:0;border-top:1px solid var(--color-border-hairline);max-width:440px">
+        <sc-for list="{{ poolSteps }}" as="q" hint-placeholder-count="4">
+          <li style="display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--color-border-hairline);font-size:15px"><span style="flex:0 0 20px;font-size:12px;color:var(--grey-500);font-variant-numeric:tabular-nums">{{ q.n }}</span>{{ q.text }}</li>
+        </sc-for>
+      </ol>
+    </div>
+    <div style="flex:1 1 240px;display:grid;gap:12px">
+      <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.12;letter-spacing:-.01em;max-width:22ch;text-wrap:balance">Più Hearth viene vissuto, più il valore può tornare dove viene <em style="font-style:italic">vissuto</em>.</p>
+      <span style="font-size:13px;color:var(--grey-600);max-width:34ch">Non un importo fisso per utilizzo: la quota dipende dalle regole del programma e dagli utilizzi registrati nel periodo di riferimento.</span>
+    </div>
+  </div>
+
+  <!-- 03 Ragione per entrare -->
+  <div data-reveal="wait" style="margin-top:clamp(40px,5vw,72px);display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,48px) var(--grid-gutter);align-items:flex-start;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:clamp(24px,3vw,40px) 0">
+    <span style="flex:0 0 clamp(56px,7vw,100px);font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:.9;letter-spacing:-.02em">03</span>
+    <div style="flex:1 1 300px;min-width:0;display:grid;gap:16px">
+      <h3 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em">Dai una ragione per entrare.</h3>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:44ch;text-wrap:pretty">Il vantaggio non compra una posizione migliore nella guida. Ma quando qualcuno ti scopre, può diventare una ragione concreta per scegliere di entrare.</p>
+    </div>
+    <div style="flex:1 1 240px;display:flex;flex-wrap:nowrap;gap:12px;align-items:center;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500);white-space:nowrap;overflow-x:auto;scrollbar-width:none;mask-image:linear-gradient(90deg,#000 92%,transparent)"><span style="color:var(--ink)">Scoperta</span><span>→</span><span>Scheda</span><span>→</span><span>Vantaggio</span><span>→</span><span>Visita</span><span>→</span><span style="color:var(--ink)">Utilizzo</span></div>
+  </div>
+  <p style="margin:16px 0 0;font-size:13px;color:var(--grey-600)">Non si compra un posto nella guida. <a href="Hearth Attivita.dc.html" style="font-weight:700">Scopri come funziona Hearth per le attività →</a></p>
+</section>
+
+<!-- 8 · CONFIGURARE UN VANTAGGIO -->
+<section data-screen-label="Configurazione" style="background:var(--white);margin-top:var(--space-silence);padding:var(--space-section) 0;border-top:1px solid var(--color-border-hairline);border-bottom:1px solid var(--color-border-hairline)">
+  <div style="max-width:1440px;margin:0 auto;padding:0 var(--grid-margin)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,5vw,96px);align-items:flex-end;justify-content:space-between">
+      <div style="display:grid;gap:20px"><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Configurare un vantaggio</div><h2 style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:.96;letter-spacing:-.02em;max-width:12ch">Tu decidi il gesto.</h2></div>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:44ch;text-wrap:pretty">Tipo, descrizione e frequenza per Pass. Poi il vantaggio compare nella tua scheda e chi ha il Pass lo usa da te. Esempio dimostrativo.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,56px) var(--grid-gutter);margin-top:clamp(40px,5vw,72px);align-items:flex-start">
+      <!-- come lo configura -->
+      <div data-reveal="wait" data-mode="core" data-density="compact" style="flex:1 1 300px;max-width:420px;min-width:0;border:1px solid var(--grey-200);border-radius:20px;padding:20px;display:grid;gap:16px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Come lo configura l'attività</div>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Select" label="Tipo di vantaggio" value="omaggio" options="{{ kindOptions }}" hint-size="100%,64px"></x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Textarea" label="Descrizione" value="Calice di benvenuto incluso con la degustazione." rows="{{ 2 }}" hint="Cosa riceve concretamente chi ha il Pass." hint-size="100%,96px"></x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Select" label="Frequenza per Pass" value="giorno" options="{{ freqOptions }}" hint-size="100%,64px"></x-import>
+        <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" full-width="{{ true }}" hint-size="100%,32px">Salva il vantaggio</x-import>
+      </div>
+      <span aria-hidden="true" style="align-self:center;font-family:var(--font-editorial);font-weight:300;font-size:40px;color:var(--grey-400)">→</span>
+      <!-- come lo vede -->
+      <div data-reveal="wait" style="flex:0 1 300px;min-width:260px;display:grid;gap:12px;transition-delay:120ms">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Come lo vede il viaggiatore</div>
+        <div style="background:var(--paper);border:1px solid var(--grey-200);border-radius:20px;padding:16px 14px;display:grid;gap:12px">
+          <div style="aspect-ratio:4/3;overflow:hidden;border-radius:12px"><img src="assets/photos/vignaiolo-cantina.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="display:grid;gap:4px"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Cantina</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:22px;line-height:1.15">Una cantina del territorio</span><span style="font-size:12px;color:var(--grey-500)">Bacoli · visite dalle 11</span></div>
+          <div style="display:grid;gap:6px;border-top:1px solid var(--ink);padding-top:12px"><span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Hearth Pass · Omaggio</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:22px;line-height:1.2">Calice di benvenuto incluso con la degustazione.</span><span style="font-size:12px;color:var(--grey-500)">Una volta per Pass al giorno</span></div>
+          <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" full-width="{{ true }}" hint-size="100%,32px">Usa il vantaggio</x-import>
+        </div>
+      </div>
+      <span aria-hidden="true" style="align-self:center;font-family:var(--font-editorial);font-weight:300;font-size:40px;color:var(--grey-400)">→</span>
+      <!-- come viene utilizzato -->
+      <div data-reveal="wait" style="flex:1 1 240px;min-width:0;display:grid;gap:12px;transition-delay:200ms">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Come viene utilizzato · Mostra il Pass</div>
+        <div style="display:flex;flex-wrap:wrap;gap:20px var(--grid-gutter);align-items:flex-start">
+          <div style="flex:0 0 220px;max-width:100%;background:var(--ink);border-radius:28px;padding:10px;box-shadow:var(--shadow-dialog)">
+            <div style="background:var(--paper);border-radius:20px;padding:14px 12px 16px;display:grid;gap:12px;min-height:300px">
+              <div style="display:flex;justify-content:space-between;align-items:center"><img src="assets/hearth-symbol-notext.svg" alt="" style="width:18px;height:18px"><span style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Il mio Pass</span></div>
+              <dc-import name="HearthPassCard" duration="10" unit="day" people="2 persone" photo="torre-macchia" accent="blu" active="{{ true }}" hint-size="100%,auto"></dc-import>
+              <div style="display:grid;gap:4px;border-top:1px solid var(--color-border-hairline);padding-top:10px"><span style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Vantaggio</span><span style="font-family:var(--font-editorial);font-weight:300;font-size:18px;line-height:1.2">Calice di benvenuto incluso con la degustazione.</span></div>
+              <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="sm" full-width="{{ true }}" hint-size="100%,32px">Mostra il Pass</x-import>
+            </div>
+          </div>
+          <div style="flex:1 1 200px;min-width:0"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Timeline" items="{{ useTimeline }}" hint-size="100%,220px"></x-import></div>
+        </div>
+        <span style="font-size:12px;color:var(--grey-500)">Interazione in definizione · UI segnaposto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · CROSS-LINK PRODUZIONE -->
+<section data-screen-label="Immagini" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px) var(--grid-gutter);align-items:flex-end">
+  <h2 data-reveal="wait" style="margin:0;flex:1 1 400px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:22ch;text-wrap:balance">Il vantaggio può portarti alla porta. Le immagini fanno capire cosa c'è <em style="font-style:italic">dentro</em>.</h2>
+  <div data-reveal="wait" style="flex:1 1 300px;display:grid;gap:10px;border-left:1px solid var(--color-border-hairline);padding-left:clamp(20px,3vw,48px);transition-delay:100ms">
+    <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)">Produzione foto + video Hearth</span>
+    <span style="font-family:var(--font-editorial);font-weight:300;font-size:clamp(48px,5vw,80px);line-height:.9;letter-spacing:-.03em;font-variant-numeric:lining-nums">€200</span>
+    <p style="margin:0;font-size:14px;line-height:1.5;color:var(--grey-600);max-width:38ch">Le attività possono curare la propria presenza con una produzione realizzata dai Creator Hearth. Separata dal Pass e dal trattamento editoriale.</p>
+    <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="Hearth Attivita.dc.html#produzione" arrow="{{ true }}" hint-size="auto,24px">Scopri Hearth per le attività</x-import>
+  </div>
+</section>
+
+<!-- 10 · FAQ -->
+<section data-screen-label="FAQ" style="max-width:1440px;margin:0 auto;padding:var(--space-silence) var(--grid-margin) 0;display:grid;gap:clamp(48px,6vw,96px)">
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+    <h2 style="margin:0;flex:1 1 240px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:12ch">Per chi viaggia.</h2>
+    <div style="flex:2 1 480px;min-width:0;border-top:1px solid var(--ink)">
+      <sc-for list="{{ faqTraveller }}" as="f" hint-placeholder-count="10">
+        <details style="border-bottom:1px solid var(--color-border-hairline)">
+          <summary style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">{{ f.q }}<span data-plus="true" aria-hidden="true" style="font-family:var(--font-ui);font-size:22px;line-height:1;color:var(--grey-500);transition:transform 200ms;flex:none">+</span></summary>
+          <p style="margin:0;padding:0 0 22px;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:56ch;text-wrap:pretty">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px) var(--grid-gutter);align-items:flex-start">
+    <h2 style="margin:0;flex:1 1 240px;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:1.02;letter-spacing:-.015em;max-width:12ch">Per le attività.</h2>
+    <div style="flex:2 1 480px;min-width:0;border-top:1px solid var(--ink)">
+      <sc-for list="{{ faqBusiness }}" as="f" hint-placeholder-count="8">
+        <details style="border-bottom:1px solid var(--color-border-hairline)">
+          <summary style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 0;font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">{{ f.q }}<span data-plus="true" aria-hidden="true" style="font-family:var(--font-ui);font-size:22px;line-height:1;color:var(--grey-500);transition:transform 200ms;flex:none">+</span></summary>
+          <p style="margin:0;padding:0 0 22px;font-size:15px;line-height:1.55;color:var(--grey-600);max-width:56ch;text-wrap:pretty">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline;justify-content:space-between;border-top:1px solid var(--ink);padding-top:20px">
+    <span style="font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:1.15">Regole Hearth Pass</span>
+    <span style="font-size:13px;color:var(--grey-600);max-width:52ch">Attribuzione del QR, cosa significa «fino al 50%», commissioni, utilizzi validi, periodo di riferimento e modalità di distribuzione sono definiti nel regolamento.</span>
+    <span style="font-size:13px;color:var(--grey-500)">Come viene calcolato il valore</span>
+  </div>
+</section>
+
+<!-- 11 · CLOSING -->
+<section data-screen-label="Chiusura" style="margin-top:var(--space-silence)">
+  <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Hero" variant="image" image="assets/photos/banco-mercato.jpg" image-alt="Un banco di mercato con i prodotti esposti" focal="50% 50%" min-height="88vh" eyebrow="Hearth Pass" title="Un territorio funziona quando chi arriva incontra chi c'è." caption="Banco di mercato" hint-size="100%,680px"></x-import>
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(32px,4vw,64px) var(--grid-margin) 0;display:flex;flex-wrap:wrap;gap:24px var(--grid-gutter);align-items:center;justify-content:space-between;border-top:1px solid var(--ink)">
+    <p style="margin:0;font-family:var(--font-editorial);font-weight:300;font-size:22px;line-height:1.3;max-width:40ch;text-wrap:pretty">Hearth Pass crea un piccolo motivo in più per entrare, conoscere, provare. E fa sì che una parte del valore generato continui a circolare nell'ecosistema.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+      <a href="{{ buyUrl }}" style="text-decoration:none"><x-import component-from-global-scope="HearthDesignSystem_ed33ec.Button" variant="primary" size="lg" hint-size="auto,48px">Ottieni Hearth Pass</x-import></a>
+      <x-import component-from-global-scope="HearthDesignSystem_ed33ec.Link" href="#attivita" arrow="{{ true }}" hint-size="auto,24px">Hai un'attività? Partecipa a Hearth Pass</x-import>
+    </div>
+  </div>
+</section>
+
+<x-import component-from-global-scope="HearthDesignSystem_ed33ec.SiteFooter" wordmark-src="assets/hearth-wordmark.svg" note="Hearth S.r.l. Società Benefit" year="{{ 2026 }}" links="{{ footerLinks }}" hint-size="100%,140px"></x-import>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Routing dell'ecosistema. buy / join / rules sono PLACEHOLDER da sostituire.
+const ROUTES = { app: 'https://hearth.app', home: 'Hearth Homepage.dc.html', storie: 'Hearth Homepage.dc.html#storie', territori: 'Hearth Territori.dc.html', creator: 'Hearth Creator.dc.html', attivita: 'Hearth Attivita.dc.html', pass: 'Hearth Pass.dc.html', buy: 'https://hearth.app/pass', join: 'https://attivita.hearth.app/pass', rules: '/pass/regole' };
+const NAV_CTA = { home: 'Configura gratis il tuo evento', territori: 'Configura gratis il tuo evento', creator: 'Diventa Creator', attivita: 'Registra la tua attività', pass: 'Ottieni Hearth Pass' };
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  componentDidMount() {
+    this._doc = e => { if (this.state.menuOpen && !e.target.closest('[data-nav-menu]') && !e.target.closest('header')) this.setState({ menuOpen: false }); };
+    document.addEventListener('click', this._doc);
+    document.documentElement.setAttribute('data-reveal-ready', '');
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.setAttribute('data-reveal', 'in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px', threshold: 0.06 }) : null;
+    const scan = () => document.querySelectorAll('[data-reveal="wait"]').forEach(el => io ? io.observe(el) : el.setAttribute('data-reveal', 'in'));
+    scan();
+    this._mo = new MutationObserver(scan);
+    this._mo.observe(document.body, { childList: true, subtree: true });
+    if (!window.HearthDesignSystem_ed33ec) this._t = setTimeout(() => this.forceUpdate(), 400);
+  }
+  componentWillUnmount() { this._mo && this._mo.disconnect(); clearTimeout(this._t); document.removeEventListener('click', this._doc); }
+  renderVals() {
+    const DS = window.HearthDesignSystem_ed33ec;
+    const scrollTo = href => { const t = document.querySelector(href); if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' }); };
+    return {
+      buyUrl: ROUTES.buy, joinUrl: ROUTES.join, rulesUrl: ROUTES.rules, appUrl: ROUTES.app,
+      menuOpen: this.state.menuOpen,
+      onNavigate: (value, href) => {
+        this.setState({ menuOpen: false });
+        if (href && href.startsWith('#')) { scrollTo(href); return; }
+        if (href) window.location.href = href;
+      },
+      navItems: [{ label: 'Esplora', value: 'esplora', href: ROUTES.app }, { label: 'Per i territori', value: 'territori', href: ROUTES.territori }, { label: 'Attività', value: 'attivita', href: ROUTES.attivita }, { label: 'Creator', value: 'creator', href: ROUTES.creator }, { label: 'Hearth Pass', value: 'pass', href: ROUTES.pass }],
+      navAction: DS ? React.createElement(DS.Button, { variant: 'primary', shape: 'pill', size: 'sm', onClick: () => { window.location.href = ROUTES.buy; } }, NAV_CTA.pass) : null,
+      cycle: [
+        { who: 'Viaggiatore', text: 'Acquista Hearth Pass.', img: 'assets/photos/paese-dal-mare.jpg' },
+        { who: 'Hearth', text: 'Lo aiuta a scoprire il territorio.', img: 'assets/photos/campo-monte-mare.jpg' },
+        { who: 'Attività', text: 'Offre un vantaggio.', img: 'assets/photos/vignaiolo-cantina.jpg' },
+        { who: 'Viaggiatore', text: 'Entra e utilizza Hearth Pass.', img: 'assets/photos/oste-bancone.jpg' },
+        { who: 'Utilizzo', text: 'Viene registrato.', img: 'assets/photos/fornaia-pane.jpg' },
+        { who: 'Valore', text: 'Torna nell\u2019ecosistema secondo le regole Hearth.', img: 'assets/photos/banco-mercato.jpg' },
+        { who: 'Territorio', text: 'Continua a vivere e a essere raccontato.', img: 'assets/photos/torre-macchia.jpg' }
+      ],
+      travellerSteps: [
+        { n: '01', text: 'Scegli Hearth Pass.' }, { n: '02', text: 'Esplora Hearth.' }, { n: '03', text: 'Riconosci le attività partecipanti.' }, { n: '04', text: 'Scopri il vantaggio.' }, { n: '05', text: 'Vai nell\u2019attività.' }, { n: '06', text: 'Utilizza il Pass.' }
+      ],
+      passes: [
+        { name: '3 Day', dur: '03', unit: 'day', photo: 'oste-bancone', accent: 'terra', focal: '60% 50%', price: '€9,90', people: '2 persone', duration: '3 giorni', for: 'Per un weekend o una breve fuga.', url: ROUTES.buy + '?pass=3day' },
+        { name: '10 Day', dur: '10', unit: 'day', photo: 'torre-macchia', accent: 'blu', focal: '50% 50%', price: '€15,90', people: '2 persone', duration: '10 giorni', for: 'Per un viaggio più lungo o più territori.', url: ROUTES.buy + '?pass=10day' },
+        { name: 'Annuale', dur: '365', unit: 'days', photo: 'campo-monte-mare', accent: 'verde', focal: '50% 60%', price: '€29,90', people: '1 persona', duration: '1 anno', for: 'Per chi vuole continuare a scoprire Hearth durante l\u2019anno.', url: ROUTES.buy + '?pass=annuale' }
+      ],
+      examples: [
+        { kind: 'Forno', text: 'Assaggio della specialità del giorno.' }, { kind: 'Cantina', text: 'Calice di benvenuto incluso.' }, { kind: 'Visita', text: 'Upgrade incluso nell\u2019esperienza.' }, { kind: 'Bottega', text: 'Piccolo omaggio con l\u2019acquisto.' }
+      ],
+      qrSteps: [
+        { n: '01', text: 'Il tuo QR, nell\u2019attività.' }, { n: '02', text: 'Una persona apre Hearth.' }, { n: '03', text: 'Si registra.' }, { n: '04', text: 'Acquista un Pass attribuito alla tua segnalazione.' }, { n: '05', text: 'Puoi ricevere fino al 50%.' }
+      ],
+      poolSteps: [
+        { n: '01', text: 'Pass venduti nel periodo precedente.' }, { n: '02', text: 'Valore destinato al meccanismo attività.' }, { n: '03', text: 'Utilizzi Hearth Pass registrati.' }, { n: '04', text: 'Quota attribuita all\u2019attività.' }
+      ],
+      kindOptions: [{ value: 'omaggio', label: 'Omaggio' }, { value: 'sconto', label: 'Sconto' }, { value: 'prezzo', label: 'Prezzo dedicato' }, { value: 'upgrade', label: 'Upgrade' }, { value: 'esperienza', label: 'Esperienza' }, { value: 'servizio', label: 'Servizio incluso' }, { value: 'altro', label: 'Altro' }],
+      freqOptions: [{ value: 'giorno', label: 'Una volta al giorno' }, { value: 'settimana', label: 'Una volta alla settimana' }, { value: 'mese', label: 'Una volta al mese' }, { value: 'trimestre', label: 'Una volta al trimestre' }, { value: 'semestre', label: 'Una volta al semestre' }, { value: 'anno', label: 'Una volta all\u2019anno' }, { value: 'illimitato', label: 'Senza limite di utilizzi' }],
+      useTimeline: [
+        { title: 'Il viaggiatore apre Hearth', meta: 'Scheda della cantina', state: 'done' },
+        { title: 'Mostra il Pass', meta: 'Vantaggio: calice di benvenuto', state: 'done' },
+        { title: 'L\u2019attività conferma', meta: 'Oggi, 11:42', state: 'current' },
+        { title: 'Utilizzo registrato', meta: 'Conta per il periodo in corso', state: 'todo' }
+      ],
+      faqTraveller: [
+        { q: 'Cos\u2019è Hearth Pass?', a: 'È il Pass che ti permette di accedere ai vantaggi offerti dalle attività partecipanti mentre scopri un territorio con Hearth.' },
+        { q: 'Quanto costa?', a: '3 Day €9,90 · 10 Day €15,90 · Annuale €29,90.' },
+        { q: 'Per quante persone vale?', a: '3 Day e 10 Day valgono per 2 persone. L\u2019Annuale vale per 1 persona.' },
+        { q: 'Quanto dura?', a: '3 giorni, 10 giorni o 1 anno, a seconda del Pass scelto.' },
+        { q: 'Dove posso usarlo?', a: 'Nelle attività partecipanti che trovi su Hearth: sono riconoscibili dal vantaggio Hearth Pass nella loro scheda.' },
+        { q: 'Che tipo di vantaggi posso trovare?', a: 'Dipende dall\u2019attività: un omaggio, uno sconto, un prezzo dedicato, un upgrade, un\u2019esperienza, un servizio incluso o un altro vantaggio coerente.' },
+        { q: 'Ogni vantaggio si può usare senza limiti?', a: 'Ogni attività definisce la frequenza del proprio vantaggio per Pass: per esempio una volta al giorno, una volta al mese o senza limite. La trovi indicata nella scheda.' },
+        { q: 'Come faccio a sapere quali attività partecipano?', a: 'Su hearth.app: le attività partecipanti mostrano il vantaggio Hearth Pass nella scheda.' },
+        { q: 'Come utilizzo il vantaggio?', a: 'Apri Hearth nell\u2019attività, mostri il Pass e l\u2019attività conferma l\u2019utilizzo. Il dettaglio dell\u2019interazione è in definizione.' },
+        { q: 'Posso acquistare il Pass mentre sono già in viaggio?', a: 'Sì, da hearth.app, in qualsiasi momento.' }
+      ],
+      faqBusiness: [
+        { q: 'Quanto costa partecipare a Hearth Pass?', a: 'Le condizioni di partecipazione sono definite dal programma Hearth Pass e indicate al momento della registrazione dell\u2019attività.' },
+        { q: 'Devo offrire per forza uno sconto?', a: 'No. Può essere un omaggio, un prezzo dedicato, un upgrade, un\u2019esperienza, un servizio incluso o un altro vantaggio coerente con l\u2019attività.' },
+        { q: 'Come funziona il mio QR Hearth?', a: 'Se una persona entra su Hearth attraverso il tuo QR, si registra e acquista un Pass attribuito alla tua segnalazione, puoi ricevere fino al 50% del valore del Pass, al netto delle commissioni previste.' },
+        { q: 'Cosa succede quando qualcuno usa il Pass nella mia attività?', a: 'L\u2019utilizzo viene registrato e contribuisce alla distribuzione del valore economico previsto per le attività partecipanti, secondo le regole Hearth Pass.' },
+        { q: 'Quanto ricevo per ogni utilizzo?', a: 'Non c\u2019è necessariamente un importo fisso per utilizzo. La quota dipende dalle regole del programma e dagli utilizzi registrati nel periodo di riferimento.' },
+        { q: 'Più alto è il vantaggio, più Hearth mi mostra?', a: 'No. Il vantaggio non determina il ranking né il trattamento editoriale su Hearth.' },
+        { q: 'Posso modificare il vantaggio?', a: 'Puoi modificarlo o disattivarlo secondo quanto previsto dal sistema Hearth Pass.' },
+        { q: 'Posso scegliere quante volte viene usato?', a: 'Sì. Definisci la frequenza per Pass: una volta al giorno, alla settimana, al mese, al trimestre, al semestre, all\u2019anno o senza limite.' }
+      ],
+      footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita]].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+    };
+  }
+}
+</script>
+</body>
+</html>

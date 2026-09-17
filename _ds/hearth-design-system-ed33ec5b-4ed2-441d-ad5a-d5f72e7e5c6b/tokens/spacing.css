@@ -1,0 +1,16 @@
+:root{
+--space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;--space-32:128px;--space-40:160px;--space-48:192px;--space-64:256px;
+/* editorial rhythm */
+--space-section:clamp(64px,10vw,160px);--space-block:clamp(32px,5vw,80px);--space-silence:clamp(96px,16vw,256px);
+/* grid */
+--grid-columns:12;/* @kind other */--grid-max:1440px;--grid-max-wide:1680px;--grid-margin:clamp(20px,4vw,64px);--grid-gutter:clamp(16px,2vw,32px);/* @kind spacing */
+--width-reading:680px;--width-editorial-narrow:560px;--width-workspace:1280px;
+/* density */
+--density-row:48px;--density-control:40px;--density-gap:var(--space-4);
+/* consumed by components */
+--row-height:var(--density-row);--control-height:var(--density-control);
+}
+[data-density="compact"]{--density-row:36px;--density-control:32px;--density-gap:var(--space-2)}
+[data-density="comfortable"]{--density-row:56px;--density-control:44px;--density-gap:var(--space-6)}
+/* compact never shrinks touch targets on coarse pointers */
+@media (pointer:coarse){[data-density="compact"]{--density-control:44px;--density-row:44px}}

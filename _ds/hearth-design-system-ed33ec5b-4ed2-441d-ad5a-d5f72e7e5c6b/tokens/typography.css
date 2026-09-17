@@ -1,0 +1,39 @@
+:root{
+--font-editorial:"Albra",Georgia,"Times New Roman",serif;--font-ui:"Avenir","Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+/* fluid sizes: mobile → desktop */
+--type-display-xl-size:clamp(56px,9.5vw,152px);--type-display-xl-lh:.92;--type-display-xl-ls:-.025em;
+--type-display-l-size:clamp(40px,6vw,96px);--type-display-l-lh:.96;--type-display-l-ls:-.02em;
+--type-display-m-size:clamp(32px,4vw,64px);--type-display-m-lh:1.02;--type-display-m-ls:-.015em;
+--type-editorial-heading-size:clamp(26px,2.6vw,40px);--type-editorial-heading-lh:1.12;--type-editorial-heading-ls:-.01em;
+--type-editorial-quote-size:clamp(22px,2.2vw,32px);--type-editorial-quote-lh:1.3;
+--type-editorial-body-size:clamp(18px,1.3vw,21px);--type-editorial-body-lh:1.5;
+--type-editorial-number-size:clamp(48px,6vw,88px);
+--type-ui-heading-size:22px;--type-ui-heading-lh:1.25;--type-ui-heading-ls:-.005em;
+--type-ui-title-size:17px;--type-ui-title-lh:1.35;
+--type-body-size:15px;--type-body-lh:1.55;
+--type-body-sm-size:13px;--type-body-sm-lh:1.5;
+--type-label-size:13px;--type-label-lh:1.2;--type-label-ls:.01em;
+--type-metadata-size:12px;--type-metadata-lh:1.4;--type-metadata-ls:.02em;
+--type-caption-size:12px;--type-caption-lh:1.45;
+--type-eyebrow-size:11px;--type-eyebrow-lh:1.2;--type-eyebrow-ls:.14em;
+--measure-reading:64ch;--measure-editorial:58ch;--measure-ui:80ch;
+}
+body{font-family:var(--font-ui);font-size:var(--type-body-size);line-height:var(--type-body-lh);color:var(--color-text-primary);background:var(--color-background-canvas);-webkit-font-smoothing:antialiased;margin:0}
+a{color:var(--color-text-primary);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:var(--grey-300)}
+a:hover{text-decoration-color:var(--ink)}
+.t-display-xl{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-xl-size);line-height:var(--type-display-xl-lh);letter-spacing:var(--type-display-xl-ls);text-wrap:balance}
+.t-display-l{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-l-size);line-height:var(--type-display-l-lh);letter-spacing:var(--type-display-l-ls);text-wrap:balance}
+.t-display-m{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-display-m-size);line-height:var(--type-display-m-lh);letter-spacing:var(--type-display-m-ls);text-wrap:balance}
+.t-editorial-heading{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-heading-size);line-height:var(--type-editorial-heading-lh);letter-spacing:var(--type-editorial-heading-ls);text-wrap:pretty}
+.t-editorial-quote{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-quote-size);line-height:var(--type-editorial-quote-lh);text-wrap:pretty}
+.t-editorial-body{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-body-size);line-height:var(--type-editorial-body-lh);max-width:var(--measure-editorial);text-wrap:pretty}
+.t-editorial-number{font-family:var(--font-editorial);font-weight:300;font-size:var(--type-editorial-number-size);line-height:1;letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.t-ui-heading{font-family:var(--font-ui);font-weight:400;font-size:var(--type-ui-heading-size);line-height:var(--type-ui-heading-lh);letter-spacing:var(--type-ui-heading-ls)}
+.t-ui-title{font-family:var(--font-ui);font-weight:700;font-size:var(--type-ui-title-size);line-height:var(--type-ui-title-lh)}
+.t-body{font-family:var(--font-ui);font-weight:400;font-size:var(--type-body-size);line-height:var(--type-body-lh);max-width:var(--measure-ui)}
+.t-body-sm{font-family:var(--font-ui);font-size:var(--type-body-sm-size);line-height:var(--type-body-sm-lh)}
+.t-label{font-family:var(--font-ui);font-weight:700;font-size:var(--type-label-size);line-height:var(--type-label-lh);letter-spacing:var(--type-label-ls)}
+.t-metadata{font-family:var(--font-ui);font-size:var(--type-metadata-size);line-height:var(--type-metadata-lh);letter-spacing:var(--type-metadata-ls);color:var(--color-text-secondary);font-variant-numeric:tabular-nums}
+.t-caption{font-family:var(--font-ui);font-size:var(--type-caption-size);line-height:var(--type-caption-lh);color:var(--color-text-secondary)}
+.t-eyebrow{font-family:var(--font-ui);font-weight:700;font-size:var(--type-eyebrow-size);line-height:var(--type-eyebrow-lh);letter-spacing:var(--type-eyebrow-ls);text-transform:uppercase}
+.t-editorial-heading em,.t-display-xl em,.t-display-l em,.t-display-m em,.t-editorial-body em,.t-editorial-quote em{font-style:italic;font-weight:300}

@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/hearth-pass", "destination": "/pass", "permanent": true },
+    { "source": "/hearth-pass/:path*", "destination": "/pass", "permanent": true },
+    { "source": "/website-business", "destination": "/attivita/sito", "permanent": true },
+    { "source": "/website-business/:path*", "destination": "/attivita/sito", "permanent": true }
+  ]
+}

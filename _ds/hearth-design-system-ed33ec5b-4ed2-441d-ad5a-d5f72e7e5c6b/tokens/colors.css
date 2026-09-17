@@ -1,0 +1,28 @@
+:root{
+/* base — paper & ink */
+--ink:#151412;--ink-soft:#2b2926;--paper:#faf8f3;--white:#ffffff;--mist:#f1eee8;
+--grey-100:#e8e5df;--grey-200:#d6d2ca;--grey-300:#b5b0a7;--grey-400:#8a857c;--grey-500:#5f5b54;--grey-600:#3e3b36;
+/* territory accents — optional, ≤10% of a surface, never in Core chrome */
+--accent-terra:#b5533a;--accent-rosso:#e9573f;--accent-blu:#2f4f7a;--accent-giallo:#e2b73a;--accent-verde:#4f6b4a;
+--on-accent-terra:var(--paper);--on-accent-rosso:var(--ink);--on-accent-blu:var(--paper);--on-accent-giallo:var(--ink);--on-accent-verde:var(--paper);
+--accent:var(--accent-terra);--on-accent:var(--on-accent-terra);
+/* semantic states — desaturated, editorial */
+--state-success:#3f6b4a;--state-warning:#a8742c;--state-error:#a63a2b;--state-info:#3e5a80;
+/* semantic aliases */
+--color-background-canvas:var(--paper);--color-background-surface:var(--white);--color-background-subtle:var(--mist);--color-background-inverse:var(--ink);
+--color-text-primary:var(--ink);--color-text-secondary:var(--grey-500);--color-text-tertiary:var(--grey-500);--color-text-decorative:var(--grey-400);--color-text-inverse:var(--paper);--color-text-on-image:var(--paper);
+--color-border-hairline:rgba(21,20,18,.12);--color-border-default:var(--grey-200);--color-border-control:var(--grey-400);--color-border-strong:var(--ink);
+--color-action-primary:var(--ink);--color-action-primary-hover:var(--ink-soft);--color-action-primary-text:var(--paper);--color-action-secondary-hover:var(--mist);
+--color-focus-ring:var(--ink);
+--color-overlay-scrim:linear-gradient(180deg,rgba(21,20,18,0) 40%,rgba(21,20,18,.55) 100%);
+--color-material-glass:rgba(250,248,243,.82);--color-material-glass-dark:rgba(21,20,18,.6);
+--color-background-hover:var(--mist);--color-background-selected:var(--grey-100);
+}
+/* Core mode — operational tools. Pure white canvas, neutral (non-beige) greys. Paper stays available for Stories/Editions previews nested inside Core. Contrast on #FFF: Ink 18.41:1 · #5A5957 7.14:1 · #7C7B79 4.5:1 (control borders) · #DADAD8 decorative. */
+[data-mode="core"]{
+--color-background-canvas:#ffffff;--color-background-surface:#ffffff;--color-background-subtle:#f4f4f3;--color-background-hover:#f2f2f1;--color-background-selected:#ebebea;
+--color-text-secondary:#5a5957;--color-text-tertiary:#5a5957;--color-text-decorative:#8c8b89;--color-text-inverse:#ffffff;
+--color-border-hairline:rgba(21,20,18,.10);--color-border-default:#dadad8;--color-border-control:#7c7b79;
+--color-action-primary-text:#ffffff;--color-action-secondary-hover:#f2f2f1;
+--color-material-glass:rgba(255,255,255,.86);
+}

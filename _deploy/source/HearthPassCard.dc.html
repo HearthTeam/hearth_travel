@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/styles.css">
+<script src="_ds/hearth-design-system-ed33ec5b-4ed2-441d-ad5a-d5f72e7e5c6b/_ds_bundle.js"></script>
+<style>body{margin:0;background:#f1eee8}
+@container (max-width: 260px){[data-pass-tagline]{display:none}}</style>
+</helmet>
+<!-- Hearth Pass · master. Paper sheet, ink rule, Albra duration, "Finestra Hearth" (vertical photographic cut) on the right. Ratio 8:5. -->
+<div data-hearth-pass="true" style="container-type:inline-size;width:100%;aspect-ratio:8/5;background:var(--paper);color:var(--ink);border:1px solid var(--grey-200);border-radius:14px;overflow:hidden;position:relative;font-family:var(--font-ui);display:grid;grid-template-columns:minmax(0,1fr) 34%;box-shadow:0 1px 0 rgba(21,20,18,.06)">
+  <div style="position:relative;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:6.5% 6% 6% 7%;min-width:0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+      <img src="assets/hearth-wordmark.svg" alt="Hearth" style="height:clamp(10px,5.2cqw,22px);display:block">
+      <span style="display:flex;align-items:center;gap:6px;white-space:nowrap">
+        <sc-if value="{{ isActive }}" hint-placeholder-val="{{ false }}"><span style="font-size:clamp(6px,2.2cqw,9px);letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:var(--ink);color:var(--paper);padding:.35em .6em;border-radius:3px">Attivo</span></sc-if>
+        <span style="font-size:clamp(7px,2.6cqw,11px);font-weight:700;letter-spacing:.16em;text-transform:uppercase">Hearth Pass</span>
+      </span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:2%;min-width:0;padding-top:4%">
+      <span style="font-family:var(--font-editorial);font-weight:300;font-size:clamp(44px,26cqw,112px);line-height:.82;letter-spacing:-.05em;font-variant-numeric:lining-nums;white-space:nowrap">{{ duration }}</span>
+      <span style="font-family:var(--font-editorial);font-style:italic;font-weight:300;font-size:clamp(14px,6cqw,26px);line-height:1;padding-bottom:.35em;white-space:nowrap">{{ unit }}</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:2px 8px;border-top:1px solid var(--ink);padding-top:4%;font-size:clamp(7px,2.6cqw,11px);letter-spacing:.12em;text-transform:uppercase;font-weight:700;overflow:hidden">
+      <span style="white-space:nowrap">{{ people }}</span>
+      <span data-pass-tagline="true" style="color:var(--grey-500);white-space:nowrap">Scopri · Entra · Vivi</span>
+    </div>
+  </div>
+  <!-- Finestra Hearth -->
+  <div style="position:relative;overflow:hidden;border-left:1px solid var(--ink);background:var(--mist)">
+    <img src="{{ photoSrc }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{ focal }}">
+    <span style="position:absolute;left:0;right:0;bottom:0;height:clamp(3px,1.6cqw,7px);background:{{ accentColor }}"></span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:480,&quot;height&quot;:300},&quot;duration&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;03&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenuto&quot;},&quot;unit&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;day&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenuto&quot;},&quot;people&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2 persone&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenuto&quot;},&quot;photo&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;oste-bancone&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;oste-bancone&quot;,&quot;fornaia-pane&quot;,&quot;vignaiolo-cantina&quot;,&quot;torre-macchia&quot;,&quot;paese-dal-mare&quot;,&quot;banco-mercato&quot;,&quot;campo-monte-mare&quot;,&quot;chef-cucina&quot;,&quot;pescatore-reti&quot;,&quot;rievocazione-costume&quot;],&quot;section&quot;:&quot;Finestra Hearth&quot;},&quot;focal&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;50% 50%&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Finestra Hearth&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;terra&quot;,&quot;tsType&quot;:&quot;'terra' | 'blu' | 'verde' | 'ink'&quot;,&quot;options&quot;:[&quot;terra&quot;,&quot;blu&quot;,&quot;verde&quot;,&quot;ink&quot;],&quot;section&quot;:&quot;Variante&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Variante&quot;}}">
+const ACCENT = { terra: 'var(--accent-terra, #B5533A)', blu: 'var(--accent-blu, #2F4F7A)', verde: 'var(--accent-verde, #4F6B4A)', ink: 'var(--ink)' };
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    return {
+      duration: p.duration ?? '03',
+      unit: p.unit ?? 'day',
+      people: p.people ?? '2 persone',
+      photoSrc: 'assets/photos/' + (p.photo ?? 'oste-bancone') + '.jpg',
+      focal: p.focal ?? '50% 50%',
+      accentColor: ACCENT[p.accent ?? 'terra'] || ACCENT.terra,
+      isActive: !!p.active
+    };
+  }
+}
+</script>
+</body>
+</html>
