@@ -35,4 +35,14 @@
     <lastmod>2026-09-08</lastmod>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://hearth.travel/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hearth.travel/delete-account</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>

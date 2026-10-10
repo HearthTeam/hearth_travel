@@ -16,6 +16,8 @@ Nessun framework, nessun bundler, nessuna dipendenza npm, nessun build step:
 | `/attivita` | `attivita/index.html` |
 | `/attivita/sito` | `attivita/sito/index.html` |
 | `/pass` | `pass/index.html` |
+| `/privacy` | `privacy/index.html` |
+| `/delete-account` | `delete-account/index.html` |
 | `/website-business/` | `website-business/index.html` |
 | qualsiasi altro | `404.html` |
 
@@ -34,6 +36,26 @@ Tutti i percorsi interni sono **root-absolute** (`/assets/…`, `/_ds/…`,
 `/support.js`): il sito funziona solo servito come document root del dominio,
 non da una sottocartella. Il file `.nojekyll` è necessario, altrimenti Jekyll
 ignorerebbe la cartella `_ds/`.
+
+## Pagine legali
+
+`/privacy` e `/delete-account` sono **HTML statico puro**: nessun JavaScript,
+nessun runtime, solo markup e CSS inline. Sono le due pagine richieste per la
+pubblicazione su App Store e Google Play (informativa privacy e procedura di
+cancellazione account), quindi devono restare raggiungibili e indicizzabili
+anche se il resto del sito cambia.
+
+I sorgenti sono i due bundle `_deploy/source/Hearth Privacy standalone.html` e
+`_deploy/source/Hearth Delete Account standalone.html`: in quel formato il
+documento è incapsulato come stringa JSON e gli asset sono UUID risolti in
+`data:` URI a runtime. Le pagine pubblicate sono la versione srotolata, con i
+riferimenti riscritti sugli asset reali del sito (`/assets/…`,
+`/_ds/…/assets/fonts/…`, verificati identici byte per byte) e i link interni
+sui percorsi pubblici. Pesano 66 KB e 38 KB invece di 358 KB e 328 KB, e
+condividono i font già caricati dalle altre pagine.
+
+Rigenerando i sorgenti, rifare la stessa riscrittura. Il link «Privacy» nel
+footer delle sei pagine del sito è in `footerLinks`.
 
 ## `/website-business/`
 

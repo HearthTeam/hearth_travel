@@ -427,7 +427,7 @@ class Component extends DCLogic {
         { q: 'Hearth sostituisce il sito del Comune?', a: 'No. Il sito istituzionale resta; Hearth raccoglie e tiene aggiornato ciò che il sito di solito non riesce a raccontare.' }
       ],
       footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
-        [['Esplora', ROUTES.app], ['Storie', ROUTES.home + '#storie'], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Contatti', 'mailto:info@hearth.email']].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.home + '#storie'], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Contatti', 'mailto:info@hearth.email'], ['Privacy', '/privacy']].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
     };
   }
 }

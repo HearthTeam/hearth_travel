@@ -478,7 +478,7 @@ class Component extends DCLogic {
         { q: 'Posso scegliere quante volte viene usato?', a: 'Sì. Definisci la frequenza per Pass: una volta al giorno, alla settimana, al mese, al trimestre, al semestre, all\u2019anno o senza limite.' }
       ],
       footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
-        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita]].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Privacy', '/privacy']].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
     };
   }
 }

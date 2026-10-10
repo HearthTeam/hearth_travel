@@ -386,7 +386,7 @@ class Component extends DCLogic {
         { title: 'Costruisci qualcosa che rimane.', sub: 'Una guida con un indirizzo stabile, che l\u2019anno dopo riparte da qui.' }
       ],
       footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
-        [['Esplora', ROUTES.app], ['Storie', '#storie'], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita]].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+        [['Esplora', ROUTES.app], ['Storie', '#storie'], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Privacy', '/privacy']].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
     };
   }
 }

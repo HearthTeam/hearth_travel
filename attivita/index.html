@@ -506,7 +506,7 @@ class Component extends DCLogic {
         { q: 'Potete realizzare anche il mio sito?', a: 'Sì. Hearth realizza siti dedicati alle attività a €300. Puoi iniziare con €20 e ricevere una prima demo in anteprima prima di completare il progetto.', href: ROUTES.site, link: 'Guarda come funziona il sito Hearth' }
       ],
       footerLinks: DS ? React.createElement('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px 24px', fontSize: 13 } },
-        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita]].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
+        [['Esplora', ROUTES.app], ['Storie', ROUTES.storie], ['Hearth Pass', ROUTES.pass], ['Per i territori', ROUTES.territori], ['Creator', ROUTES.creator], ['Attività', ROUTES.attivita], ['Privacy', '/privacy']].map(([l, h]) => React.createElement('a', { key: l, href: h, style: { color: 'var(--grey-500)', textDecoration: 'none' } }, l))) : null
     };
   }
 }
